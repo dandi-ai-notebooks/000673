@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 10.0,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a comprehensive description of the Dandiset including: 1) The title \"Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons\", 2) The Dandiset ID (000673), 3) Clear description of the purpose (working memory tasks in epilepsy patients), 4) Detailed metadata including keywords, measurement types, and dataset scale (41 units, ~70 electrodes, 140+ trials), 5) Data organization (44 assets shown with file structure), 6) Links to additional code resources. The description is well-structured and includes both high-level overview and specific technical details about the data contents.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a thorough description of DANDI 000673, including: 1) Full title \"Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons\", 2) Clear purpose description (working memory tasks recordings from epilepsy patients), 3) Detailed metadata including keywords, measurement types, and units/electrodes counts, 4) Data structure information (44 NWB files from multiple subjects), 5) Links to additional code resources, and 6) Important caveats about data interpretation. The description provides comprehensive understanding of both content and organization while maintaining clarity.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a thorough description of DANDI 000673, including: 1) Full title \"Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons\", 2) Clear purpose description (recordings from epilepsy patients performing working memory tasks), 3) Detailed metadata including keywords, measurement types, and unit/electrode counts, 4) Data structure information (44 NWB files across multiple subjects), 5) Links to additional code resources, and 6) Important caveats about data interpretation. The description is well-organized, comprehensive and includes all key aspects needed to understand the dataset's content and purpose.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 8.0,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates good metadata exploration through multiple approaches:\n    1. Uses DandiAPIClient to load and list dataset assets\n    2. Shows basic dataset info (keywords, measurement types, unit counts)\n    3. Loads specific NWB file and displays session info, trial counts, unit counts\n    4. Shows trial metadata fields and their contents\n    5. Provides context through markdown cells explaining the dataset's purpose\n    However, it doesn't exhaustively explore all metadata fields or provide detailed field descriptions, and some potentially important metadata (like subject info) isn't shown.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates good metadata exploration with several key aspects: 1) Uses DandiAPIClient to load the dandiset and list assets, 2) Shows basic dataset info like keywords and measurement types, 3) Displays number of units, electrodes, and trials, 4) Successfully loads and prints session description and trial counts, 5) Includes explanatory markdown about the dataset content. However, it doesn't provide detailed descriptions of all metadata fields or demonstrate comprehensive metadata exploration capabilities. Some fields like subject information and acquisition metadata are not explored.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads the dandiset using DandiAPIClient and displays several key metadata aspects:\n    - Lists and counts total assets (44 files)\n    - Shows file paths and naming structure\n    - Loads an example NWB file with session info\n    - Displays trial counts and unit counts\n    - Shows keywords and measurement types\n    - Includes links to additional code resources\n    However, it doesn't exhaustively explore all possible metadata fields or provide detailed descriptions of each field's meaning. Some metadata is presented in markdown rather than extracted programmatically from the API.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 7.333333333333333,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates solid asset handling by: 1) Using DandiAPIClient to list all assets in the dataset (44 found), 2) Successfully loading a specific NWB file (subject 1, session 2) using lindi and pynwb, 3) Accessing basic metadata like session description, trial count, and unit count. However, it doesn't extensively explore multiple asset types or provide comprehensive metadata exploration across different assets. It focuses mainly on one example file rather than showing how to work with multiple assets.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates strong asset handling capabilities: 1) Uses DandiAPIClient to list all assets in the dataset (44 files found), 2) Successfully loads a specific NWB file (sub-1/ses-2) using both lindi and pynwb, 3) Shows basic metadata access like session description, trial count, and unit count, 4) Successfully accesses and works with multiple data types within the asset (events, LFPs, units, trials). However, it doesn't extensively explore metadata across multiple assets or provide comprehensive asset handling patterns.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates strong asset handling capabilities: 1) Uses DandiAPIClient to list all assets in the Dandiset, 2) Shows actual file paths of the first 5 assets, 3) Successfully loads a specific NWB file (subject 1, session 2) using both lindi and pynwb, 4) Accesses and displays basic metadata (session description, trial count, unit count), and 5) Uses the loaded asset for various analyses. However, it doesn't thoroughly explore different asset types or provide comprehensive metadata exploration.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 7.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates strong competency in NWB file handling: it successfully loads the file using pynwb, shows how to access multiple key components (trials, units, LFPs, events), and extracts meaningful data from each. It explores the file structure by accessing acquisition data, intervals, and units. The code successfully demonstrates working with basic NWB components with proper error handling. However, it doesn't provide a complete exploration of all possible NWB components or show detailed navigation of the full NWB hierarchy. It focuses on the most relevant components for this dataset's analysis.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates a solid grasp of NWB file handling by: 1) Successfully loading an NWB file using pynwb, 2) Accessing multiple key components including units, trials, LFP data, and events, 3) Demonstrating how to extract and work with various data structures (timestamps, trial information, spike times), 4) Showing proper navigation through the NWB hierarchy to access nested information. It also prints useful metadata like session description, trial counts, and unit counts. However, it doesn't provide a complete exploration of all possible NWB components or show advanced hierarchical navigation techniques that would warrant a higher score.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates strong competency in NWB file handling: it successfully loads the file using pynwb, accesses multiple key components (units, trials, events, LFPs), and shows how to extract and work with different data types. It explores the trial structure, behavioral data, electrophysiology recordings, and event markers. The code successfully executes and produces visualizations. However, it doesn't provide a complete exploration of the NWB hierarchy or demonstrate all possible data components, and some of the data structure explanations could be more detailed. The notebook serves as a good practical introduction rather than a comprehensive guide.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 7.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates strong capabilities in loading and handling NWB data. It successfully:\n    1. Loads the NWB file using pynwb and lindi\n    2. Accesses multiple data types (events, LFPs, spike times, trial information)\n    3. Shows how to extract specific arrays and metadata\n    4. Handles different data structures appropriately (time series, events, intervals)\n    5. Provides working examples of accessing complex trial-related data\n    However, it doesn't demonstrate advanced data access techniques like querying or filtering complex data structures, nor does it show comprehensive error handling or optimization strategies.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates strong capabilities in loading and handling NWB data. It shows:\n    1. Loading an NWB file using pynwb and lindi\n    2. Accessing multiple data types (events, LFPs, spike times, trial information)\n    3. Successfully extracts and uses different data structures (arrays, timestamps, metadata)\n    4. Shows how to navigate complex trial data with multiple columns\n    5. Handles both continuous (LFP) and discrete (spike) data appropriately\n    However, it doesn't demonstrate advanced data access techniques like querying or filtering complex data structures, and some more complex data types in the NWB format aren't explored.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates strong capabilities in loading and handling NWB data. It successfully:\n    1. Loads the NWB file using pynwb and lindi\n    2. Accesses multiple data types including:\n        - Event data (TTL markers)\n        - LFP recordings\n        - Spike data\n        - Trial information with detailed metadata\n    3. Shows how to navigate complex data structures (trials table with multiple columns)\n    4. Handles different data types appropriately (timestamps, spike times, LFP traces)\n    5. Includes error handling and informative comments\n    However, it doesn't show advanced data access techniques or more sophisticated querying methods that might be useful for complex analyses.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple types of data visualization including:\n    1. Event histogram with labeled axes and title\n    2. LFP time series plot showing averaged signal\n    3. Spike raster plot for multiple units\n    Each plot has proper axis labels, titles, and basic formatting. The code successfully loads and plots different aspects of the NWB data (events, LFP, spikes). However, the visualizations are relatively basic, lacking advanced features like statistical overlays, multiple subplot arrangements, or publication-ready styling. The plots serve more as demonstrations than analysis-ready figures.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple types of visualizations (TTL event histogram, LFP traces, spike raster plots) with proper axis labels, titles, and basic formatting. The plots cover different aspects of the neural data (events, continuous signals, spike times) and include helpful markdown explanations. However, the visualizations are fairly basic, without advanced features like subplots, custom styling, or interactive elements. Some plots could benefit from better scaling, colormaps, or legends. While functional and clear, they don't reach publication quality or show advanced visualization techniques.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple types of data visualization from NWB files including: 1) histogram of TTL event codes, 2) LFP time series plot, and 3) spike raster plot. Each visualization includes proper axis labels, titles, and basic formatting. The plots effectively show different aspects of the neural data (events, LFP, spikes) and include simple but clear explanations. However, the visualizations are fairly basic without advanced techniques like subplots, custom color schemes, or publication-ready formatting. The code is functional and well-structured but focuses on basic demonstration rather than sophisticated analysis or presentation.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 6.333333333333333,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains multiple plots (event histogram, LFP trace, spike raster) that are generally well-formatted with:\n    - Clear axes labels and titles\n    - Appropriate figure sizes\n    - Readable data visualization\n    - Basic formatting elements\n    However, they lack some elements that would make them publication-ready, such as:\n    - No error bars or statistical annotations\n    - Limited customization of visual style\n    - Basic color schemes\n    - No subplot letters/numbers\n    - No legend in some plots where it might be useful",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains 4 plots: a histogram of event codes, an LFP time series, a spike raster, and a basic trial data preview. The plots have essential elements like titles, axis labels, and appropriate scales. However, they lack additional formatting refinements like grid lines, legends (where applicable), or detailed annotation. Font sizes and figure dimensions are reasonable but not optimized. The plots are functional and clear for exploratory analysis but would need enhancement for publication. While serving their purpose for data exploration, they fall short of publication standards in terms of polish and detail.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains 4 plots: event histogram, LFP trace, spike raster, and trial data. The plots have essential elements like titles, axis labels, and clear data representation. The formatting is adequate with readable fonts and appropriate scales. However, they lack some professional touches like: grid lines where appropriate, consistent figure sizes, color schemes, legends for multiple traces, or detailed annotations. The figures serve their demonstrative purpose but would need refinement for publication.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains 4 distinct plots that effectively visualize different aspects of the data: 1) A histogram of TTL event codes, 2) An average LFP trace over 5 seconds, 3) A spike raster plot showing activity of 5 units over 10 seconds, and 4) Textual trial information (though not strictly a plot). These plots demonstrate varied data types (events, LFP, spikes, behavioral) and use appropriate visualization methods (histogram, time series, raster). Each plot serves a specific purpose in understanding the dataset.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains 4 distinct plots:\n    1. A histogram of TTL event codes\n    2. An average LFP trace over 5 seconds\n    3. A spike raster plot showing 5 units over 10 seconds\n    4. (No fourth actual plot, but trial data is shown in text format)\n    The plots are effective and show different aspects of the data (event markers, LFP signals, and spike timing), making good use of different visualization types (histogram, time series, raster).",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains 4 distinct plots that effectively demonstrate different aspects of the data:\n    1. TTL event codes histogram showing behavioral event markers\n    2. Average LFP trace across electrodes showing temporal dynamics\n    3. Spike raster plot showing activity of 5 units\n    4. Trial table information (though this is displayed as text, not a plot)\n    Each plot serves a different purpose and uses appropriate visualization types (histogram, time series, raster) to represent the neurophysiological and behavioral data. While the plots are effective, the total number falls in the range specified for score 6.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

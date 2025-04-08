@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 8.0,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook provides a good description of Dandiset 000673, including: 1) The full title \"Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons\", 2) A clear explanation that it contains electrophysiological recordings and behavioral data from the Sternberg task in epilepsy patients, 3) Information about the recording methods (depth electrodes and Behnke-Fried microwires), 4) Recording locations (medial temporal lobe and medial frontal cortex), 5) Lists all 44 assets in the dataset with their paths, and 6) Shows key metadata like institution (Cedars-Sinai) and lab (Rutishauser). However, it doesn't fully detail the data organization structure or provide comprehensive metadata descriptions.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook provides a thorough description of Dandiset 000673 in its introduction. It includes the title, states that it contains electrophysiological recordings and behavioral data from the Sternberg task in epilepsy patients, mentions the specific recording methods (depth electrodes and Behnke-Fried microwires), and specifies the anatomical regions (medial temporal lobe and medial frontal cortex). It lists the required packages for working with the data. The code then shows the complete file structure with 44 assets across multiple subjects and sessions. The NWB file exploration reveals additional metadata including institution (Cedars-Sinai) and lab (Rutishauser). However, it could be more explicit about the data organization principles and experimental design.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook provides a thorough description of Dandiset 000673 in its introductory section. It includes the title \"Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons\", explains that the dataset contains electrophysiological recordings and behavioral data from the Sternberg task, specifies the patient population (those with intractable epilepsy), describes the recording methodology (depth electrodes and Behnke-Fried microwires), and mentions the anatomical locations (medial temporal lobe and medial frontal cortex). The notebook also demonstrates the dataset's structure by listing all 44 assets and shows key metadata like institution (Cedars-Sinai) and lab (Rutishauser). However, it could be more detailed about the data organization within each NWB file and provide more specifics about the experimental protocol.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 7.666666666666667,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook shows successful loading of the dandiset using DandiAPIClient and demonstrates:\n    1. Loading the dandiset ID (000673)\n    2. Listing all assets (44 NWB files) with their paths\n    3. Loading a specific NWB file and extracting key metadata fields including:\n        - Session description\n        - Identifier\n        - Session start time\n        - Experiment description\n        - Institution\n        - Lab\n    However, it doesn't provide detailed descriptions of all available metadata fields or explore the complete metadata structure, missing some potential metadata categories.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates loading of Dandiset information in multiple ways. It uses DandiAPIClient to access the Dandiset (000673) and list all assets (44 NWB files). It then loads an individual NWB file and displays key metadata fields including session description, identifier, session start time, experiment description, institution, and lab information. The code executes successfully and the outputs are clearly shown. However, it doesn't provide detailed descriptions of all possible metadata fields or explain the complete metadata structure of the Dandiset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates strong metadata exploration capabilities. It successfully loads the dandiset using DandiAPIClient, displays the number and paths of all assets (44 files), loads a specific NWB file, and shows key metadata fields including session description, identifier, start time, experiment description, institution, and lab information. The code executes without major errors. However, it doesn't provide detailed descriptions of all possible metadata fields or demonstrate exhaustive metadata exploration capabilities.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates basic to intermediate asset handling capabilities. It successfully lists all available assets in the Dandiset using the DANDI API client (score >= 4). It then loads a specific NWB file (sub-1/sub-1_ses-1_ecephys+image.nwb) and accesses its metadata including session description, identifier, start time, experiment description, institution, and lab info (score >= 7). However, it doesn't explore multiple asset types or provide comprehensive metadata exploration across different assets. It focuses mainly on one NWB file and its specific data types (LFP, trials).",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates basic asset handling: it uses DandiAPIClient to connect to the dataset, lists all 44 assets with their paths (showing sub-X/ses-Y structure), and successfully loads one specific asset (sub-1/sub-1_ses-1_ecephys+image.nwb) using lindi and pynwb. It also retrieves basic metadata from the loaded asset (session description, identifier, start time, etc.). However, it doesn't explore multiple asset types or provide comprehensive metadata exploration across different assets.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates loading assets at multiple levels: 1) It successfully uses DandiAPIClient to list all assets in the dataset (44 NWB files), showing their paths. 2) It shows how to load a specific NWB file using lindi and pynwb libraries. 3) It successfully accesses and displays basic metadata from the loaded file (session description, identifier, start time, etc.). However, it doesn't explore multiple asset types (though all assets are NWB files) or provide comprehensive metadata exploration. The focus is more on working with the data within a single NWB file rather than asset handling itself.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates accessing multiple aspects of an NWB file: 1) It loads the file using lindi and pynwb libraries, 2) Shows basic metadata (session description, identifier, start time, etc.), 3) Accesses LFP data from acquisition, 4) Shows how to work with trial data from intervals, and 5) Explores multiple data structures (LFPs, trials, loads). However, it doesn't provide a comprehensive exploration of the full NWB hierarchy or show all available data components. The focus is on a few key elements rather than a complete structural overview.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates several key aspects of NWB file access and exploration: 1) It properly loads an NWB file using both lindi and pynwb, 2) Shows basic metadata like session description, identifier, and timestamps, 3) Accesses and visualizes multiple data structures including LFPs and trials, 4) Shows how to navigate different NWB components (acquisition, intervals). However, it doesn't provide a complete exploration of the NWB hierarchy or show all available data structures in the file. The exploration focuses on a few key components rather than providing a comprehensive overview.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates loading and accessing NWB file contents with both lindi and pynwb libraries. It shows key basic information (session description, identifier, start time, etc.), and explores multiple data structures including LFPs (acquisition), trials (intervals), and associated metadata. The code runs with only minor warnings and successfully accesses and visualizes different components of the NWB hierarchy. However, it doesn't provide a comprehensive exploration of all available NWB structures or show the complete hierarchical organization of the file.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates strong competency in loading and handling NWB data: 1) Successfully loads NWB file using both lindi and pynwb libraries, 2) Accesses basic metadata (session description, identifier, timestamps), 3) Shows how to load different data types including LFP recordings (acquisition), trial data (intervals), 4) Handles different data structures appropriately (time series for LFP, event data for trials, metadata fields), 5) Extracts and processes specific subsets of data (channel selection, time windowing). However, it doesn't demonstrate more advanced access techniques like lazy loading or complex queries, and some data types in the files may not be explored.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates loading multiple types of data from NWB files: it accesses LFP data (acquisition), trial data (intervals), and various metadata (session description, identifier, etc.). It properly handles different data types, showing how to access both time series data (LFPs) and event data (trials). The code runs with only minor warnings. However, it doesn't explore some of the more complex data structures that might be present in the NWB files (like units or processing modules) or demonstrate advanced access techniques like querying or filtering.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates solid data loading capabilities from NWB files. It successfully uses lindi and pynwb to load the file and access multiple data types including: basic metadata (session description, identifier, etc.), LFP data (with sampling rate and electrode info), and trial information (start/stop times and loads). The code runs with only minor warnings, and shows practical examples of accessing and visualizing each data type. However, it doesn't delve into more advanced data access techniques or comprehensively cover all available data types in the NWB file structure.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully demonstrates multiple visualization types (LFP data, trial structure, and trial loads) with proper labeling, axes, titles, and legends. The plots are clear and purposeful, showing different aspects of the data. Each visualization is accompanied by descriptive markdown explaining what is being shown. However, it doesn't reach the level of publication quality as the visualizations are relatively basic (no complex styling, minimal customization) and could benefit from more advanced techniques like subplots, statistical overlays, or interactive features.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple visualization types (LFP data, trial structure, trial loads) with proper formatting, labels, and titles. Each plot is well-explained in markdown cells. The code successfully creates clear visualizations using matplotlib/seaborn with appropriate axes labels, legends, and titles. The plots show different aspects of the data (time series for LFP, event plots for trials, and scatter/line plots for loads). However, it doesn't employ particularly advanced techniques or create publication-ready figures (no error bars, statistical analysis, or complex multi-panel figures). The visualizations are functional and clear but relatively basic.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple types of visualizations (LFP data, trial structure, and trial loads) from the NWB file with proper labeling, axes, titles, and legends. The plots are well-formatted using seaborn styling and include clear explanations in markdown. The visualizations cover different aspects of the data (electrophysiology signals, event timing, and behavioral parameters). However, the visualizations are relatively basic and don't employ advanced techniques like subplots, statistical overlays, or interactive features. The plots are saved to files but could benefit from more customization and optimization for publication standards.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains three plots: LFP data, trial structure, and trial loads. The plots have proper basic elements including titles, axis labels, and legends where appropriate. They use reasonable color choices (different colors for channels, red/blue for trial starts/stops, green for loads) and appropriate figure sizes. However, they lack some refinements that would make them publication-ready: no grid lines for better readability, no units in parentheses for axes labels where applicable, no error bars or confidence intervals where relevant, and relatively basic matplotlib styling. The plots are clear and professional but could be enhanced with more sophisticated formatting and additional context.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains three plots (LFP data, trial structure, and trial loads) that demonstrate good basic visualization practices:\n    - All plots have clear titles, axis labels, and appropriate scaling\n    - The LFP plot uses multiple channels with offset for clarity and includes a legend\n    - The trials plot uses distinct colors for start/stop times and includes a legend\n    - The loads plot uses appropriate markers and line style\n    However, they fall short of publication quality because:\n    - No consistent style guide across plots\n    - Limited customization of tick marks and grid lines\n    - Basic color schemes\n    - No error bars or statistical annotations\n    - Minimal attention to font sizes and spacing",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains 3 plots (LFP, trials, and loads) that demonstrate good basic visualization practices. The plots have proper axis labels, titles, and legends where appropriate. They use reasonable figure sizes and seaborn styling for better aesthetics. However, they could be improved to reach publication quality: the LFP plot lacks units on the y-axis, the trials plot could benefit from better visualization of overlapping events, and the loads plot could use gridlines and better marker sizes. The plots are clear and informative but not quite publication-ready.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 5.0,
+            "reps": [
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains exactly three plots that effectively visualize different aspects of the data: 1) LFP data showing voltage traces across multiple channels over time, 2) Trial structure showing start and stop times using event plots, and 3) Trial loads plotted against start times. Each plot demonstrates a distinct aspect of the dataset and uses appropriate visualization techniques (line plots, event plots, and scatter plots with lines). The plots are well-labeled with axes, titles, and when needed, legends. The accompanying markdown cells provide clear interpretations of each plot.",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains exactly three plots that effectively demonstrate different aspects of the data: 1) LFP data visualization showing electrical activity across multiple channels, 2) Trial structure plot showing start/stop times, and 3) Trial loads plot showing load values over time. Each plot serves a distinct purpose and provides meaningful insight into different aspects of the dataset. The plots are well-labeled with appropriate axes, titles, and legends. They also include appropriate visualizations for their respective data types (time series for LFP, event plot for trials, and scatter/line plot for loads).",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains exactly 3 plots that effectively show different aspects of the data:\n    1. LFP plot showing time series data for 5 channels\n    2. Trial structure plot showing start/stop times\n    3. Trial loads plot showing load values over time\n    Each plot serves a distinct purpose and effectively visualizes different aspects of the dataset: electrophysiological data (LFP), experimental structure (trials), and behavioral data (loads).",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

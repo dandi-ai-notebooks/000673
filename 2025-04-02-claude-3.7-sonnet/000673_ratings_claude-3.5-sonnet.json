@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 10.0,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a comprehensive description of DANDI:000673 including: 1) The ID and full title, 2) Purpose - studying human working memory and neural phase-amplitude coupling, 3) Detailed contents - electrophysiological recordings from human medial temporal lobe and frontal cortex during a Sternberg task, 4) Data organization - explains the NWB file structure, number of subjects (36), sessions (44), and types of data included (spike times, behavioral data, images), 5) Clear metadata about subjects and recordings, 6) Associated experimental design and task paradigm. The description flows logically from overview to specific details.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides an extensive description of DANDI:000673. It includes: 1) The Dandiset ID and title, 2) A clear description of the purpose (studying human working memory and neural phase-amplitude coupling), 3) Detailed information about the experimental setup (recordings from epilepsy patients with implanted electrodes), 4) Comprehensive metadata exploration showing file structure and contents, 5) Clear explanation of the data organization (44 assets from 36 subjects), and 6) Thorough description of the included data types (electrophysiological recordings, behavioral data, stimulus images). The notebook not only lists these elements but demonstrates them through code and visualizations, making the dataset structure and content very clear.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides an extremely comprehensive description of DANDI:000673. It includes the ID and title, explains that it contains electrophysiological recordings from human medial temporal lobe during a Sternberg working memory task, details the experimental setup (patients with epilepsy, depth electrodes), describes the data structure (NWB format, multiple subjects/sessions), shows the organization of files and assets, and provides extensive metadata including subject counts and file sizes. The description flows naturally from high-level overview to specific details about data organization and experimental protocol. The notebook also effectively demonstrates the contents through code examples that access and display the data structure.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 7.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads the dandiset using dandi.dandiapi and demonstrates several aspects of metadata handling: 1) It obtains basic metadata like ID, name, and description 2) It iterates through assets and organizes them into a dataframe showing subjects, sessions, and file sizes 3) The code executes without errors and the outputs clearly show the retrieved information. However, it doesn't fully explore all possible metadata fields or provide detailed descriptions of each field's meaning. The level of metadata exploration is solid but not exhaustive.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads the Dandiset using DandiAPIClient and demonstrates thorough metadata exploration. It retrieves and displays the Dandiset ID (000673), name, and description. It further explores the dataset structure by examining assets, creating a dataframe with subject and session information, and displaying meaningful statistics like total number of assets and unique subjects. The metadata access is well explained with context and purpose. However, it doesn't comprehensively describe all available metadata fields or provide detailed field descriptions.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates excellent handling of dandiset metadata loading. It uses DandiAPIClient to load the dataset, successfully retrieves the dandiset ID (000673), name, and description. It also effectively lists and analyzes the assets within the dataset, including creating a dataframe showing subjects, sessions, and file sizes. The code executes successfully and provides clear output. However, it doesn't fully explore all possible metadata fields or provide detailed descriptions of each field's meaning and purpose, which would be needed for a perfect score.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 9.0,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates comprehensive asset handling by: 1) Successfully connecting to DANDI API and listing all assets, 2) Creating a DataFrame with asset information including subject IDs, sessions, paths and sizes, 3) Loading a specific NWB file asset using lindi for streaming access, 4) Accessing and displaying asset metadata including subject info and experiment details, 5) Exploring contents of loaded NWB file including acquisition data, trials, neural units, and electrodes, 6) Working with multiple types of data within the assets including spike times, images, and behavioral data. The only minor limitation is that it focuses on one main asset type (NWB files) rather than exploring multiple different asset types.",
+                    "repnum": 0
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates excellent asset handling: it successfully loads the Dandiset using DandiAPIClient, lists all assets and creates a dataframe with asset information (subject IDs, sessions, paths, sizes). It then shows how to load a specific NWB file using lindi, access its metadata (subject info, session description), and demonstrates practical usage through data analysis. The notebook also effectively uses asset metadata to organize and filter the data. Multiple asset types (electrophysiology data, images) are explored with working examples. The only minor limitation is that it doesn't show loading multiple different NWB files for comparison.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates excellent asset handling: it successfully loads the Dandiset using DandiAPIClient, lists all assets, creates a dataframe with asset information including subject IDs, sessions, paths and sizes, prints summary statistics of assets, and then shows how to load and access specific NWB files using lindi. It explores the metadata of loaded assets in detail, including session descriptions, experiment details, and subject information. The notebook also demonstrates practical usage of the loaded assets by analyzing their contents. However, it doesn't extensively explore multiple asset types, focusing mainly on NWB files.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 10.0,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook demonstrates excellent NWB file handling, showing:\n    1. Successful loading using lindi and pynwb\n    2. Access to basic metadata (subject info, session description)\n    3. Detailed exploration of key NWB components (acquisition, trials, units, electrodes)\n    4. Proper navigation of the NWB hierarchy\n    5. Access to multiple data types (spike times, event timestamps, stimulus images)\n    6. Clear demonstration of relationships between different NWB components\n    7. Practical examples of data extraction and analysis from various NWB structures\n    8. Comprehensive overview of available data fields and their organization\n    The notebook serves as a thorough tutorial for working with NWB files from this Dandiset.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook demonstrates excellent handling of NWB files. It successfully loads an NWB file using lindi and pynwb, shows the basic file structure, and comprehensively explores multiple components including: acquisition data, trials information, neural units, electrodes, stimulus data, and temporal structure. It accesses and displays metadata (subject info, session description), explores the hierarchy of data structures, and demonstrates how to work with different data types (spikes, events, images). The code is well-documented and executes successfully, providing clear examples of how to navigate and extract information from complex NWB files.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook demonstrates excellent NWB file handling. It successfully loads an NWB file using lindi and pynwb, shows the basic file structure, and extensively explores multiple components including: acquisition data, trial information, neural unit data, and electrode information. It accesses and displays metadata (subject info, session description), explores the hierarchical structure, and shows how to navigate and extract data from various components (trials, units, electrodes, stimulus presentation). The code is well-documented and successfully executes, showing both high-level organization and detailed data access patterns.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 9.666666666666666,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates excellent data loading capabilities from NWB files. It shows:\n    1. Loading NWB file using lindi and pynwb\n    2. Accessing basic metadata (subject info, session description)\n    3. Exploring and loading acquisition data\n    4. Accessing trial information with multiple columns\n    5. Loading neural unit and electrode data\n    6. Handling different data types (spike times, images, event timestamps)\n    7. Accessing complex nested structures like indexed_images\n    8. Appropriate error handling and data validation\n    9. Loading data across multiple trials and conditions\n    However, it doesn't demonstrate some advanced techniques like chunked loading or memory optimization strategies.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook demonstrates comprehensive NWB data loading capabilities: 1) Uses lindi for efficient streaming access without full download, 2) Successfully loads and displays metadata, trial data, neural recordings, electrode information, and stimulus images, 3) Properly handles different data types including electrophysiology, behavioral data, and images, 4) Shows how to navigate complex NWB hierarchy by accessing acquisition, trials, units, and electrodes groups, 5) Includes error handling and proper data validation, 6) Demonstrates how to extract and work with timestamps, spike times, and other temporal data, 7) Shows how to access and visualize both raw data and derived measures",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook demonstrates comprehensive NWB data loading and handling. It shows: 1) How to load NWB files using lindi and pynwb libraries with proper error handling, 2) Access to multiple data types including trials, units, electrodes, and stimulus images, 3) Proper handling of different data structures (TimeSeries, Intervals, Units), 4) Navigation of complex hierarchical NWB structure, 5) Extraction and manipulation of both simple arrays and complex data objects, 6) Examples working with timestamps, spike data, electrode locations, and image data. The code runs successfully and includes proper error handling and data verification steps.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 8.333333333333334,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates multiple well-executed visualizations including: 1) electrode distribution bar plots, 2) spike count histograms, 3) raster plots with PSTH, 4) firing rate bar plots across task phases, 5) stimulus image displays, and 6) trial timeline visualizations. The plots have proper labels, titles, and grid lines where appropriate. The code includes helpful comments and functions for creating the visualizations. The visualizations effectively show different aspects of the NWB data (behavioral, neural, and experimental design). While comprehensive, some visualizations could be enhanced with more sophisticated techniques like confidence intervals or statistical annotations to reach publication quality.",
+                    "repnum": 0
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates excellent visualization capabilities across multiple data types with clear documentation:\n    - Creates behavioral data visualizations (response time boxplots)\n    - Shows electrode distribution bar plots\n    - Produces spike count histograms \n    - Generates detailed raster plots and PSTHs for neural activity\n    - Creates firing rate comparisons across task phases\n    - Shows stimulus image visualization\n    - Produces trial structure timeline plots\n    All visualizations have proper labels, titles, and formatting. Multiple plotting libraries are used (matplotlib, seaborn). The code is well-documented with clear explanations of what is being plotted. The only thing preventing a perfect 10 is that some visualizations could be more polished for publication standards.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook demonstrates comprehensive visualization capabilities across multiple data types from the NWB file including: behavioral data (response time boxplots), neural data (raster plots and PSTHs), electrode distributions (bar plots), spike count distributions (histograms), firing rate analyses (bar plots), trial structure timelines, and even stimulus images. The visualizations are well-formatted with proper axes labels, titles, and legends. The code includes error handling and data preprocessing. The plots effectively communicate different aspects of the data and are accompanied by explanatory text. However, some visualizations could benefit from additional aesthetic refinements and statistical annotations to reach true publication quality.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 8.0,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook contains multiple plots that are generally well-formatted with proper labels, titles, and axes. The plots include histograms, bar charts, raster plots, timelines, and image displays. Most plots use appropriate color schemes, grids, and legends where needed. They employ good sizing and subplot layouts. However, there are some minor issues: some axis labels could be more descriptive, some plots lack units, and a few could benefit from additional annotations. The plots are clear and professional but fall slightly short of publication-ready quality due to these small formatting inconsistencies.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook contains multiple well-formatted plots including boxplots, bar charts, raster plots, and trial timeline visualizations. The plots consistently use:\n    - Clear axis labels with units\n    - Informative titles\n    - Appropriate sizing and spacing\n    - Grid lines for readability\n    - Proper color schemes\n    - Legend where needed\n    - Good use of subplots\n\n    However, they fall short of perfect publication quality in a few areas:\n    - Some plots could benefit from more detailed captions\n    - Font sizes could be more consistent across plots\n    - Some plots have basic seaborn/matplotlib default styling\n    - A few plots have overlapping text labels",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook contains multiple plots that are generally well-executed. The plots include:\n    - Box plots for response time analysis with clear axes and titles\n    - Bar plots for electrode distribution with proper rotated labels\n    - Histograms for spike counts with grid lines and clear labeling\n    - Raster plots and PSTH combinations with proper formatting and dual y-axes\n    - Bar plots for firing rates with error bars and clear task phase labels\n    - Trial timeline visualization with event markers\n    \n    The plots consistently show:\n    - Clear titles\n    - Properly labeled axes\n    - Appropriate figure sizes\n    - Good use of color and markers\n    - Grid lines where helpful\n    - Readable fonts\n    \n    However, they fall short of full publication quality as some could benefit from:\n    - More consistent font sizes\n    - Better color schemes\n    - More detailed legends\n    - Higher resolution for image displays",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 9.666666666666666,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook includes multiple effective plots demonstrating various aspects of the data:\n    1. Boxplot of response times by memory load\n    2. Bar plot of electrodes by brain region\n    3. Histogram of spike counts per unit\n    4. Two raster plots with PSTH for neural responses\n    5. Bar plot of firing rates by task phase\n    6. Bar plot of firing rates by memory load\n    7. Grid of 4 sample stimulus images\n    8. Timeline plot of trial events\n    \n    In total, there are 8 distinct and effective visualizations using diverse plot types (boxplots, bar plots, histograms, raster plots, image displays, and timelines) to show different aspects of the behavioral, neural, and experimental data.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook contains multiple effective plots showing diverse aspects of the data:\n1. Bar plot of electrodes by brain region\n2. Histogram of spike counts per unit\n3. Raster plot + PSTH for probe stimulus\n4. Raster plot + PSTH for maintenance period\n5. Bar plot of firing rates by task phase\n6. Bar plot of firing rates by memory load\n7. Box plot of response times by memory load\n8. Display of 4 sample stimulus images\n9. Timeline plot of trial events\nAll plots are well-labeled, appropriate for their data types, and effectively demonstrate different aspects of the dataset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook includes multiple effective plots showing diverse aspects of the data: 1) Boxplot of response times by memory load, 2) Bar plot of electrodes by brain region, 3) Histogram of spike counts per unit, 4) Two raster plots with PSTH for neural activity, 5) Bar plot of firing rates by task phase, 6) Bar plot of firing rates by memory load, 7) Grid of 4 sample stimulus images, 8) Trial event timeline plot. These 8+ plots effectively use different visualization types (boxplots, bar plots, histograms, raster plots, PSTH, image displays, timelines) and demonstrate various aspects of the data (behavioral, neural, anatomical, and temporal).",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}
