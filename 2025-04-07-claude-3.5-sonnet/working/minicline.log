@@ -1,0 +1,1167 @@
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Let me start by getting information about Dandiset 000673 using the dandi-notebook-gen-tools command. This will help me understand what data I'm working with.
+
+Tool: execute_command
+Params: {'command': 'dandi-notebook-gen-tools dandiset-info 000673', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+dandi-notebook-gen-tools dandiset-info 000673
+================================
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+Total prompt tokens: 9546 + 0
+Total completion tokens: 104 + 0
+
+=========================================
+
+execute_command 'dandi-notebook-gen-tools dandiset-info 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 4
+Submitting completion request...
+Processing response...
+This is a fascinating dataset about working memory and phase-amplitude coupling in human hippocampal neurons. Now I need to get information about the assets (NWB files) available in this dataset.
+
+Tool: execute_command
+Params: {'command': 'dandi-notebook-gen-tools dandiset-assets 000673', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+dandi-notebook-gen-tools dandiset-assets 000673
+================================
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+Total prompt tokens: 20496 + 0
+Total completion tokens: 210 + 0
+
+=========================================
+
+execute_command 'dandi-notebook-gen-tools dandiset-assets 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 6
+Submitting completion request...
+Processing response...
+I see several NWB files available. Let's select sub-1_ses-1_ecephys+image.nwb to explore as it's one of the first sessions and has both ecephys and image data. I'll get detailed information about this file's contents using the nwb-file-info tool.
+
+The asset ID for this file is "65a7e913-45c7-48db-bf19-b9f5e910110a", so the download URL would be: https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+
+Tool: execute_command
+Params: {'command': 'dandi-notebook-gen-tools nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+dandi-notebook-gen-tools nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+================================
+{
+  "results": {
+    "usageString": "# This is how you would access data in this particular NWB file using lindi and pynwb.\n\n# Lindi and pynwb are Python libraries that can be installed using pip:\n# pip install lindi pynwb\n\n\nimport pynwb\nimport lindi\n\n# Load https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/\nf = lindi.LindiH5pyFile.from_lindi_file(\"https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json\")\nnwb = pynwb.NWBHDF5IO(file=f, mode='r').read()\n\nnwb.session_description # (str) SBCAT_ID: 1\nnwb.identifier # (str) sub-1_ses-1_P55CS\nnwb.session_start_time # (datetime) 2018-01-01T00:00:00.000000-08:00\nnwb.file_create_date # (datetime) 2025-01-20T00:00:00.000000-08:00, 2025-01-20T11:52:09.051525-08:00\nnwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00.000000-08:00\nnwb.experimenter # (List[str]) [\"Kyzar, Michael\"]\nnwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed in patients with intractable epilepsy implanted with depth electrodes and Behnke-Fried microwires in the human medial temporal lobe and medial frontal cortex.\nnwb.institution # (str) Cedars-Sinai Medical Center\nnwb.keywords # (List[str]) [\"single neuron, human, intracranial\"]\nnwb.protocol # (str) \nnwb.lab # (str) Rutishauser\nnwb.subject # (Subject)\nnwb.subject.age # (str) P43Y\nnwb.subject.age__reference # (str) birth\nnwb.subject.description # (str) Subject metadata\nnwb.subject.genotype # (str) \nnwb.subject.sex # (str) F\nnwb.subject.species # (str) Homo sapiens\nnwb.subject.subject_id # (str) 1\nnwb.subject.weight # (str) \nnwb.subject.date_of_birth # (datetime) \n\nLFPs = nwb.acquisition[\"LFPs\"] # (ElectricalSeries) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz\nLFPs.data # (h5py.Dataset) shape [550276, 70]; dtype <f8\nelectrodes = LFPs.electrodes # (DynamicTableRegion) num. electrodes: 70\n# This is a reference into the nwb.electrodes table and can be used in the same way\n# For example, electrode_ids = electrodes[\"id\"].data[:] # len(electrode_ids) == 70\n# And the other columns can be accessed in the same way\n# It's the same table, but a subset of the rows.\nLFPs.starting_time # 0.0000155 sec\nLFPs.rate # 400 Hz\n\nevents = nwb.acquisition[\"events\"] # (TimeSeries) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = Start of Experiment, 11 = Fixation Cross, 1 = Picture #1 Shown, 2 = Picture #2 Shown, 3 = Picture #3 Shown, 5 = Transition between each picture presentation, 6 = End of Encoding Sequence / Start of Maintenance Period, 7 = Probe Stimulus, 8 = Subject Response, 60 = End of Experiment \nevents.data # (h5py.Dataset) shape [982]; dtype |i1\nevents.timestamps # (h5py.Dataset) shape [982]; dtype <f8\n\ntrials = nwb.intervals[\"trials\"] # (TimeIntervals) Intervals for the Sternberg Task\ntrials[\"PicIDs_Encoding1\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc1 loads.\ntrials[\"PicIDs_Encoding2\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc2 loads.\ntrials[\"PicIDs_Encoding3\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc1 loads.\ntrials[\"PicIDs_Probe\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Probe loads.\ntrials[\"id\"] # (h5py.Dataset) shape [140]; dtype <i4 undefined\ntrials[\"loads\"] # (h5py.Dataset) shape [140]; dtype |u1 Encoding loads for each trial\ntrials[\"probe_in_out\"] # (h5py.Dataset) shape [140]; dtype |u1 Whether the probe image was held (1) or not held (0) in memory.\ntrials[\"response_accuracy\"] # (h5py.Dataset) shape [140]; dtype |u1 Whether the subject response was correct (1) or incorrect (0).\ntrials[\"start_time\"] # (h5py.Dataset) shape [140]; dtype <f8 Trial start times\ntrials[\"stop_time\"] # (h5py.Dataset) shape [140]; dtype <f8 Trial stop times\ntrials[\"timestamps_Encoding1\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #1 presentation\ntrials[\"timestamps_Encoding1_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #1 presentation\ntrials[\"timestamps_Encoding2\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #2 presentation\ntrials[\"timestamps_Encoding2_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #2 presentation\ntrials[\"timestamps_Encoding3\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #3 presentation\ntrials[\"timestamps_Encoding3_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #3 presentation\ntrials[\"timestamps_FixationCross\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of fixation cross\ntrials[\"timestamps_Maintenance\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of maintenance periods\ntrials[\"timestamps_Probe\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of probe onset\ntrials[\"timestamps_Response\"] # (h5py.Dataset) shape [140]; dtype <f8 Time stamps of button press\n\nStimulusPresentation = nwb.stimulus[\"StimulusPresentation\"] # (IndexSeries) Presentation order of the stimulus. Indexes 'StimulusTemplates'.\nStimulusPresentation.data # (h5py.Dataset) shape [560]; dtype <u4\nStimulusPresentation.indexed_images # Images\nfor k in StimulusPresentation.indexed_images.images.keys():\n    image = StimulusPresentation.indexed_images.images[k]\n    print(f'Image {k}: {image.data.shape})')\nStimulusPresentation.timestamps # (h5py.Dataset) shape [560]; dtype <f8\n\nelectrodes = nwb.electrodes # (DynamicTable)\nelectrodes.colnames # (Tuple[str]) (\"x\", \"y\", \"z\", \"location\", \"filtering\", \"group\", \"group_name\", \"origChannel\")\nelectrode_ids = electrodes[\"id\"].data[:] # len(electrode_ids) == 74 (number of electrodes is 74)\nelectrodes[\"x\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"y\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"z\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"location\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"filtering\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"group\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"group_name\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"origChannel\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\n\nunits = nwb.units # (Units)\nunits.colnames # (Tuple[str]) (\"spike_times\", \"electrodes\", \"clusterID_orig\", \"waveforms\", \"waveforms_mean_snr\", \"waveforms_peak_snr\", \"waveforms_isolation_distance\", \"waveforms_mean_proj_dist\")\nunit_ids = units[\"id\"].data # len(unit_ids) == 46 (number of units is 46)\nunit_index = 0 # Can range from 0 to 45\nunits[\"spike_times\"][unit_index] # (np.array) spike times for unit at index unit_index\nunits[\"electrodes\"].data # (np.ndarray) shape [46]; dtype <i4; single electrodes\nunits[\"clusterID_orig\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster IDs of units, which referneces the cluster ID used in the native dataset. Used for cross-referencing validating the exported dataset\nunit_index = 0 # Can range from 0 to 45\nunits[\"waveforms\"][unit_index] # (np.ndarray) vector of data for unit at index unit_index\nunits[\"waveforms_mean_snr\"].data # (np.ndarray) shape [46]; dtype <f8; Mean Signal-to-Noise Ratio (SNR) across all samples of the mean waveform.\nunits[\"waveforms_peak_snr\"].data # (np.ndarray) shape [46]; dtype <f8; Signal-to-Noise Ratio (SNR) of the mean signal amplitude.\nunits[\"waveforms_isolation_distance\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster Isolation distance, computed using all waveforms in the cluster.\nunits[\"waveforms_mean_proj_dist\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster Isolation distance, computed using all waveforms in the cluster.\n"
+  }
+}
+Total prompt tokens: 33215 + 0
+Total completion tokens: 473 + 0
+
+=========================================
+
+execute_command 'dandi-notebook-gen-tools nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "usageString": "# This is how you would access data in this particular NWB file using lindi and pynwb.\n\n# Lindi and pynwb are Python libraries that can be installed using pip:\n# pip install lindi pynwb\n\n\nimport pynwb\nimport lindi\n\n# Load https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/\nf = lindi.LindiH5pyFile.from_lindi_file(\"https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json\")\nnwb = pynwb.NWBHDF5IO(file=f, mode='r').read()\n\nnwb.session_description # (str) SBCAT_ID: 1\nnwb.identifier # (str) sub-1_ses-1_P55CS\nnwb.session_start_time # (datetime) 2018-01-01T00:00:00.000000-08:00\nnwb.file_create_date # (datetime) 2025-01-20T00:00:00.000000-08:00, 2025-01-20T11:52:09.051525-08:00\nnwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00.000000-08:00\nnwb.experimenter # (List[str]) [\"Kyzar, Michael\"]\nnwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed in patients with intractable epilepsy implanted with depth electrodes and Behnke-Fried microwires in the human medial temporal lobe and medial frontal cortex.\nnwb.institution # (str) Cedars-Sinai Medical Center\nnwb.keywords # (List[str]) [\"single neuron, human, intracranial\"]\nnwb.protocol # (str) \nnwb.lab # (str) Rutishauser\nnwb.subject # (Subject)\nnwb.subject.age # (str) P43Y\nnwb.subject.age__reference # (str) birth\nnwb.subject.description # (str) Subject metadata\nnwb.subject.genotype # (str) \nnwb.subject.sex # (str) F\nnwb.subject.species # (str) Homo sapiens\nnwb.subject.subject_id # (str) 1\nnwb.subject.weight # (str) \nnwb.subject.date_of_birth # (datetime) \n\nLFPs = nwb.acquisition[\"LFPs\"] # (ElectricalSeries) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz\nLFPs.data # (h5py.Dataset) shape [550276, 70]; dtype <f8\nelectrodes = LFPs.electrodes # (DynamicTableRegion) num. electrodes: 70\n# This is a reference into the nwb.electrodes table and can be used in the same way\n# For example, electrode_ids = electrodes[\"id\"].data[:] # len(electrode_ids) == 70\n# And the other columns can be accessed in the same way\n# It's the same table, but a subset of the rows.\nLFPs.starting_time # 0.0000155 sec\nLFPs.rate # 400 Hz\n\nevents = nwb.acquisition[\"events\"] # (TimeSeries) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = Start of Experiment, 11 = Fixation Cross, 1 = Picture #1 Shown, 2 = Picture #2 Shown, 3 = Picture #3 Shown, 5 = Transition between each picture presentation, 6 = End of Encoding Sequence / Start of Maintenance Period, 7 = Probe Stimulus, 8 = Subject Response, 60 = End of Experiment \nevents.data # (h5py.Dataset) shape [982]; dtype |i1\nevents.timestamps # (h5py.Dataset) shape [982]; dtype <f8\n\ntrials = nwb.intervals[\"trials\"] # (TimeIntervals) Intervals for the Sternberg Task\ntrials[\"PicIDs_Encoding1\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc1 loads.\ntrials[\"PicIDs_Encoding2\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc2 loads.\ntrials[\"PicIDs_Encoding3\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Enc1 loads.\ntrials[\"PicIDs_Probe\"] # (h5py.Dataset) shape [140]; dtype <u2 Picture ID for Probe loads.\ntrials[\"id\"] # (h5py.Dataset) shape [140]; dtype <i4 undefined\ntrials[\"loads\"] # (h5py.Dataset) shape [140]; dtype |u1 Encoding loads for each trial\ntrials[\"probe_in_out\"] # (h5py.Dataset) shape [140]; dtype |u1 Whether the probe image was held (1) or not held (0) in memory.\ntrials[\"response_accuracy\"] # (h5py.Dataset) shape [140]; dtype |u1 Whether the subject response was correct (1) or incorrect (0).\ntrials[\"start_time\"] # (h5py.Dataset) shape [140]; dtype <f8 Trial start times\ntrials[\"stop_time\"] # (h5py.Dataset) shape [140]; dtype <f8 Trial stop times\ntrials[\"timestamps_Encoding1\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #1 presentation\ntrials[\"timestamps_Encoding1_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #1 presentation\ntrials[\"timestamps_Encoding2\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #2 presentation\ntrials[\"timestamps_Encoding2_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #2 presentation\ntrials[\"timestamps_Encoding3\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of picture #3 presentation\ntrials[\"timestamps_Encoding3_end\"] # (h5py.Dataset) shape [140]; dtype <f8 End times of picture #3 presentation\ntrials[\"timestamps_FixationCross\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of fixation cross\ntrials[\"timestamps_Maintenance\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of maintenance periods\ntrials[\"timestamps_Probe\"] # (h5py.Dataset) shape [140]; dtype <f8 Start times of probe onset\ntrials[\"timestamps_Response\"] # (h5py.Dataset) shape [140]; dtype <f8 Time stamps of button press\n\nStimulusPresentation = nwb.stimulus[\"StimulusPresentation\"] # (IndexSeries) Presentation order of the stimulus. Indexes 'StimulusTemplates'.\nStimulusPresentation.data # (h5py.Dataset) shape [560]; dtype <u4\nStimulusPresentation.indexed_images # Images\nfor k in StimulusPresentation.indexed_images.images.keys():\n    image = StimulusPresentation.indexed_images.images[k]\n    print(f'Image {k}: {image.data.shape})')\nStimulusPresentation.timestamps # (h5py.Dataset) shape [560]; dtype <f8\n\nelectrodes = nwb.electrodes # (DynamicTable)\nelectrodes.colnames # (Tuple[str]) (\"x\", \"y\", \"z\", \"location\", \"filtering\", \"group\", \"group_name\", \"origChannel\")\nelectrode_ids = electrodes[\"id\"].data[:] # len(electrode_ids) == 74 (number of electrodes is 74)\nelectrodes[\"x\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"y\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"z\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\nelectrodes[\"location\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"filtering\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"group\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"group_name\"].data[:] # (np.ndarray) shape [74]; dtype |O; my description\nelectrodes[\"origChannel\"].data[:] # (np.ndarray) shape [74]; dtype <f8; my description\n\nunits = nwb.units # (Units)\nunits.colnames # (Tuple[str]) (\"spike_times\", \"electrodes\", \"clusterID_orig\", \"waveforms\", \"waveforms_mean_snr\", \"waveforms_peak_snr\", \"waveforms_isolation_distance\", \"waveforms_mean_proj_dist\")\nunit_ids = units[\"id\"].data # len(unit_ids) == 46 (number of units is 46)\nunit_index = 0 # Can range from 0 to 45\nunits[\"spike_times\"][unit_index] # (np.array) spike times for unit at index unit_index\nunits[\"electrodes\"].data # (np.ndarray) shape [46]; dtype <i4; single electrodes\nunits[\"clusterID_orig\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster IDs of units, which referneces the cluster ID used in the native dataset. Used for cross-referencing validating the exported dataset\nunit_index = 0 # Can range from 0 to 45\nunits[\"waveforms\"][unit_index] # (np.ndarray) vector of data for unit at index unit_index\nunits[\"waveforms_mean_snr\"].data # (np.ndarray) shape [46]; dtype <f8; Mean Signal-to-Noise Ratio (SNR) across all samples of the mean waveform.\nunits[\"waveforms_peak_snr\"].data # (np.ndarray) shape [46]; dtype <f8; Signal-to-Noise Ratio (SNR) of the mean signal amplitude.\nunits[\"waveforms_isolation_distance\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster Isolation distance, computed using all waveforms in the cluster.\nunits[\"waveforms_mean_proj_dist\"].data # (np.ndarray) shape [46]; dtype <f8; Cluster Isolation distance, computed using all waveforms in the cluster.\n"
+  }
+}
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 8
+Submitting completion request...
+Processing response...
+Let me create a tmp_scripts directory first to store our exploratory scripts and plots.
+
+Tool: execute_command
+Params: {'command': 'mkdir -p tmp_scripts', 'requires_approval': 'false'}
+================================
+Command to be executed
+mkdir -p tmp_scripts
+================================
+Total prompt tokens: 49313 + 0
+Total completion tokens: 538 + 0
+
+=========================================
+
+execute_command 'mkdir -p tmp_scripts' (requires approval):
+Command executed successfully
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 10
+Submitting completion request...
+Processing response...
+Now I'll create a script to explore some of the data, focusing first on the trial structure, behavioral performance, and basic neural activity patterns. Let's create a script that:
+1. Loads the data and plots trial information
+2. Shows behavioral performance across different memory loads
+3. Creates a raster plot of some example neuronal activity
+
+Tool: write_to_file
+Params: {'path': 'tmp_scripts/explore_data.py', 'content': '"""\nThis script explores the basic structure of the data from sub-1_ses-1, including:\n1. Trial structure and behavioral performance\n2. Example neural activity patterns\n"""\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pynwb\nimport lindi\nimport seaborn as sns\nfrom collections import Counter\n\n# Load the data\nf = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")\nnwb = pynwb.NWBHDF5IO(file=f, mode=\'r\').read()\n\n# Set up the figure with multiple subplots\nplt.figure(figsize=(15, 10))\n\n# Plot 1: Distribution of memory loads\nplt.subplot(2, 2, 1)\nloads = nwb.intervals["trials"]["loads"][:]\nload_counts = Counter(loads)\nsns.barplot(x=list(load_counts.keys()), y=list(load_counts.values()))\nplt.title(\'Distribution of Memory Loads\')\nplt.xlabel(\'Memory Load\')\nplt.ylabel(\'Number of Trials\')\n\n# Plot 2: Behavioral performance by memory load\nplt.subplot(2, 2, 2)\naccuracy_by_load = {}\nfor load in np.unique(loads):\n    load_mask = loads == load\n    accuracies = nwb.intervals["trials"]["response_accuracy"][:][load_mask]\n    accuracy_by_load[load] = np.mean(accuracies) * 100\n\nsns.barplot(x=list(accuracy_by_load.keys()), y=list(accuracy_by_load.values()))\nplt.title(\'Accuracy by Memory Load\')\nplt.xlabel(\'Memory Load\')\nplt.ylabel(\'Accuracy (%)\')\n\n# Plot 3: Example neural activity\nplt.subplot(2, 2, (3, 4))\n# Get spike times for first 5 units during first 60 seconds\nunit_ids = nwb.units["id"].data[:5]  # Get first 5 units\nplt.title(\'Example Neural Activity (First 5 Units, First 60s)\')\nplt.xlabel(\'Time (s)\')\nplt.ylabel(\'Unit #\')\n\nfor i, unit_id in enumerate(unit_ids):\n    spike_times = nwb.units["spike_times"][i]\n    spike_times = spike_times[spike_times < 60]  # First 60 seconds\n    plt.plot(spike_times, np.ones_like(spike_times) * i, \'|\', markersize=4)\n\nplt.tight_layout()\nplt.savefig(\'tmp_scripts/basic_analysis.png\', dpi=300, bbox_inches=\'tight\')\nplt.close()\n\n# Also save some key statistics to a text file\nwith open(\'tmp_scripts/analysis_stats.txt\', \'w\') as f:\n    f.write(f"Total number of trials: {len(loads)}\\n")\n    f.write(f"Number of units: {len(nwb.units[\'id\'].data)}\\n")\n    f.write("\\nAccuracy by memory load:\\n")\n    for load, acc in accuracy_by_load.items():\n        f.write(f"Load {load}: {acc:.1f}%\\n")'}
+================================
+Content to be written to tmp_scripts/explore_data.py:
+"""
+This script explores the basic structure of the data from sub-1_ses-1, including:
+1. Trial structure and behavioral performance
+2. Example neural activity patterns
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pynwb
+import lindi
+import seaborn as sns
+from collections import Counter
+
+# Load the data
+f = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")
+nwb = pynwb.NWBHDF5IO(file=f, mode='r').read()
+
+# Set up the figure with multiple subplots
+plt.figure(figsize=(15, 10))
+
+# Plot 1: Distribution of memory loads
+plt.subplot(2, 2, 1)
+loads = nwb.intervals["trials"]["loads"][:]
+load_counts = Counter(loads)
+sns.barplot(x=list(load_counts.keys()), y=list(load_counts.values()))
+plt.title('Distribution of Memory Loads')
+plt.xlabel('Memory Load')
+plt.ylabel('Number of Trials')
+
+# Plot 2: Behavioral performance by memory load
+plt.subplot(2, 2, 2)
+accuracy_by_load = {}
+for load in np.unique(loads):
+    load_mask = loads == load
+    accuracies = nwb.intervals["trials"]["response_accuracy"][:][load_mask]
+    accuracy_by_load[load] = np.mean(accuracies) * 100
+
+sns.barplot(x=list(accuracy_by_load.keys()), y=list(accuracy_by_load.values()))
+plt.title('Accuracy by Memory Load')
+plt.xlabel('Memory Load')
+plt.ylabel('Accuracy (%)')
+
+# Plot 3: Example neural activity
+plt.subplot(2, 2, (3, 4))
+# Get spike times for first 5 units during first 60 seconds
+unit_ids = nwb.units["id"].data[:5]  # Get first 5 units
+plt.title('Example Neural Activity (First 5 Units, First 60s)')
+plt.xlabel('Time (s)')
+plt.ylabel('Unit #')
+
+for i, unit_id in enumerate(unit_ids):
+    spike_times = nwb.units["spike_times"][i]
+    spike_times = spike_times[spike_times < 60]  # First 60 seconds
+    plt.plot(spike_times, np.ones_like(spike_times) * i, '|', markersize=4)
+
+plt.tight_layout()
+plt.savefig('tmp_scripts/basic_analysis.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+# Also save some key statistics to a text file
+with open('tmp_scripts/analysis_stats.txt', 'w') as f:
+    f.write(f"Total number of trials: {len(loads)}\n")
+    f.write(f"Number of units: {len(nwb.units['id'].data)}\n")
+    f.write("\nAccuracy by memory load:\n")
+    for load, acc in accuracy_by_load.items():
+        f.write(f"Load {load}: {acc:.1f}%\n")
+================================
+Total prompt tokens: 65570 + 0
+Total completion tokens: 1494 + 0
+
+=========================================
+
+write_to_file for 'tmp_scripts/explore_data.py':
+Successfully wrote 2332 characters to tmp_scripts/explore_data.py
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 12
+Submitting completion request...
+Processing response...
+Now let's execute this script to generate our plots and analysis. I'm setting a longer timeout since it needs to download and process the NWB file.
+
+Tool: execute_command
+Params: {'command': 'python tmp_scripts/explore_data.py', 'requires_approval': 'false', 'timeout': '180'}
+================================
+Command to be executed
+python tmp_scripts/explore_data.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+Total prompt tokens: 82902 + 0
+Total completion tokens: 1585 + 0
+
+=========================================
+
+execute_command 'python tmp_scripts/explore_data.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 14
+Submitting completion request...
+Processing response...
+Let's examine the results of our analysis. First, I'll check the plot using read_image, and then look at the statistics from the text file.
+
+Tool: read_image
+Params: {'path': 'tmp_scripts/basic_analysis.png', 'instructions': 'Please describe the key features visible in the plots, particularly focusing on the distribution of memory loads, accuracy patterns, and neural activity structure. Note any clear trends or patterns that would be important to highlight in the notebook.'}
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 100724 + 1651
+Total completion tokens: 1706 + 200
+
+=========================================
+
+read_image for 'tmp_scripts/basic_analysis.png':
+The image for tmp_scripts/basic_analysis.png is attached. AI description: Here's a concise description of the key features in the plots:
+
+1. Distribution of Memory Loads:
+- Equal distribution between memory loads 1 and 3
+- Approximately 70 trials for each load condition
+
+2. Accuracy by Memory Load:
+- High accuracy for both conditions
+- Memory load 1: ~100% accuracy
+- Memory load 3: ~93% accuracy
+- Clear decrease in accuracy with increased memory load
+
+3. Neural Activity Structure:
+- Shows first 5 units over 60 seconds
+- Sparse, discrete firing patterns
+- Different units (0-4) show distinct temporal patterns
+- Activity appears as discrete events rather than continuous signals
+- No obvious regular periodicity in the firing patterns
+
+Key trend: There's a clear trade-off between memory load and performance accuracy, with higher memory loads resulting in slightly decreased accuracy while maintaining overall high performance levels.
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 16
+Submitting completion request...
+Processing response...
+Let me check the analysis statistics before creating a script to explore the LFP data.
+
+Tool: read_file
+Params: {'path': 'tmp_scripts/analysis_stats.txt'}
+Total prompt tokens: 120569 + 1651
+Total completion tokens: 1762 + 200
+
+=========================================
+
+read_file for 'tmp_scripts/analysis_stats.txt':
+Total number of trials: 140
+Number of units: 46
+
+Accuracy by memory load:
+Load 1: 100.0%
+Load 3: 94.3%
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 18
+Submitting completion request...
+Processing response...
+Now let's create a script to explore the LFP data and phase-amplitude coupling, since this is a key focus of the study. We'll:
+1. Plot example LFP traces
+2. Create a time-frequency analysis around specific trial events
+3. Examine the relationship between neural activity and task phases
+
+Tool: write_to_file
+Params: {'path': 'tmp_scripts/explore_lfp.py', 'content': '"""\nThis script explores the LFP data from sub-1_ses-1, focusing on:\n1. Example LFP traces\n2. Time-frequency analysis around trial events\n3. Neural activity during different task phases\n"""\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pynwb\nimport lindi\nfrom scipy import signal\nimport seaborn as sns\n\n# Load the data\nf = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")\nnwb = pynwb.NWBHDF5IO(file=f, mode=\'r\').read()\n\n# Get LFP data\nlfps = nwb.acquisition["LFPs"]\nsampling_rate = lfps.rate  # 400 Hz\n\n# Get example trial timestamps\ntrials = nwb.intervals["trials"]\nexample_trial_idx = 0  # Look at first trial\nmaintenance_start = trials["timestamps_Maintenance"][example_trial_idx]\nprobe_start = trials["timestamps_Probe"][example_trial_idx]\n\n# Calculate time window around maintenance period\nwindow_before = 1.0  # seconds before maintenance\nwindow_after = 2.0   # seconds after maintenance\n\n# Convert times to indices\nstart_idx = int((maintenance_start - window_before) * sampling_rate)\nend_idx = int((maintenance_start + window_after) * sampling_rate)\n\n# Get LFP data for this window (first few channels)\nn_channels = 4\ntime = np.arange(start_idx, end_idx) / sampling_rate\nlfp_data = lfps.data[start_idx:end_idx, :n_channels]\n\n# Create figure\nplt.figure(figsize=(15, 10))\n\n# Plot 1: Raw LFP traces\nplt.subplot(2, 1, 1)\nfor i in range(n_channels):\n    # Offset each channel for visibility\n    offset = i * np.std(lfp_data[:, 0]) * 3\n    plt.plot(time - maintenance_start, lfp_data[:, i] + offset, label=f\'Channel {i+1}\')\n\nplt.axvline(x=0, color=\'r\', linestyle=\'--\', label=\'Maintenance Start\')\nplt.axvline(x=probe_start - maintenance_start, color=\'g\', linestyle=\'--\', label=\'Probe Start\')\nplt.xlabel(\'Time relative to maintenance period (s)\')\nplt.ylabel(\'LFP amplitude (μV)\')\nplt.title(\'Example LFP Traces During Working Memory Maintenance\')\nplt.legend()\n\n# Plot 2: Time-frequency analysis for first channel\nplt.subplot(2, 1, 2)\nf, t, Sxx = signal.spectrogram(lfp_data[:, 0], fs=sampling_rate, \n                              nperseg=int(sampling_rate/2),\n                              noverlap=int(sampling_rate/4))\nplt.pcolormesh(t - window_before, f, 10 * np.log10(Sxx), shading=\'gouraud\')\nplt.axvline(x=0, color=\'r\', linestyle=\'--\', label=\'Maintenance Start\')\nplt.axvline(x=probe_start - maintenance_start, color=\'g\', linestyle=\'--\', label=\'Probe Start\')\nplt.ylabel(\'Frequency (Hz)\')\nplt.xlabel(\'Time relative to maintenance period (s)\')\nplt.title(\'Time-Frequency Analysis of LFP During Working Memory Maintenance\')\nplt.colorbar(label=\'Power (dB)\')\nplt.ylim(0, 100)  # Focus on frequencies up to 100 Hz\n\nplt.tight_layout()\nplt.savefig(\'tmp_scripts/lfp_analysis.png\', dpi=300, bbox_inches=\'tight\')\nplt.close()\n\n# Save some statistics about the LFP data\nwith open(\'tmp_scripts/lfp_stats.txt\', \'w\') as f:\n    f.write(f"Number of LFP channels: {lfps.data.shape[1]}\\n")\n    f.write(f"LFP sampling rate: {sampling_rate} Hz\\n")\n    f.write(f"Total recording duration: {lfps.data.shape[0]/sampling_rate:.2f} seconds\\n")\n    \n    # Calculate mean amplitude by channel\n    mean_amplitudes = np.mean(np.abs(lfps.data[:1000, :]), axis=0)  # First 1000 samples\n    f.write("\\nMean amplitude by channel (first 1000 samples, first 5 channels):\\n")\n    for i, amp in enumerate(mean_amplitudes[:5]):\n        f.write(f"Channel {i+1}: {amp:.2f} μV\\n")'}
+================================
+Content to be written to tmp_scripts/explore_lfp.py:
+"""
+This script explores the LFP data from sub-1_ses-1, focusing on:
+1. Example LFP traces
+2. Time-frequency analysis around trial events
+3. Neural activity during different task phases
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pynwb
+import lindi
+from scipy import signal
+import seaborn as sns
+
+# Load the data
+f = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")
+nwb = pynwb.NWBHDF5IO(file=f, mode='r').read()
+
+# Get LFP data
+lfps = nwb.acquisition["LFPs"]
+sampling_rate = lfps.rate  # 400 Hz
+
+# Get example trial timestamps
+trials = nwb.intervals["trials"]
+example_trial_idx = 0  # Look at first trial
+maintenance_start = trials["timestamps_Maintenance"][example_trial_idx]
+probe_start = trials["timestamps_Probe"][example_trial_idx]
+
+# Calculate time window around maintenance period
+window_before = 1.0  # seconds before maintenance
+window_after = 2.0   # seconds after maintenance
+
+# Convert times to indices
+start_idx = int((maintenance_start - window_before) * sampling_rate)
+end_idx = int((maintenance_start + window_after) * sampling_rate)
+
+# Get LFP data for this window (first few channels)
+n_channels = 4
+time = np.arange(start_idx, end_idx) / sampling_rate
+lfp_data = lfps.data[start_idx:end_idx, :n_channels]
+
+# Create figure
+plt.figure(figsize=(15, 10))
+
+# Plot 1: Raw LFP traces
+plt.subplot(2, 1, 1)
+for i in range(n_channels):
+    # Offset each channel for visibility
+    offset = i * np.std(lfp_data[:, 0]) * 3
+    plt.plot(time - maintenance_start, lfp_data[:, i] + offset, label=f'Channel {i+1}')
+
+plt.axvline(x=0, color='r', linestyle='--', label='Maintenance Start')
+plt.axvline(x=probe_start - maintenance_start, color='g', linestyle='--', label='Probe Start')
+plt.xlabel('Time relative to maintenance period (s)')
+plt.ylabel('LFP amplitude (μV)')
+plt.title('Example LFP Traces During Working Memory Maintenance')
+plt.legend()
+
+# Plot 2: Time-frequency analysis for first channel
+plt.subplot(2, 1, 2)
+f, t, Sxx = signal.spectrogram(lfp_data[:, 0], fs=sampling_rate, 
+                              nperseg=int(sampling_rate/2),
+                              noverlap=int(sampling_rate/4))
+plt.pcolormesh(t - window_before, f, 10 * np.log10(Sxx), shading='gouraud')
+plt.axvline(x=0, color='r', linestyle='--', label='Maintenance Start')
+plt.axvline(x=probe_start - maintenance_start, color='g', linestyle='--', label='Probe Start')
+plt.ylabel('Frequency (Hz)')
+plt.xlabel('Time relative to maintenance period (s)')
+plt.title('Time-Frequency Analysis of LFP During Working Memory Maintenance')
+plt.colorbar(label='Power (dB)')
+plt.ylim(0, 100)  # Focus on frequencies up to 100 Hz
+
+plt.tight_layout()
+plt.savefig('tmp_scripts/lfp_analysis.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+# Save some statistics about the LFP data
+with open('tmp_scripts/lfp_stats.txt', 'w') as f:
+    f.write(f"Number of LFP channels: {lfps.data.shape[1]}\n")
+    f.write(f"LFP sampling rate: {sampling_rate} Hz\n")
+    f.write(f"Total recording duration: {lfps.data.shape[0]/sampling_rate:.2f} seconds\n")
+    
+    # Calculate mean amplitude by channel
+    mean_amplitudes = np.mean(np.abs(lfps.data[:1000, :]), axis=0)  # First 1000 samples
+    f.write("\nMean amplitude by channel (first 1000 samples, first 5 channels):\n")
+    for i, amp in enumerate(mean_amplitudes[:5]):
+        f.write(f"Channel {i+1}: {amp:.2f} μV\n")
+================================
+Total prompt tokens: 140632 + 1651
+Total completion tokens: 3100 + 200
+
+=========================================
+
+write_to_file for 'tmp_scripts/explore_lfp.py':
+Successfully wrote 3451 characters to tmp_scripts/explore_lfp.py
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 20
+Submitting completion request...
+Processing response...
+Let's run this script to analyze the LFP data. Since we're loading and processing a large dataset, I'll set a generous timeout.
+
+Tool: execute_command
+Params: {'command': 'python tmp_scripts/explore_lfp.py', 'requires_approval': 'false', 'timeout': '180'}
+================================
+Command to be executed
+python tmp_scripts/explore_lfp.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+Total prompt tokens: 162187 + 1651
+Total completion tokens: 3193 + 200
+
+=========================================
+
+execute_command 'python tmp_scripts/explore_lfp.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 22
+Submitting completion request...
+Processing response...
+Let me examine both the LFP analysis plot and stats before creating the notebook. First, let's look at the LFP visualization.
+
+Tool: read_image
+Params: {'path': 'tmp_scripts/lfp_analysis.png', 'instructions': 'Please describe the key features in both the raw LFP traces and the time-frequency analysis, focusing on any patterns around the maintenance period and probe presentation. Look for evidence of oscillatory activity and power changes across different frequency bands.'}
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 184270 + 3306
+Total completion tokens: 3317 + 417
+
+=========================================
+
+read_image for 'tmp_scripts/lfp_analysis.png':
+The image for tmp_scripts/lfp_analysis.png is attached. AI description: Here's a concise analysis of the LFP traces and time-frequency data:
+
+Raw LFP Traces:
+- Four distinct channels showing different amplitude patterns
+- Channel 4 (red) shows highest amplitude fluctuations (~40-60 µV)
+- Notable increase in activity across channels near the probe start time
+- Maintenance period (after red dashed line) shows relatively sustained oscillatory activity
+
+Time-Frequency Analysis:
+- Strong power in lower frequencies (0-20 Hz) throughout the recording
+- Moderate power in theta/alpha range (5-15 Hz) during maintenance period
+- Less power in higher frequencies (60-100 Hz)
+- Clear temporal dynamics with power fluctuations across frequencies
+- Slight increase in broadband power around maintenance start (red dashed line)
+- Generally consistent spectral pattern during maintenance period
+
+The data suggests prominent low-frequency oscillations with dynamic modulation during the working memory task, particularly during the maintenance period.
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 24
+Submitting completion request...
+Processing response...
+Let me check the LFP statistics before creating the notebook.
+
+Tool: read_file
+Params: {'path': 'tmp_scripts/lfp_stats.txt'}
+Total prompt tokens: 208439 + 3306
+Total completion tokens: 3372 + 417
+
+=========================================
+
+read_file for 'tmp_scripts/lfp_stats.txt':
+Number of LFP channels: 70
+LFP sampling rate: 400.0 Hz
+Total recording duration: 1375.69 seconds
+
+Mean amplitude by channel (first 1000 samples, first 5 channels):
+Channel 1: 8.91 μV
+Channel 2: 16.54 μV
+Channel 3: 11.36 μV
+Channel 4: 10.92 μV
+Channel 5: 5.45 μV
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 26
+Submitting completion request...
+Processing response...
+Now that we have explored the data and generated informative visualizations, I'll create the Jupytext notebook that guides researchers through exploring and analyzing this dataset. The notebook will include:
+1. Introduction to the dataset and its significance
+2. Code to load and explore the data structure
+3. Analysis of behavioral performance
+4. Visualization of neural activity
+5. LFP analysis during working memory maintenance
+
+Tool: write_to_file
+Params: {'path': 'notebook.py', 'content': '# %% [markdown]\n# # Analysis of Human Hippocampal Neurons During Working Memory\n# \n# **Warning**: This notebook was generated using dandi-notebook-gen and has not been fully verified. Please be cautious when interpreting the code or results.\n#\n# ## Dataset Overview\n#\n# This notebook explores Dandiset 000673: "Data for: Control of working memory by phase–amplitude coupling of human hippocampal neurons". The dataset contains electrophysiological recordings and behavioral data from patients with intracranial electrodes performing a Sternberg working memory task.\n#\n# **Key Features:**\n# - Recordings from human medial temporal and frontal lobe\n# - Single neuron activity and local field potentials (LFPs)\n# - Working memory task with varying memory loads\n# - Focus on theta-gamma phase-amplitude coupling\n#\n# ## Required Packages\n#\n# To run this notebook, you\'ll need the following packages installed:\n# - pynwb\n# - lindi\n# - numpy\n# - matplotlib\n# - seaborn\n# - scipy\n\n# %%\n# Import required packages\nimport pynwb\nimport lindi\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy import signal\nfrom collections import Counter\n\n# Set up plotting style\nsns.set_theme()\n\n# %% [markdown]\n# ## Loading the Dataset\n# \n# First, let\'s use the DANDI API to list all assets in the dataset and then load our example subject\'s data.\n\n# %%\n# List all assets in the dataset\nfrom dandi.dandiapi import DandiAPIClient\nclient = DandiAPIClient()\ndandiset = client.get_dandiset("000673")\nassets = list(dandiset.get_assets())\n\nprint(f"Total number of NWB files: {len(assets)}")\nprint("\\nFirst few files:")\nfor asset in assets[:5]:\n    print(f"- {asset.path}")\n\n# %%\n# Load the first subject\'s data\nf = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")\nnwb = pynwb.NWBHDF5IO(file=f, mode=\'r\').read()\n\nprint("\\nDataset Information:")\nprint(f"Subject ID: {nwb.subject.subject_id}")\nprint(f"Session Start: {nwb.session_start_time}")\nprint(f"Experiment Description: {nwb.experiment_description}")\n\n# %% [markdown]\n# ## Behavioral Analysis\n# \n# The experiment used a Sternberg working memory task where participants had to remember either 1 or 3 images. Let\'s analyze the behavioral performance across different memory loads.\n\n# %%\n# Get trial information\ntrials = nwb.intervals["trials"]\nloads = trials["loads"][:]\naccuracy = trials["response_accuracy"][:]\n\n# Plot distribution of memory loads\nplt.figure(figsize=(10, 4))\nplt.subplot(1, 2, 1)\nload_counts = Counter(loads)\nsns.barplot(x=list(load_counts.keys()), y=list(load_counts.values()))\nplt.title(\'Distribution of Memory Loads\')\nplt.xlabel(\'Memory Load\')\nplt.ylabel(\'Number of Trials\')\n\n# Plot accuracy by memory load\nplt.subplot(1, 2, 2)\naccuracy_by_load = {}\nfor load in np.unique(loads):\n    load_mask = loads == load\n    accuracies = accuracy[load_mask]\n    accuracy_by_load[load] = np.mean(accuracies) * 100\n\nsns.barplot(x=list(accuracy_by_load.keys()), y=list(accuracy_by_load.values()))\nplt.title(\'Accuracy by Memory Load\')\nplt.xlabel(\'Memory Load\')\nplt.ylabel(\'Accuracy (%)\')\nplt.tight_layout()\n\nprint("\\nBehavioral Performance Summary:")\nfor load, acc in accuracy_by_load.items():\n    print(f"Memory Load {load}: {acc:.1f}% accuracy")\n\n# %% [markdown]\n# ## Neural Activity Analysis\n#\n# The dataset contains both single-unit recordings and local field potentials (LFPs). Let\'s examine both types of neural activity:\n# 1. Single unit spike patterns\n# 2. LFP activity during working memory maintenance\n\n# %%\n# Plot example neural activity for first few units\nunit_ids = nwb.units["id"].data[:5]  # Get first 5 units\nplt.figure(figsize=(12, 4))\nplt.title(\'Example Neural Activity (First 5 Units, First 60s)\')\nplt.xlabel(\'Time (s)\')\nplt.ylabel(\'Unit #\')\n\nfor i, unit_id in enumerate(unit_ids):\n    spike_times = nwb.units["spike_times"][i]\n    spike_times = spike_times[spike_times < 60]  # First 60 seconds\n    plt.plot(spike_times, np.ones_like(spike_times) * i, \'|\', markersize=4)\n\nplt.tight_layout()\n\n# %% [markdown]\n# ## LFP Analysis During Working Memory\n#\n# Now let\'s examine the LFP activity during the working memory maintenance period. We\'ll look at:\n# 1. Raw LFP traces from multiple channels\n# 2. Time-frequency analysis to examine oscillatory patterns\n\n# %%\n# Get LFP data\nlfps = nwb.acquisition["LFPs"]\nsampling_rate = lfps.rate\n\n# Get example trial timestamps\nexample_trial_idx = 0  # Look at first trial\nmaintenance_start = trials["timestamps_Maintenance"][example_trial_idx]\nprobe_start = trials["timestamps_Probe"][example_trial_idx]\n\n# Calculate time window\nwindow_before = 1.0  # seconds before maintenance\nwindow_after = 2.0   # seconds after maintenance\n\n# Convert times to indices\nstart_idx = int((maintenance_start - window_before) * sampling_rate)\nend_idx = int((maintenance_start + window_after) * sampling_rate)\n\n# Get LFP data for this window (first few channels)\nn_channels = 4\ntime = np.arange(start_idx, end_idx) / sampling_rate\nlfp_data = lfps.data[start_idx:end_idx, :n_channels]\n\n# Create figure\nplt.figure(figsize=(12, 8))\n\n# Plot raw LFP traces\nplt.subplot(2, 1, 1)\nfor i in range(n_channels):\n    offset = i * np.std(lfp_data[:, 0]) * 3\n    plt.plot(time - maintenance_start, lfp_data[:, i] + offset, label=f\'Channel {i+1}\')\n\nplt.axvline(x=0, color=\'r\', linestyle=\'--\', label=\'Maintenance Start\')\nplt.axvline(x=probe_start - maintenance_start, color=\'g\', linestyle=\'--\', label=\'Probe Start\')\nplt.xlabel(\'Time relative to maintenance period (s)\')\nplt.ylabel(\'LFP amplitude (μV)\')\nplt.title(\'Example LFP Traces During Working Memory Maintenance\')\nplt.legend()\n\n# Time-frequency analysis\nplt.subplot(2, 1, 2)\nf, t, Sxx = signal.spectrogram(lfp_data[:, 0], fs=sampling_rate, \n                              nperseg=int(sampling_rate/2),\n                              noverlap=int(sampling_rate/4))\nplt.pcolormesh(t - window_before, f, 10 * np.log10(Sxx), shading=\'gouraud\')\nplt.axvline(x=0, color=\'r\', linestyle=\'--\', label=\'Maintenance Start\')\nplt.axvline(x=probe_start - maintenance_start, color=\'g\', linestyle=\'--\', label=\'Probe Start\')\nplt.ylabel(\'Frequency (Hz)\')\nplt.xlabel(\'Time relative to maintenance period (s)\')\nplt.title(\'Time-Frequency Analysis of LFP During Working Memory Maintenance\')\nplt.colorbar(label=\'Power (dB)\')\nplt.ylim(0, 100)\nplt.tight_layout()\n\n# Print some LFP information\nprint("\\nLFP Recording Information:")\nprint(f"Number of LFP channels: {lfps.data.shape[1]}")\nprint(f"Sampling rate: {sampling_rate} Hz")\nprint(f"Recording duration: {lfps.data.shape[0]/sampling_rate:.2f} seconds")\n\n# %% [markdown]\n# ## Summary\n#\n# This notebook demonstrated how to:\n# 1. Load and access data from this human intracranial recording dataset\n# 2. Analyze behavioral performance in the working memory task\n# 3. Visualize single-unit neural activity\n# 4. Examine LFP patterns during working memory maintenance\n#\n# Key observations:\n# - The dataset contains recordings from multiple subjects performing a Sternberg working memory task\n# - Behavioral performance shows high accuracy with a slight decrease for higher memory loads\n# - Neural data includes both single-unit activity and LFP recordings\n# - LFP recordings show distinct oscillatory patterns during working memory maintenance\n#\n# For more detailed analysis methods and the complete study findings, please refer to the associated paper and the code repository at: https://github.com/rutishauserlab/SBCAT-release-NWB'}
+================================
+Content to be written to notebook.py:
+# %% [markdown]
+# # Analysis of Human Hippocampal Neurons During Working Memory
+# 
+# **Warning**: This notebook was generated using dandi-notebook-gen and has not been fully verified. Please be cautious when interpreting the code or results.
+#
+# ## Dataset Overview
+#
+# This notebook explores Dandiset 000673: "Data for: Control of working memory by phase–amplitude coupling of human hippocampal neurons". The dataset contains electrophysiological recordings and behavioral data from patients with intracranial electrodes performing a Sternberg working memory task.
+#
+# **Key Features:**
+# - Recordings from human medial temporal and frontal lobe
+# - Single neuron activity and local field potentials (LFPs)
+# - Working memory task with varying memory loads
+# - Focus on theta-gamma phase-amplitude coupling
+#
+# ## Required Packages
+#
+# To run this notebook, you'll need the following packages installed:
+# - pynwb
+# - lindi
+# - numpy
+# - matplotlib
+# - seaborn
+# - scipy
+
+# %%
+# Import required packages
+import pynwb
+import lindi
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import signal
+from collections import Counter
+
+# Set up plotting style
+sns.set_theme()
+
+# %% [markdown]
+# ## Loading the Dataset
+# 
+# First, let's use the DANDI API to list all assets in the dataset and then load our example subject's data.
+
+# %%
+# List all assets in the dataset
+from dandi.dandiapi import DandiAPIClient
+client = DandiAPIClient()
+dandiset = client.get_dandiset("000673")
+assets = list(dandiset.get_assets())
+
+print(f"Total number of NWB files: {len(assets)}")
+print("\nFirst few files:")
+for asset in assets[:5]:
+    print(f"- {asset.path}")
+
+# %%
+# Load the first subject's data
+f = lindi.LindiH5pyFile.from_lindi_file("https://lindi.neurosift.org/dandi/dandisets/000673/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/nwb.lindi.json")
+nwb = pynwb.NWBHDF5IO(file=f, mode='r').read()
+
+print("\nDataset Information:")
+print(f"Subject ID: {nwb.subject.subject_id}")
+print(f"Session Start: {nwb.session_start_time}")
+print(f"Experiment Description: {nwb.experiment_description}")
+
+# %% [markdown]
+# ## Behavioral Analysis
+# 
+# The experiment used a Sternberg working memory task where participants had to remember either 1 or 3 images. Let's analyze the behavioral performance across different memory loads.
+
+# %%
+# Get trial information
+trials = nwb.intervals["trials"]
+loads = trials["loads"][:]
+accuracy = trials["response_accuracy"][:]
+
+# Plot distribution of memory loads
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+load_counts = Counter(loads)
+sns.barplot(x=list(load_counts.keys()), y=list(load_counts.values()))
+plt.title('Distribution of Memory Loads')
+plt.xlabel('Memory Load')
+plt.ylabel('Number of Trials')
+
+# Plot accuracy by memory load
+plt.subplot(1, 2, 2)
+accuracy_by_load = {}
+for load in np.unique(loads):
+    load_mask = loads == load
+    accuracies = accuracy[load_mask]
+    accuracy_by_load[load] = np.mean(accuracies) * 100
+
+sns.barplot(x=list(accuracy_by_load.keys()), y=list(accuracy_by_load.values()))
+plt.title('Accuracy by Memory Load')
+plt.xlabel('Memory Load')
+plt.ylabel('Accuracy (%)')
+plt.tight_layout()
+
+print("\nBehavioral Performance Summary:")
+for load, acc in accuracy_by_load.items():
+    print(f"Memory Load {load}: {acc:.1f}% accuracy")
+
+# %% [markdown]
+# ## Neural Activity Analysis
+#
+# The dataset contains both single-unit recordings and local field potentials (LFPs). Let's examine both types of neural activity:
+# 1. Single unit spike patterns
+# 2. LFP activity during working memory maintenance
+
+# %%
+# Plot example neural activity for first few units
+unit_ids = nwb.units["id"].data[:5]  # Get first 5 units
+plt.figure(figsize=(12, 4))
+plt.title('Example Neural Activity (First 5 Units, First 60s)')
+plt.xlabel('Time (s)')
+plt.ylabel('Unit #')
+
+for i, unit_id in enumerate(unit_ids):
+    spike_times = nwb.units["spike_times"][i]
+    spike_times = spike_times[spike_times < 60]  # First 60 seconds
+    plt.plot(spike_times, np.ones_like(spike_times) * i, '|', markersize=4)
+
+plt.tight_layout()
+
+# %% [markdown]
+# ## LFP Analysis During Working Memory
+#
+# Now let's examine the LFP activity during the working memory maintenance period. We'll look at:
+# 1. Raw LFP traces from multiple channels
+# 2. Time-frequency analysis to examine oscillatory patterns
+
+# %%
+# Get LFP data
+lfps = nwb.acquisition["LFPs"]
+sampling_rate = lfps.rate
+
+# Get example trial timestamps
+example_trial_idx = 0  # Look at first trial
+maintenance_start = trials["timestamps_Maintenance"][example_trial_idx]
+probe_start = trials["timestamps_Probe"][example_trial_idx]
+
+# Calculate time window
+window_before = 1.0  # seconds before maintenance
+window_after = 2.0   # seconds after maintenance
+
+# Convert times to indices
+start_idx = int((maintenance_start - window_before) * sampling_rate)
+end_idx = int((maintenance_start + window_after) * sampling_rate)
+
+# Get LFP data for this window (first few channels)
+n_channels = 4
+time = np.arange(start_idx, end_idx) / sampling_rate
+lfp_data = lfps.data[start_idx:end_idx, :n_channels]
+
+# Create figure
+plt.figure(figsize=(12, 8))
+
+# Plot raw LFP traces
+plt.subplot(2, 1, 1)
+for i in range(n_channels):
+    offset = i * np.std(lfp_data[:, 0]) * 3
+    plt.plot(time - maintenance_start, lfp_data[:, i] + offset, label=f'Channel {i+1}')
+
+plt.axvline(x=0, color='r', linestyle='--', label='Maintenance Start')
+plt.axvline(x=probe_start - maintenance_start, color='g', linestyle='--', label='Probe Start')
+plt.xlabel('Time relative to maintenance period (s)')
+plt.ylabel('LFP amplitude (μV)')
+plt.title('Example LFP Traces During Working Memory Maintenance')
+plt.legend()
+
+# Time-frequency analysis
+plt.subplot(2, 1, 2)
+f, t, Sxx = signal.spectrogram(lfp_data[:, 0], fs=sampling_rate, 
+                              nperseg=int(sampling_rate/2),
+                              noverlap=int(sampling_rate/4))
+plt.pcolormesh(t - window_before, f, 10 * np.log10(Sxx), shading='gouraud')
+plt.axvline(x=0, color='r', linestyle='--', label='Maintenance Start')
+plt.axvline(x=probe_start - maintenance_start, color='g', linestyle='--', label='Probe Start')
+plt.ylabel('Frequency (Hz)')
+plt.xlabel('Time relative to maintenance period (s)')
+plt.title('Time-Frequency Analysis of LFP During Working Memory Maintenance')
+plt.colorbar(label='Power (dB)')
+plt.ylim(0, 100)
+plt.tight_layout()
+
+# Print some LFP information
+print("\nLFP Recording Information:")
+print(f"Number of LFP channels: {lfps.data.shape[1]}")
+print(f"Sampling rate: {sampling_rate} Hz")
+print(f"Recording duration: {lfps.data.shape[0]/sampling_rate:.2f} seconds")
+
+# %% [markdown]
+# ## Summary
+#
+# This notebook demonstrated how to:
+# 1. Load and access data from this human intracranial recording dataset
+# 2. Analyze behavioral performance in the working memory task
+# 3. Visualize single-unit neural activity
+# 4. Examine LFP patterns during working memory maintenance
+#
+# Key observations:
+# - The dataset contains recordings from multiple subjects performing a Sternberg working memory task
+# - Behavioral performance shows high accuracy with a slight decrease for higher memory loads
+# - Neural data includes both single-unit activity and LFP recordings
+# - LFP recordings show distinct oscillatory patterns during working memory maintenance
+#
+# For more detailed analysis methods and the complete study findings, please refer to the associated paper and the code repository at: https://github.com/rutishauserlab/SBCAT-release-NWB
+================================
+Total prompt tokens: 232933 + 3306
+Total completion tokens: 5847 + 417
+
+=========================================
+
+write_to_file for 'notebook.py':
+Successfully wrote 7486 characters to notebook.py
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 28
+Submitting completion request...
+Processing response...
+Now I'll convert the Jupytext notebook to ipynb format and execute it to ensure it runs without errors.
+
+Tool: execute_command
+Params: {'command': 'jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb', 'requires_approval': 'false', 'timeout': '600'}
+================================
+Command to be executed
+jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb
+================================
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+Total prompt tokens: 260068 + 3306
+Total completion tokens: 5941 + 417
+
+=========================================
+
+execute_command 'jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb' (requires approval):
+Command executed successfully
+STDOUT:
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+
+STDERR:
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+
+=========================================
+
+Using model: anthropic/claude-3.5-sonnet
+Num. messages in conversation: 30
+Submitting completion request...
+Processing response...
+The notebook has been successfully created, converted to .ipynb format, and executed without errors. Let me verify that all the required components are included and working properly by presenting this as a completion.
+
+Tool: attempt_completion
+Params: {'result': "I have created a comprehensive Jupyter notebook that guides researchers through exploring and analyzing Dandiset 000673. The notebook includes:\n\n1. A clear introduction to the dataset and its significance in studying human hippocampal neurons during working memory tasks\n2. Code to load and explore the dataset structure using the DANDI API\n3. Analysis of behavioral performance across different memory loads\n4. Visualization of single-unit neural activity\n5. LFP analysis during working memory maintenance periods\n6. Detailed explanatory markdown cells throughout\n\nThe notebook has been:\n- Written in Jupytext format (notebook.py)\n- Successfully converted to notebook.ipynb\n- Executed without errors\n- Includes appropriate warnings about AI generation\n\nThe notebook provides a solid foundation for researchers to:\n- Understand the dataset's structure and content\n- Load and work with the NWB files\n- Visualize both behavioral and neural data\n- Perform basic analyses of working memory maintenance\n\nAll code cells execute successfully, producing informative visualizations and analyses that help researchers get started with this dataset."}
+I have created a comprehensive Jupyter notebook that guides researchers through exploring and analyzing Dandiset 000673. The notebook includes:
+
+1. A clear introduction to the dataset and its significance in studying human hippocampal neurons during working memory tasks
+2. Code to load and explore the dataset structure using the DANDI API
+3. Analysis of behavioral performance across different memory loads
+4. Visualization of single-unit neural activity
+5. LFP analysis during working memory maintenance periods
+6. Detailed explanatory markdown cells throughout
+
+The notebook has been:
+- Written in Jupytext format (notebook.py)
+- Successfully converted to notebook.ipynb
+- Executed without errors
+- Includes appropriate warnings about AI generation
+
+The notebook provides a solid foundation for researchers to:
+- Understand the dataset's structure and content
+- Load and work with the NWB files
+- Visualize both behavioral and neural data
+- Perform basic analyses of working memory maintenance
+
+All code cells execute successfully, producing informative visualizations and analyses that help researchers get started with this dataset.
+Total prompt tokens: 287551 + 3306
+Total completion tokens: 6244 + 417
+

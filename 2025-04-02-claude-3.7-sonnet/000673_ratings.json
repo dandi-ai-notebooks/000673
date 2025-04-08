@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 9.666666666666666,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a comprehensive description of the Dandiset, including its purpose, contents, and data organization, as well as the structure and metadata. It loads and explores the data, examines the behavioral task design, and analyzes neural activity. It also describes the task, including image stimuli and trial structure/timing. The notebook serves as a good introduction to the dataset.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a comprehensive description of the Dandiset, including its ID, title, purpose, contents (electrophysiological recordings, Sternberg working memory task data), data structure (NWB files), and key metadata fields (subject, session, electrode location). It also shows example images and data structure of the files. It does an excellent job of explaining the dataset's background and organization, making it clear and accessible. The notebook contains title, ID, purpose, contents and data organization.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides a comprehensive description of the dandiset including its purpose, contents, and key metadata. It includes the ID, title, a detailed description of the experiment, and explains data organization within the NWB files including information about trials, units, and electrodes. Therefore, the notebook provided detailed insights into the Dandiset.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook loads the Dandiset and extracts the ID, name, and description. It prints these to the console, demonstrating that the Dandiset is loaded and its metadata is accessible. I'm choosing a score of 6 because it successfully loads and displays basic metadata fields. The code executes without errors and loads essential metadata like ID, name, and a truncated description.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset ID, name, and description, displaying them in a user-friendly manner. It demonstrates the retrieval and presentation of several key metadata fields, indicating a successful, albeit not exhaustive, exploration. Therefore, the notebook should be rated a 6.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset ID, name, and description, printing these to the console. This qualifies for a score of 6 as it loads and displays basic metadata fields.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 6.333333333333333,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates how to load and explore assets of the Dandiset in several steps:\n1. Lists available assets from the Dandiset.\n2. Shows how to load a specific NWB file from an asset.\n3. Demonstrates how to access its metadata, acquisition data, trial information, neural unit information, and electrode information.\nThere are also examples of how to explore stimulus images used in the task.\nOverall, the notebook comprehensively handles asset loading, and metadata access. The notebook contains some issues with warnings, though. But these have no impact on the goal.",
+                    "repnum": 0
+                },
+                {
+                    "score": 1.0,
+                    "thinking": "The notebook does not contain any code or text relating to the loading or management of assets of the Dandiset. The entire notebook is a set of questions asking for a summarization. Therefore, it receives a score of 1.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook begins by loading Dandiset metadata and listing available assets. It demonstrates how to access basic Dandiset information such as ID, name, and description, and proceeds to load, explore, and analyze a specific NWB file from the Dandiset. The notebook successfully lists available assets, retrieves and uses metadata, and demonstrates how to load specific assets from the Dandiset while providing context regarding the data structure and its relation to the experiment. It could be improved by exploring all of the multiple assets.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 7.333333333333333,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook shows how to load an NWB file from DANDI, explores the basic structure of the file including acquisition data, trials, neural units, and electrodes. It iterates through the contents and displays the structure with basic properties such as data shape. The notebook also demonstrates accessing specific components such as spike trains from units and locations of electrodes.\n    Therefore, it goes beyond simply opening the file and explores multiple data structures within. However it is not super comprehensive, as some data structures might be missed.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook includes code that successfully loads and displays basic information from an NWB file, including image series and event timelines. It also includes a visualization of neural activity over time. However, it could benefit from more detailed explanations and comprehensive data structure exploration. Overall, the notebook provides a good starting point for understanding how to interact with NWB files.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook demonstrates how to download and open an NWB file from the DANDI archive, showing the basic file structure, how to access contents, and explore multiple data structures. This covers loading, reading, and navigating the NWB file, justifying a high score.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 5.333333333333333,
+            "reps": [
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook provides some basic information about NWB files and the Dandi Archive. It attempts to load and visualize data from an NWB file. However, the data loading portion of the notebook has issues (e.g., missing dandiset_id, syntax errors, etc.) and fails to load data without modifications. Therefore, the notebook only demonstrates a rudimentary loading and handling of data from an NWB file in the Dandi Archive.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads and explores NWB files, demonstrating how to access different data types (e.g., spike times, trial information, electrode locations, stimulus images). It uses `lindi` for streaming access of the NWB file. The code accesses multiple data elements and handles different data types appropriately. It also provides examples of exploring complex data structures like trials and units. Thus, a score of 8 is warranted.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook loads an NWB file from the DANDI archive, and then proceeds to demonstrate how to access many useful data types from it including: acquisition data, trial information, neural unit information, and electrode information. This corresponds to level 6. It also loads the stimulus images, and handles the various timestamps associated with different events. The use of lindi is not fully required, hence it does not reach higher levels.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates several visualization techniques for different data types stored in the NWB file, including behavioral data (response times), electrode locations, neural activity (spike counts, raster plots, firing rates), and stimulus images. The visualizations are generally clear and well-labeled. However, they do not create publication-quality plots but are very well done.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates multiple visualization types for various data, including behavioral data, neural activity, electrode locations, and example images. The plots are generally clear, well-labeled with titles and axes labels, and are accompanied by descriptive text that aid in interpretation. The notebook does not explore advanced visualization techniques or customization that might be expected for publication-quality figures. The figures are comprehensive and the code is well-documented. The notebook provides a good balance, making it accessible for beginners and informative enough for those wanting to delve deeper into the dataset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook provides several examples of visualizing data extracted from the NWB file. It plots electrode locations, spike counts, raster plots and PSTHs, firing rates, stimulus images, and trial timelines. The visualizations are mostly clear and labeled, effectively conveying the data's characteristics. The notebook could be improved with more advanced visualization techniques and more comprehensive summaries, but overall, it is well done. The quality of visualization is high, with clear labeling and informative plots. The notebook covers different neural data types, like spike times and firing rates.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains several plots including boxplots, histograms, bar charts, raster plots and image displays. Almost all plots have appropriate labels and titles. Formatting is generally good, making them readable. The plots are not necessarily publication-ready, but they are clear and informative. However, the plots are somewhat basic in style and formatting - they do not reach the advanced level expected for a publication. Minor style choices might need tweaking for publication but all plots are fully understandable.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The plots throughout the notebook are generally well-formatted and readable. They include appropriate labels and titles. Some plots, like the raster plots, do not have y axis labels explaining what each trial represents. Overall the plots are informative and improve overall comprehensibility.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains a good variety of plots, including box plots, bar charts, histograms, raster plots and a trial timeline. The plots are generally well-formatted, readable, and have appropriate labels. The code includes commands such as `plt.ylabel`, `plt.title`, and `plt.xlabel` that contribute to the informativeness and readability of the generated plots. The plot of trial events is somewhat basic, but still conveys the information. Overall, the plots are clear and provide useful information for understanding the dataset and the performed analyses.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 9.666666666666666,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook contains the following plots:\n1. Boxplot of response time by memory load.\n2. Bar plot of the number of electrodes by brain region.\n3. Histogram of spike counts per unit.\n4. Raster plot of neural response to probe stimulus and PSTH.\n5. Raster plot of neural activity during maintenance period and PSTH.\n6. Bar plot of unit firing rate by task phase.\n7. Bar plot of unit firing rate by memory load.\n8. Sample stimulus images.\n9. Timeline of trial events.\n\nThat's nine plots total. All plots are effective.\n\nTherefore, a score of 10.",
+                    "repnum": 0
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook includes 10 effective plots. These plots visualize various aspects of the data, including the response time by memory load, number of electrodes by brain region, spike counts per unit, neural responses to probe stimuli and during maintenance, firing rate by task phase and memory load, sample stimulus images, and a timeline of trial events. The plots provide a comprehensive visualization of the dataset and the analyses performed.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "There are 9 plots included: Response Time by Memory Load (boxplot), Electrode distribution by Brain Region (bar plot), Spike count histogram (histogram), unit response to probe stimulus raster and PSTH, unit activity during maintenance raster and PSTH, unit firing rate by task phase (bar plot), unit firing rate by memory load (bar plot), sample stimulus images (imshow), Task event timeline (line plot). All plots visualize different data aspects with appropriate methods.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

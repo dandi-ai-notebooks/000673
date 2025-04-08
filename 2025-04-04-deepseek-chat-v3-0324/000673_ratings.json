@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 5.333333333333333,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook includes the Dandiset ID and title, provides a brief overview of its contents (electrophysiological recordings from medial temporal lobe and medial frontal cortex during a Sternberg working memory task), and describes the data format (NWB). It also mentions the presence of spikes and LFPs and the task details. Therefore, it provides more than just basic information but not a fully detailed description of the data organization, reaching a fair description.",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook provides the DANDIset ID and title. In the introduction, the notebook includes an overview of the dataset, including the type of recordings, task performed and data format. Therefore it includes the title, ID, and a brief overview of the dandiset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook provides the Dandiset ID and title, a brief overview of the data (electrophysiological recordings, working memory task), and mentions some key features. This aligns with level 5 of the rubric.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook loads the Dandiset and retrieves basic metadata fields such as session description, identifier, and subject information. The code executes without significant errors and successfully displays the information. Therefore a score between 6 and 7 is appropriate. I am selecting score 6 because the metadata fields are not thoroughly explored.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook loads the Dandiset using the DandiAPIClient, retrieves the Dandiset ID (\"000673\"), and lists the assets within it. It prints the number of assets found, which indicates that basic metadata loading is successful. The notebook also accesses and prints basic file info, like session description, identifier, and subject info. Thus it displays basic metadata fields.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset and retrieves the assets. It displays basic information such as session description, identifier, and subject info. The notebook adequately demonstrates how to load and display several key metadata fields including access to subject specifics, even though other more advanced or comprehensive aspects about metadata fields are not explicitly discussed thoroughly. Therefore, the notebook demonstrates loading and displaying of basic metadata fields",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook initializes a DandiAPIClient, retrieves a specific dandiset (\"000673\"), and lists the assets within that dandiset. It then loads a specific asset by its URL. This demonstrates how to load assets of the Dandiset with example code. Therefore, a score of 6 is appropriate.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the assets in the Dandiset. It first lists the available assets and then proceeds to load a specific asset (NWB file) for further analysis. The NWB file can be seen as an asset of a specific type relevant to this dandiset. The notebook also shows how to retrieve basic metadata like session description and subject info from the loaded NWB file. Therefore, the score is higher than just listing assets, it involves loading and accessing basic information contained within the asset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully connects to the DANDI archive, lists the available assets in the Dandiset, loads a specific NWB file, and accesses its metadata. This demonstrates loading specific assets and accessing asset metadata. The notebook also explores multiple asset types (LFP, Spikes, Behavioral Data) with examples. Therefore, the notebook demonstrates comprehensive asset handling and loading assets of the Dandiset. It loads an NWB file, showing how to access its data. The loading and access of spike and LFP data is part of working with the loaded asset. Hence it fulfills the 'Demonstrates loading specific assets' criteria as well as 'Shows how to access asset metadata.' In addition it explores multiple asset types. Thus, the score should be 8.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads an NWB file from the DANDI archive. It then prints information such as session description, identifier, and subject info, demonstrating how to access basic information. Code is shown loading the data, and multiple NWB data structures are explored, like LFP data, spike times and behavioral data, extracting info from the epochs",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads an NWB file from a URL, prints session information and subject metadata, retrieves LFP data, plots sample LFP traces, accesses spike data, creates a raster plot, and analyzes behavioral data. The notebook accesses and visualizes fundamental NWB components, including LFP, spike times, and trial information. The code clearly shows how to load an NWB file, access basic data components, and visualize the data in a meaningful manner. Demonstrating access to LFP, spike, and trial data are all accesses to different NWB data structures. The notebook demonstrated accessing basic NWB components and explores multiple NWB data structures. Thus I rated it an 7.0",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully opens an NWB file, demonstrates accessing basic NWB components like session description, identifier, subject info, LFP data, spike times, and trial metrics. It explores multiple NWB data structures, providing a demonstration of NWB file structure and key data components. Therefore, the notebook deserves a score of 7 since it does a comprehensive exploration of NWB data structures.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the NWB file using lindi and pynwb libraries. It then demonstrates how to access different data elements such as session description, subject information, LFP data, spike times, trial information, memory loads and accuracy data. It handles different data types appropriately by plotting LFP data and creating raster plots for spike data and bar plots for accuracy. Thus, the notebook shows how to access multiple data elements successfully from the NWB file. The code runs successfully without significant errors.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads data from the NWB file, including LFP data, spike data, and trial information. It demonstrates how to access multiple data elements and handles time series, spike times, and behavioral metrics. Therefore, it does a good job of demonstrating how to load data. The notebook also shows how to list assets, which is a plus. However, it does not use advanced data access techniques. The handling of complex data structures could be enhanced by describing the structure as well.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads and explores data from an NWB file within the Dandiset. It demonstrates loading basic session information, LFP data, spike data, and behavioral data. It shows how to access multiple data elements, such as LFP data from different channels, spike times for a specific unit, and behavioral metrics for different memory loads. Includes visualizations of each data type. It handles numerical data, lists, and string appropriately.\n    The notebook can further demonstrate more complex data structures.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates how to load an NWB file from a DANDI dataset and visualize data from it. It visualizes LFP data, spike data, and behavioral data like accuracy by memory load. The plots generated are understandable, labeled adequately, and showcase different datatypes from the NWB file. Each section progresses logically, building upon previous steps. There aren't advanced visualization techniques used, so a higher score is not warranted, but the notebook succeeds in showing ways to visualize multiple data types. However there are a couple flaws. In the behavioral analysis plot, only load 1 and 3 were plotted, as opposed to all three loads. Additionally, it only looks at one single neuron from the unit IDs, so it is not comprehensive.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook effectively demonstrates how to visualize data from an NWB file within the Dandiset. It covers LFP traces, spike rasters, and behavioral data (accuracy by memory load). The plots are adequately labeled, using titles and axis labels and legends. Thus, while they aren't \"publication quality,\" they are clear and informative. The absence of more advanced visualization techniques keeps it from a higher score.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads an NWB file from the DANDI archive and proceeds to visualize LFP data as traces, spike data as a raster plot, and behavioral data as a bar graph. The visualizations include labels and titles which makes them easy to understand. However, there could be some room for improvement, such as adding error bars to the behavioral figure and customizing colors.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains three plots. The LFP traces plot is generally readable with labeled axes and a legend. The spike raster plot is also relatively clear. The behavior analysis plot showing accuracy by memory load lacks the bar for \"Memory Load 2,\" which is a significant omission. Overall, the plots are reasonably well-formatted and labeled, but not of professional quality due to minor issues. They are however, more than just basic plots with formatting issues.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook includes three plots: LFP traces, a spike raster plot, and a bar plot of accuracy by memory load. The plots are readable and have basic labels. The LFP plot includes a legend and axis labels. The raster plot shows spike times relative to a probe event across trials and includes appropriate axis labeling. Similarly, the accuracy plot depicts accuracy for different memory loads, with the x-axis representing memory load and the y-axis representing accuracy. The plots are clear and informative but lack the polish of publication-quality figures.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook provides three plots visualizing LFP traces, spike rasters, and behavioral accuracy. The plots are generally readable and have axis labels and titles. More detailed formatting (e.g., adjusting marker size in the raster plot, a legend on the accuracy plot, and ensuring consistent sizing across figures) would improve clarity and presentation, but they are sufficient for basic data examination. Load levels for only labels 1 and 3 appear to be available, load level 2 is missing from the last plot.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 5.0,
+            "reps": [
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook includes three different plots:\n1.  Sample LFP Traces\n2.  Spike Raster for Unit 0\n3.  Accuracy by Memory Load\n\nAll three plots show different aspects of the data (LFP, Spike Times, and Behavioral metrics).",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains one plot of LFP traces, one spike raster plot, and one accuracy plot illustrating behavioural performance. All three plots are effective visualizations of different aspects of the neural data. Thus, the notebook contains three effective plots, warranting a score of 5.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains three plots:\n1. LFP traces\n2. Spike Raster\n3. Accuracy by memory load.\n\nEach plot provides a different view of the data (LFP, Spikes, Behavior). Therefore, the notebook contains three effective plots demonstrating data variety.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

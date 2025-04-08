@@ -1,0 +1,10 @@
+Number of LFP channels: 70
+LFP sampling rate: 400.0 Hz
+Total recording duration: 1375.69 seconds
+
+Mean amplitude by channel (first 1000 samples, first 5 channels):
+Channel 1: 8.91 μV
+Channel 2: 16.54 μV
+Channel 3: 11.36 μV
+Channel 4: 10.92 μV
+Channel 5: 5.45 μV
