@@ -1,0 +1,13 @@
+session_description: SBCAT_ID: 1
+identifier: sub-1_ses-1_P55CS
+session_start_time: 2018-01-01 00:00:00-08:00
+subject ID: 1, species: Homo sapiens, sex: F, age: P43Y
+keywords: ['single neuron, human, intracranial']
+LFP data shape: (550276, 70)
+LFP rate: 400.0
+Events count: 982
+Stimulus presentations: 560
+Stimulus template image keys: ['image_101', 'image_102', 'image_103', 'image_104', 'image_105'] ... (only first 5 shown)
+Number of units: 46
+Electrodes table columns: ('x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel')
+Number of electrodes: 74
