@@ -1,0 +1,2654 @@
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+The first step is to retrieve the Dandiset metadata using the provided CLI tool command:
+
+```bash
+python tools_cli.py dandiset-info 000673
+```
+
+This will give us information about the Dandiset's title, description, and metadata, which will help with authoring the introduction markdown section of the notebook.
+
+I will pass this command using the execute_command tool.
+
+Since this command is non-destructive and only retrieves information, requires_approval can be set to false.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-info 000673', 'requires_approval': 'false', 'timeout': '120'}
+================================
+Command to be executed
+python tools_cli.py dandiset-info 000673
+================================
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+Total prompt tokens: 7360 + 0
+Total completion tokens: 146 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-info 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 4
+Submitting completion request...
+Processing response...
+I now have the Dandiset metadata: 
+- **Title:** Control of working memory by phase–amplitude coupling of human hippocampal neurons
+- **Description:** Human MTL and PFC recordings of working memory tasks, with theta-gamma phase-amplitude coupling central to the analysis
+- **Contributors, keywords, license, citation** also available
+
+Next, I need to list the Dandiset assets using:
+```
+python tools_cli.py dandiset-assets 000673
+```
+This will provide the available files, specifically the NWB files and their asset IDs. These asset IDs will let me retrieve download URLs for examining specific NWB files.
+
+Because this command only queries dataset info, I will set requires_approval to false.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-assets 000673', 'requires_approval': 'false', 'timeout': '180'}
+================================
+Command to be executed
+python tools_cli.py dandiset-assets 000673
+================================
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+Total prompt tokens: 15905 + 0
+Total completion tokens: 346 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-assets 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 6
+Submitting completion request...
+Processing response...
+From the Dandiset assets listing, I see multiple NWB files across different subjects and sessions, with their asset IDs and file sizes. 
+
+I will pick one NWB file for detailed metadata inspection and for inclusion in the example analysis in the notebook. A suitable choice is:
+
+- **sub-1/sub-1_ses-1_ecephys+image.nwb**
+- **asset_id:** 65a7e913-45c7-48db-bf19-b9f5e910110a
+- **download URL:** https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+
+Now, I will use the CLI tool to fetch info about this NWB file, with:
+
+```bash
+python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+```
+
+This will help identify what data groups, datasets, and metadata are inside the file, which will inform the example code to explore and visualize data.
+
+I will execute this now with a reasonable timeout since remote file info retrieval could take some time.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/', 'requires_approval': 'false', 'timeout': '240'}
+================================
+Command to be executed
+python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+file = remfile.File(url)
+f = h5py.File(file)
+io = pynwb.NWBHDF5IO(file=f)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) SBCAT_ID: 1
+nwb.identifier # (str) sub-1_ses-1_P55CS
+nwb.session_start_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 1, 20, 0, 0, tzinfo=tzoffset(None, -28800)), datetime.datetime(2025, 1, 20, 11, 52, 9, 51525, tzinfo=tzoffset(None, -28800))]
+nwb.experimenter # (tuple) ['Kyzar, Michael']
+nwb.related_publications # (tuple) ['doi: PENDING']
+nwb.acquisition # (LabelledDict)
+nwb.acquisition["LFPs"] # (ElectricalSeries)
+nwb.acquisition["LFPs"].starting_time # (float64) 1.55e-05
+nwb.acquisition["LFPs"].rate # (float64) 400.0
+nwb.acquisition["LFPs"].resolution # (float64) -1.0
+nwb.acquisition["LFPs"].comments # (str) no comments
+nwb.acquisition["LFPs"].description # (str) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz
+nwb.acquisition["LFPs"].conversion # (float64) 1.0
+nwb.acquisition["LFPs"].offset # (float64) 0.0
+nwb.acquisition["LFPs"].unit # (str) volts
+nwb.acquisition["LFPs"].data # (Dataset) shape (550276, 70); dtype float64
+# nwb.acquisition["LFPs"].data[:, :] # Access all data
+# nwb.acquisition["LFPs"].data[0:10, :] # Access first 10 rows
+# nwb.acquisition["LFPs"].data[:, 0:10] # Access first 10 columns
+nwb.acquisition["LFPs"].starting_time_unit # (str) seconds
+nwb.acquisition["LFPs"].electrodes # (DynamicTableRegion)
+nwb.acquisition["LFPs"].electrodes.description # (str) single electrodes
+nwb.acquisition["LFPs"].electrodes.table # (DynamicTable)
+nwb.acquisition["LFPs"].electrodes.table.description # (str) microwire electrodes table
+nwb.acquisition["LFPs"].electrodes.table.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.acquisition["LFPs"].electrodes.table.columns # (tuple)
+nwb.acquisition["LFPs"].electrodes.table.id # (ElementIdentifiers)
+nwb.acquisition["events"] # (TimeSeries)
+nwb.acquisition["events"].resolution # (float64) -1.0
+nwb.acquisition["events"].comments # (str) no comments
+nwb.acquisition["events"].description # (str) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = ...
+nwb.acquisition["events"].conversion # (float64) 1.0
+nwb.acquisition["events"].offset # (float64) 0.0
+nwb.acquisition["events"].unit # (str) NA
+nwb.acquisition["events"].data # (Dataset) shape (982,); dtype int8
+# nwb.acquisition["events"].data[:] # Access all data
+# nwb.acquisition["events"].data[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps # (Dataset) shape (982,); dtype float64
+# nwb.acquisition["events"].timestamps[:] # Access all data
+# nwb.acquisition["events"].timestamps[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps_unit # (str) seconds
+nwb.acquisition["events"].interval # (int) 1
+nwb.stimulus # (LabelledDict)
+nwb.stimulus["StimulusPresentation"] # (IndexSeries)
+nwb.stimulus["StimulusPresentation"].resolution # (float) -1.0
+nwb.stimulus["StimulusPresentation"].comments # (str) no comments
+nwb.stimulus["StimulusPresentation"].description # (str) Presentation order of the stimulus. Indexes 'StimulusTemplates'.
+nwb.stimulus["StimulusPresentation"].conversion # (float) 1.0
+nwb.stimulus["StimulusPresentation"].offset # (float) 0.0
+nwb.stimulus["StimulusPresentation"].unit # (str) N/A
+nwb.stimulus["StimulusPresentation"].data # (Dataset) shape (560,); dtype uint32
+# nwb.stimulus["StimulusPresentation"].data[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].data[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps # (Dataset) shape (560,); dtype float64
+# nwb.stimulus["StimulusPresentation"].timestamps[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].timestamps[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps_unit # (str) seconds
+nwb.stimulus["StimulusPresentation"].interval # (int) 1
+nwb.stimulus_template # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"] # (Images)
+nwb.stimulus_template["StimulusTemplates"].description # (str) A collection of images presented to the subject
+nwb.stimulus_template["StimulusTemplates"].images # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"].images["image_101"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_102"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_103"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_104"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_105"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_106"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_107"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_108"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_109"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_110"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_111"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_112"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_113"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_114"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_115"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_116"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_117"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_118"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_119"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_120"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_121"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_122"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_123"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_124"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_125"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_126"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_127"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_128"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_129"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_130"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_131"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_132"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_133"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_134"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_135"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_136"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_137"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_138"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_139"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_140"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_141"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_142"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_143"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_144"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_145"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_146"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_147"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_148"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_149"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_150"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_151"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_152"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_153"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_154"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_155"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_156"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_157"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_201"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_202"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_203"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_204"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_205"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_206"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_207"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_208"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_209"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_210"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_211"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_212"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_213"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_214"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_215"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_216"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_217"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_218"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_219"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_220"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_221"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_222"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_223"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_224"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_225"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_226"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_227"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_228"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_229"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_230"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_231"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_232"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_233"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_234"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_235"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_236"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_237"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_238"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_239"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_240"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_241"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_242"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_243"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_244"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_245"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_246"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_247"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_248"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_249"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_250"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_251"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_252"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_253"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_254"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_255"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_256"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_257"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_301"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_302"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_303"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_304"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_305"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_306"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_307"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_308"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_309"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_310"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_311"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_312"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_313"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_314"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_315"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_316"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_317"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_318"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_319"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_320"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_321"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_322"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_323"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_324"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_325"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_326"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_327"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_328"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_329"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_330"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_331"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_332"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_333"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_334"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_335"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_336"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_337"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_338"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_339"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_340"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_341"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_342"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_343"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_344"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_345"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_346"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_347"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_348"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_349"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_350"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_351"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_352"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_353"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_354"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_355"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_356"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_401"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_402"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_403"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_404"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_405"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_406"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_407"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_408"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_409"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_410"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_411"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_412"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_413"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_414"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_415"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_416"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_417"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_418"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_419"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_420"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_421"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_422"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_423"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_424"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_425"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_426"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_427"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_428"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_429"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_430"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_431"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_432"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_433"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_434"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_435"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_436"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_437"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_438"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_439"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_440"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_441"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_442"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_443"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_444"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_445"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_446"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_447"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_448"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_449"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_450"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_451"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_452"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_453"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_454"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_455"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_501"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_502"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_503"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_504"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_505"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_506"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_507"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_508"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_509"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_510"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_511"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_512"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_513"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_514"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_515"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_516"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_517"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_518"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_519"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_520"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_521"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_522"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_523"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_524"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_525"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_526"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_527"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_528"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_529"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_530"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_531"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_532"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_533"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_534"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_535"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_536"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_537"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_538"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_539"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_540"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_541"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_542"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_543"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_544"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_545"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_546"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_547"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_548"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_549"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_550"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_551"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_552"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_553"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_554"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_555"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_999"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].order_of_images # (ImageReferences)
+nwb.keywords # (StrDataset) shape (1,); dtype object
+# nwb.keywords[:] # Access all data
+# nwb.keywords[0:10] # Access first 10 elements
+# First few values of nwb.keywords: ['single neuron, human, intracranial']
+nwb.electrode_groups # (LabelledDict)
+nwb.electrode_groups["NLX-microwires-129"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-129"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-129"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-129"].device # (Device)
+nwb.electrode_groups["NLX-microwires-129"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-130"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-130"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-130"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-130"].device # (Device)
+nwb.electrode_groups["NLX-microwires-130"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-131"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-131"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-131"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-131"].device # (Device)
+nwb.electrode_groups["NLX-microwires-131"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-132"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-132"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-132"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-132"].device # (Device)
+nwb.electrode_groups["NLX-microwires-132"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-133"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-133"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-133"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-133"].device # (Device)
+nwb.electrode_groups["NLX-microwires-133"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-134"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-134"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-134"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-134"].device # (Device)
+nwb.electrode_groups["NLX-microwires-134"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-135"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-135"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-135"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-135"].device # (Device)
+nwb.electrode_groups["NLX-microwires-135"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-136"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-136"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-136"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-136"].device # (Device)
+nwb.electrode_groups["NLX-microwires-136"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-137"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-137"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-137"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-137"].device # (Device)
+nwb.electrode_groups["NLX-microwires-137"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-138"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-138"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-138"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-138"].device # (Device)
+nwb.electrode_groups["NLX-microwires-138"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-140"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-140"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-140"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-140"].device # (Device)
+nwb.electrode_groups["NLX-microwires-140"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-141"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-141"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-141"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-141"].device # (Device)
+nwb.electrode_groups["NLX-microwires-141"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-142"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-142"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-142"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-142"].device # (Device)
+nwb.electrode_groups["NLX-microwires-142"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-143"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-143"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-143"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-143"].device # (Device)
+nwb.electrode_groups["NLX-microwires-143"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-144"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-144"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-144"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-144"].device # (Device)
+nwb.electrode_groups["NLX-microwires-144"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-145"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-145"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-145"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-145"].device # (Device)
+nwb.electrode_groups["NLX-microwires-145"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-146"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-146"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-146"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-146"].device # (Device)
+nwb.electrode_groups["NLX-microwires-146"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-148"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-148"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-148"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-148"].device # (Device)
+nwb.electrode_groups["NLX-microwires-148"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-149"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-149"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-149"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-149"].device # (Device)
+nwb.electrode_groups["NLX-microwires-149"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-150"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-150"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-150"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-150"].device # (Device)
+nwb.electrode_groups["NLX-microwires-150"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-151"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-151"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-151"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-151"].device # (Device)
+nwb.electrode_groups["NLX-microwires-151"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-152"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-152"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-152"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-152"].device # (Device)
+nwb.electrode_groups["NLX-microwires-152"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-153"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-153"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-153"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-153"].device # (Device)
+nwb.electrode_groups["NLX-microwires-153"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-154"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-154"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-154"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-154"].device # (Device)
+nwb.electrode_groups["NLX-microwires-154"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-155"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-155"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-155"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-155"].device # (Device)
+nwb.electrode_groups["NLX-microwires-155"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-156"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-156"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-156"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-156"].device # (Device)
+nwb.electrode_groups["NLX-microwires-156"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-157"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-157"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-157"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-157"].device # (Device)
+nwb.electrode_groups["NLX-microwires-157"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-158"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-158"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-158"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-158"].device # (Device)
+nwb.electrode_groups["NLX-microwires-158"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-160"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-160"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-160"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-160"].device # (Device)
+nwb.electrode_groups["NLX-microwires-160"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-161"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-161"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-161"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-161"].device # (Device)
+nwb.electrode_groups["NLX-microwires-161"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-162"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-162"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-162"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-162"].device # (Device)
+nwb.electrode_groups["NLX-microwires-162"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-163"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-163"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-163"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-163"].device # (Device)
+nwb.electrode_groups["NLX-microwires-163"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-164"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-164"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-164"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-164"].device # (Device)
+nwb.electrode_groups["NLX-microwires-164"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-165"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-165"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-165"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-165"].device # (Device)
+nwb.electrode_groups["NLX-microwires-165"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-166"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-166"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-166"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-166"].device # (Device)
+nwb.electrode_groups["NLX-microwires-166"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-167"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-167"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-167"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-167"].device # (Device)
+nwb.electrode_groups["NLX-microwires-167"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-168"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-168"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-168"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-168"].device # (Device)
+nwb.electrode_groups["NLX-microwires-168"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-169"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-169"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-169"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-169"].device # (Device)
+nwb.electrode_groups["NLX-microwires-169"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-170"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-170"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-170"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-170"].device # (Device)
+nwb.electrode_groups["NLX-microwires-170"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-171"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-171"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-171"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-171"].device # (Device)
+nwb.electrode_groups["NLX-microwires-171"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-172"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-172"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-172"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-172"].device # (Device)
+nwb.electrode_groups["NLX-microwires-172"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-173"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-173"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-173"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-173"].device # (Device)
+nwb.electrode_groups["NLX-microwires-173"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-174"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-174"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-174"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-174"].device # (Device)
+nwb.electrode_groups["NLX-microwires-174"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-175"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-175"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-175"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-175"].device # (Device)
+nwb.electrode_groups["NLX-microwires-175"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-176"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-176"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-176"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-176"].device # (Device)
+nwb.electrode_groups["NLX-microwires-176"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-177"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-177"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-177"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-177"].device # (Device)
+nwb.electrode_groups["NLX-microwires-177"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-178"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-178"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-178"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-178"].device # (Device)
+nwb.electrode_groups["NLX-microwires-178"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-179"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-179"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-179"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-179"].device # (Device)
+nwb.electrode_groups["NLX-microwires-179"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-180"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-180"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-180"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-180"].device # (Device)
+nwb.electrode_groups["NLX-microwires-180"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-181"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-181"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-181"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-181"].device # (Device)
+nwb.electrode_groups["NLX-microwires-181"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-182"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-182"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-182"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-182"].device # (Device)
+nwb.electrode_groups["NLX-microwires-182"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-183"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-183"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-183"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-183"].device # (Device)
+nwb.electrode_groups["NLX-microwires-183"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-184"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-184"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-184"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-184"].device # (Device)
+nwb.electrode_groups["NLX-microwires-184"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-185"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-185"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-185"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-185"].device # (Device)
+nwb.electrode_groups["NLX-microwires-185"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-186"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-186"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-186"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-186"].device # (Device)
+nwb.electrode_groups["NLX-microwires-186"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-187"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-187"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-187"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-187"].device # (Device)
+nwb.electrode_groups["NLX-microwires-187"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-188"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-188"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-188"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-188"].device # (Device)
+nwb.electrode_groups["NLX-microwires-188"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-189"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-189"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-189"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-189"].device # (Device)
+nwb.electrode_groups["NLX-microwires-189"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-191"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-191"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-191"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-191"].device # (Device)
+nwb.electrode_groups["NLX-microwires-191"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-192"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-192"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-192"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-192"].device # (Device)
+nwb.electrode_groups["NLX-microwires-192"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-193"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-193"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-193"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-193"].device # (Device)
+nwb.electrode_groups["NLX-microwires-193"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-194"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-194"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-194"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-194"].device # (Device)
+nwb.electrode_groups["NLX-microwires-194"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-195"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-195"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-195"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-195"].device # (Device)
+nwb.electrode_groups["NLX-microwires-195"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-197"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-197"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-197"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-197"].device # (Device)
+nwb.electrode_groups["NLX-microwires-197"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-198"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-198"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-198"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-198"].device # (Device)
+nwb.electrode_groups["NLX-microwires-198"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-199"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-199"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-199"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-199"].device # (Device)
+nwb.electrode_groups["NLX-microwires-199"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-200"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-200"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-200"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-200"].device # (Device)
+nwb.electrode_groups["NLX-microwires-200"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-201"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-201"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-201"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-201"].device # (Device)
+nwb.electrode_groups["NLX-microwires-201"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-202"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-202"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-202"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-202"].device # (Device)
+nwb.electrode_groups["NLX-microwires-202"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-203"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-203"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-203"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-203"].device # (Device)
+nwb.electrode_groups["NLX-microwires-203"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-204"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-204"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-204"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-204"].device # (Device)
+nwb.electrode_groups["NLX-microwires-204"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-205"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-205"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-205"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-205"].device # (Device)
+nwb.electrode_groups["NLX-microwires-205"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-206"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-206"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-206"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-206"].device # (Device)
+nwb.electrode_groups["NLX-microwires-206"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-208"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-208"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-208"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-208"].device # (Device)
+nwb.electrode_groups["NLX-microwires-208"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices # (LabelledDict)
+nwb.devices["NLX-microwires-129"] # (Device)
+nwb.devices["NLX-microwires-129"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-130"] # (Device)
+nwb.devices["NLX-microwires-130"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-131"] # (Device)
+nwb.devices["NLX-microwires-131"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-132"] # (Device)
+nwb.devices["NLX-microwires-132"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-133"] # (Device)
+nwb.devices["NLX-microwires-133"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-134"] # (Device)
+nwb.devices["NLX-microwires-134"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-135"] # (Device)
+nwb.devices["NLX-microwires-135"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-136"] # (Device)
+nwb.devices["NLX-microwires-136"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-137"] # (Device)
+nwb.devices["NLX-microwires-137"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-138"] # (Device)
+nwb.devices["NLX-microwires-138"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-140"] # (Device)
+nwb.devices["NLX-microwires-140"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-141"] # (Device)
+nwb.devices["NLX-microwires-141"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-142"] # (Device)
+nwb.devices["NLX-microwires-142"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-143"] # (Device)
+nwb.devices["NLX-microwires-143"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-144"] # (Device)
+nwb.devices["NLX-microwires-144"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-145"] # (Device)
+nwb.devices["NLX-microwires-145"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-146"] # (Device)
+nwb.devices["NLX-microwires-146"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-148"] # (Device)
+nwb.devices["NLX-microwires-148"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-149"] # (Device)
+nwb.devices["NLX-microwires-149"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-150"] # (Device)
+nwb.devices["NLX-microwires-150"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-151"] # (Device)
+nwb.devices["NLX-microwires-151"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-152"] # (Device)
+nwb.devices["NLX-microwires-152"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-153"] # (Device)
+nwb.devices["NLX-microwires-153"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-154"] # (Device)
+nwb.devices["NLX-microwires-154"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-155"] # (Device)
+nwb.devices["NLX-microwires-155"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-156"] # (Device)
+nwb.devices["NLX-microwires-156"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-157"] # (Device)
+nwb.devices["NLX-microwires-157"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-158"] # (Device)
+nwb.devices["NLX-microwires-158"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-160"] # (Device)
+nwb.devices["NLX-microwires-160"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-161"] # (Device)
+nwb.devices["NLX-microwires-161"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-162"] # (Device)
+nwb.devices["NLX-microwires-162"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-163"] # (Device)
+nwb.devices["NLX-microwires-163"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-164"] # (Device)
+nwb.devices["NLX-microwires-164"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-165"] # (Device)
+nwb.devices["NLX-microwires-165"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-166"] # (Device)
+nwb.devices["NLX-microwires-166"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-167"] # (Device)
+nwb.devices["NLX-microwires-167"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-168"] # (Device)
+nwb.devices["NLX-microwires-168"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-169"] # (Device)
+nwb.devices["NLX-microwires-169"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-170"] # (Device)
+nwb.devices["NLX-microwires-170"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-171"] # (Device)
+nwb.devices["NLX-microwires-171"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-172"] # (Device)
+nwb.devices["NLX-microwires-172"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-173"] # (Device)
+nwb.devices["NLX-microwires-173"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-174"] # (Device)
+nwb.devices["NLX-microwires-174"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-175"] # (Device)
+nwb.devices["NLX-microwires-175"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-176"] # (Device)
+nwb.devices["NLX-microwires-176"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-177"] # (Device)
+nwb.devices["NLX-microwires-177"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-178"] # (Device)
+nwb.devices["NLX-microwires-178"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-179"] # (Device)
+nwb.devices["NLX-microwires-179"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-180"] # (Device)
+nwb.devices["NLX-microwires-180"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-181"] # (Device)
+nwb.devices["NLX-microwires-181"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-182"] # (Device)
+nwb.devices["NLX-microwires-182"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-183"] # (Device)
+nwb.devices["NLX-microwires-183"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-184"] # (Device)
+nwb.devices["NLX-microwires-184"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-185"] # (Device)
+nwb.devices["NLX-microwires-185"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-186"] # (Device)
+nwb.devices["NLX-microwires-186"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-187"] # (Device)
+nwb.devices["NLX-microwires-187"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-188"] # (Device)
+nwb.devices["NLX-microwires-188"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-189"] # (Device)
+nwb.devices["NLX-microwires-189"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-191"] # (Device)
+nwb.devices["NLX-microwires-191"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-192"] # (Device)
+nwb.devices["NLX-microwires-192"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-193"] # (Device)
+nwb.devices["NLX-microwires-193"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-194"] # (Device)
+nwb.devices["NLX-microwires-194"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-195"] # (Device)
+nwb.devices["NLX-microwires-195"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-197"] # (Device)
+nwb.devices["NLX-microwires-197"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-198"] # (Device)
+nwb.devices["NLX-microwires-198"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-199"] # (Device)
+nwb.devices["NLX-microwires-199"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-200"] # (Device)
+nwb.devices["NLX-microwires-200"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-201"] # (Device)
+nwb.devices["NLX-microwires-201"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-202"] # (Device)
+nwb.devices["NLX-microwires-202"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-203"] # (Device)
+nwb.devices["NLX-microwires-203"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-204"] # (Device)
+nwb.devices["NLX-microwires-204"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-205"] # (Device)
+nwb.devices["NLX-microwires-205"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-206"] # (Device)
+nwb.devices["NLX-microwires-206"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-208"] # (Device)
+nwb.devices["NLX-microwires-208"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.intervals # (LabelledDict)
+nwb.intervals["trials"] # (TimeIntervals)
+nwb.intervals["trials"].description # (str) Intervals for the Sternberg Task
+nwb.intervals["trials"].colnames # (tuple)
+nwb.intervals["trials"].columns # (tuple)
+nwb.intervals["trials"].id # (ElementIdentifiers)
+nwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed...
+nwb.session_id # (str) 1
+nwb.lab # (str) Rutishauser
+nwb.institution # (str) Cedars-Sinai Medical Center
+nwb.notes # (str) (1) Experiment variant: 1b. (2) The session start time has been set to Jan 1st of the recording y...
+nwb.source_script # (str) NWB_SBCAT_reexport_main.m
+nwb.source_script_file_name # (str) NWB_SBCAT
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) microwire electrodes table
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+nwb.subject # (Subject)
+nwb.subject.age # (str) P43Y
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) Subject metadata
+nwb.subject.sex # (str) F
+nwb.subject.species # (str) Homo sapiens
+nwb.subject.subject_id # (str) 1
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) Intervals for the Sternberg Task
+nwb.trials.colnames # (tuple)
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times', 'electrodes', 'clusterID_orig', 'waveforms', 'waveforms_mean_snr', 'waveforms_peak_snr', 'waveforms_isolation_distance', 'waveforms_mean_proj_dist']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+Total prompt tokens: 26065 + 0
+Total completion tokens: 694 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/' (requires approval):
+Command executed successfully
+STDOUT:
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+file = remfile.File(url)
+f = h5py.File(file)
+io = pynwb.NWBHDF5IO(file=f)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) SBCAT_ID: 1
+nwb.identifier # (str) sub-1_ses-1_P55CS
+nwb.session_start_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 1, 20, 0, 0, tzinfo=tzoffset(None, -28800)), datetime.datetime(2025, 1, 20, 11, 52, 9, 51525, tzinfo=tzoffset(None, -28800))]
+nwb.experimenter # (tuple) ['Kyzar, Michael']
+nwb.related_publications # (tuple) ['doi: PENDING']
+nwb.acquisition # (LabelledDict)
+nwb.acquisition["LFPs"] # (ElectricalSeries)
+nwb.acquisition["LFPs"].starting_time # (float64) 1.55e-05
+nwb.acquisition["LFPs"].rate # (float64) 400.0
+nwb.acquisition["LFPs"].resolution # (float64) -1.0
+nwb.acquisition["LFPs"].comments # (str) no comments
+nwb.acquisition["LFPs"].description # (str) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz
+nwb.acquisition["LFPs"].conversion # (float64) 1.0
+nwb.acquisition["LFPs"].offset # (float64) 0.0
+nwb.acquisition["LFPs"].unit # (str) volts
+nwb.acquisition["LFPs"].data # (Dataset) shape (550276, 70); dtype float64
+# nwb.acquisition["LFPs"].data[:, :] # Access all data
+# nwb.acquisition["LFPs"].data[0:10, :] # Access first 10 rows
+# nwb.acquisition["LFPs"].data[:, 0:10] # Access first 10 columns
+nwb.acquisition["LFPs"].starting_time_unit # (str) seconds
+nwb.acquisition["LFPs"].electrodes # (DynamicTableRegion)
+nwb.acquisition["LFPs"].electrodes.description # (str) single electrodes
+nwb.acquisition["LFPs"].electrodes.table # (DynamicTable)
+nwb.acquisition["LFPs"].electrodes.table.description # (str) microwire electrodes table
+nwb.acquisition["LFPs"].electrodes.table.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.acquisition["LFPs"].electrodes.table.columns # (tuple)
+nwb.acquisition["LFPs"].electrodes.table.id # (ElementIdentifiers)
+nwb.acquisition["events"] # (TimeSeries)
+nwb.acquisition["events"].resolution # (float64) -1.0
+nwb.acquisition["events"].comments # (str) no comments
+nwb.acquisition["events"].description # (str) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = ...
+nwb.acquisition["events"].conversion # (float64) 1.0
+nwb.acquisition["events"].offset # (float64) 0.0
+nwb.acquisition["events"].unit # (str) NA
+nwb.acquisition["events"].data # (Dataset) shape (982,); dtype int8
+# nwb.acquisition["events"].data[:] # Access all data
+# nwb.acquisition["events"].data[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps # (Dataset) shape (982,); dtype float64
+# nwb.acquisition["events"].timestamps[:] # Access all data
+# nwb.acquisition["events"].timestamps[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps_unit # (str) seconds
+nwb.acquisition["events"].interval # (int) 1
+nwb.stimulus # (LabelledDict)
+nwb.stimulus["StimulusPresentation"] # (IndexSeries)
+nwb.stimulus["StimulusPresentation"].resolution # (float) -1.0
+nwb.stimulus["StimulusPresentation"].comments # (str) no comments
+nwb.stimulus["StimulusPresentation"].description # (str) Presentation order of the stimulus. Indexes 'StimulusTemplates'.
+nwb.stimulus["StimulusPresentation"].conversion # (float) 1.0
+nwb.stimulus["StimulusPresentation"].offset # (float) 0.0
+nwb.stimulus["StimulusPresentation"].unit # (str) N/A
+nwb.stimulus["StimulusPresentation"].data # (Dataset) shape (560,); dtype uint32
+# nwb.stimulus["StimulusPresentation"].data[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].data[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps # (Dataset) shape (560,); dtype float64
+# nwb.stimulus["StimulusPresentation"].timestamps[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].timestamps[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps_unit # (str) seconds
+nwb.stimulus["StimulusPresentation"].interval # (int) 1
+nwb.stimulus_template # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"] # (Images)
+nwb.stimulus_template["StimulusTemplates"].description # (str) A collection of images presented to the subject
+nwb.stimulus_template["StimulusTemplates"].images # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"].images["image_101"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_102"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_103"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_104"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_105"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_106"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_107"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_108"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_109"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_110"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_111"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_112"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_113"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_114"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_115"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_116"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_117"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_118"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_119"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_120"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_121"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_122"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_123"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_124"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_125"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_126"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_127"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_128"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_129"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_130"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_131"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_132"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_133"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_134"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_135"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_136"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_137"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_138"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_139"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_140"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_141"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_142"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_143"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_144"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_145"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_146"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_147"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_148"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_149"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_150"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_151"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_152"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_153"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_154"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_155"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_156"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_157"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_201"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_202"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_203"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_204"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_205"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_206"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_207"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_208"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_209"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_210"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_211"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_212"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_213"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_214"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_215"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_216"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_217"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_218"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_219"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_220"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_221"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_222"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_223"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_224"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_225"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_226"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_227"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_228"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_229"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_230"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_231"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_232"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_233"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_234"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_235"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_236"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_237"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_238"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_239"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_240"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_241"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_242"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_243"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_244"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_245"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_246"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_247"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_248"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_249"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_250"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_251"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_252"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_253"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_254"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_255"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_256"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_257"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_301"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_302"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_303"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_304"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_305"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_306"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_307"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_308"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_309"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_310"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_311"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_312"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_313"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_314"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_315"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_316"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_317"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_318"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_319"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_320"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_321"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_322"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_323"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_324"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_325"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_326"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_327"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_328"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_329"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_330"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_331"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_332"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_333"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_334"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_335"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_336"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_337"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_338"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_339"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_340"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_341"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_342"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_343"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_344"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_345"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_346"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_347"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_348"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_349"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_350"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_351"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_352"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_353"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_354"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_355"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_356"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_401"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_402"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_403"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_404"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_405"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_406"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_407"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_408"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_409"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_410"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_411"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_412"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_413"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_414"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_415"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_416"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_417"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_418"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_419"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_420"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_421"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_422"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_423"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_424"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_425"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_426"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_427"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_428"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_429"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_430"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_431"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_432"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_433"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_434"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_435"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_436"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_437"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_438"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_439"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_440"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_441"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_442"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_443"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_444"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_445"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_446"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_447"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_448"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_449"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_450"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_451"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_452"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_453"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_454"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_455"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_501"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_502"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_503"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_504"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_505"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_506"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_507"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_508"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_509"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_510"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_511"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_512"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_513"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_514"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_515"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_516"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_517"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_518"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_519"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_520"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_521"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_522"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_523"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_524"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_525"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_526"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_527"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_528"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_529"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_530"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_531"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_532"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_533"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_534"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_535"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_536"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_537"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_538"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_539"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_540"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_541"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_542"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_543"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_544"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_545"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_546"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_547"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_548"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_549"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_550"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_551"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_552"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_553"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_554"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_555"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_999"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].order_of_images # (ImageReferences)
+nwb.keywords # (StrDataset) shape (1,); dtype object
+# nwb.keywords[:] # Access all data
+# nwb.keywords[0:10] # Access first 10 elements
+# First few values of nwb.keywords: ['single neuron, human, intracranial']
+nwb.electrode_groups # (LabelledDict)
+nwb.electrode_groups["NLX-microwires-129"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-129"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-129"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-129"].device # (Device)
+nwb.electrode_groups["NLX-microwires-129"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-130"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-130"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-130"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-130"].device # (Device)
+nwb.electrode_groups["NLX-microwires-130"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-131"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-131"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-131"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-131"].device # (Device)
+nwb.electrode_groups["NLX-microwires-131"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-132"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-132"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-132"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-132"].device # (Device)
+nwb.electrode_groups["NLX-microwires-132"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-133"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-133"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-133"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-133"].device # (Device)
+nwb.electrode_groups["NLX-microwires-133"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-134"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-134"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-134"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-134"].device # (Device)
+nwb.electrode_groups["NLX-microwires-134"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-135"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-135"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-135"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-135"].device # (Device)
+nwb.electrode_groups["NLX-microwires-135"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-136"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-136"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-136"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-136"].device # (Device)
+nwb.electrode_groups["NLX-microwires-136"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-137"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-137"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-137"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-137"].device # (Device)
+nwb.electrode_groups["NLX-microwires-137"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-138"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-138"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-138"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-138"].device # (Device)
+nwb.electrode_groups["NLX-microwires-138"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-140"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-140"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-140"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-140"].device # (Device)
+nwb.electrode_groups["NLX-microwires-140"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-141"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-141"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-141"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-141"].device # (Device)
+nwb.electrode_groups["NLX-microwires-141"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-142"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-142"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-142"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-142"].device # (Device)
+nwb.electrode_groups["NLX-microwires-142"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-143"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-143"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-143"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-143"].device # (Device)
+nwb.electrode_groups["NLX-microwires-143"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-144"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-144"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-144"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-144"].device # (Device)
+nwb.electrode_groups["NLX-microwires-144"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-145"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-145"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-145"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-145"].device # (Device)
+nwb.electrode_groups["NLX-microwires-145"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-146"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-146"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-146"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-146"].device # (Device)
+nwb.electrode_groups["NLX-microwires-146"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-148"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-148"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-148"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-148"].device # (Device)
+nwb.electrode_groups["NLX-microwires-148"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-149"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-149"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-149"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-149"].device # (Device)
+nwb.electrode_groups["NLX-microwires-149"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-150"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-150"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-150"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-150"].device # (Device)
+nwb.electrode_groups["NLX-microwires-150"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-151"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-151"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-151"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-151"].device # (Device)
+nwb.electrode_groups["NLX-microwires-151"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-152"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-152"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-152"].location # (str) amygdala_left
+nwb.electrode_groups["NLX-microwires-152"].device # (Device)
+nwb.electrode_groups["NLX-microwires-152"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-153"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-153"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-153"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-153"].device # (Device)
+nwb.electrode_groups["NLX-microwires-153"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-154"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-154"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-154"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-154"].device # (Device)
+nwb.electrode_groups["NLX-microwires-154"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-155"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-155"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-155"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-155"].device # (Device)
+nwb.electrode_groups["NLX-microwires-155"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-156"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-156"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-156"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-156"].device # (Device)
+nwb.electrode_groups["NLX-microwires-156"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-157"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-157"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-157"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-157"].device # (Device)
+nwb.electrode_groups["NLX-microwires-157"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-158"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-158"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-158"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-158"].device # (Device)
+nwb.electrode_groups["NLX-microwires-158"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-160"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-160"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-160"].location # (str) hippocampus_left
+nwb.electrode_groups["NLX-microwires-160"].device # (Device)
+nwb.electrode_groups["NLX-microwires-160"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-161"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-161"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-161"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-161"].device # (Device)
+nwb.electrode_groups["NLX-microwires-161"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-162"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-162"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-162"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-162"].device # (Device)
+nwb.electrode_groups["NLX-microwires-162"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-163"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-163"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-163"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-163"].device # (Device)
+nwb.electrode_groups["NLX-microwires-163"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-164"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-164"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-164"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-164"].device # (Device)
+nwb.electrode_groups["NLX-microwires-164"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-165"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-165"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-165"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-165"].device # (Device)
+nwb.electrode_groups["NLX-microwires-165"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-166"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-166"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-166"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-166"].device # (Device)
+nwb.electrode_groups["NLX-microwires-166"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-167"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-167"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-167"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-167"].device # (Device)
+nwb.electrode_groups["NLX-microwires-167"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-168"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-168"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-168"].location # (str) dorsal_anterior_cingulate_cortex_right
+nwb.electrode_groups["NLX-microwires-168"].device # (Device)
+nwb.electrode_groups["NLX-microwires-168"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-169"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-169"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-169"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-169"].device # (Device)
+nwb.electrode_groups["NLX-microwires-169"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-170"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-170"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-170"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-170"].device # (Device)
+nwb.electrode_groups["NLX-microwires-170"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-171"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-171"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-171"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-171"].device # (Device)
+nwb.electrode_groups["NLX-microwires-171"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-172"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-172"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-172"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-172"].device # (Device)
+nwb.electrode_groups["NLX-microwires-172"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-173"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-173"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-173"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-173"].device # (Device)
+nwb.electrode_groups["NLX-microwires-173"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-174"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-174"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-174"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-174"].device # (Device)
+nwb.electrode_groups["NLX-microwires-174"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-175"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-175"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-175"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-175"].device # (Device)
+nwb.electrode_groups["NLX-microwires-175"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-176"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-176"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-176"].location # (str) pre_supplementary_motor_area_right
+nwb.electrode_groups["NLX-microwires-176"].device # (Device)
+nwb.electrode_groups["NLX-microwires-176"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-177"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-177"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-177"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-177"].device # (Device)
+nwb.electrode_groups["NLX-microwires-177"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-178"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-178"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-178"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-178"].device # (Device)
+nwb.electrode_groups["NLX-microwires-178"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-179"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-179"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-179"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-179"].device # (Device)
+nwb.electrode_groups["NLX-microwires-179"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-180"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-180"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-180"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-180"].device # (Device)
+nwb.electrode_groups["NLX-microwires-180"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-181"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-181"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-181"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-181"].device # (Device)
+nwb.electrode_groups["NLX-microwires-181"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-182"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-182"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-182"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-182"].device # (Device)
+nwb.electrode_groups["NLX-microwires-182"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-183"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-183"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-183"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-183"].device # (Device)
+nwb.electrode_groups["NLX-microwires-183"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-184"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-184"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-184"].location # (str) amygdala_right
+nwb.electrode_groups["NLX-microwires-184"].device # (Device)
+nwb.electrode_groups["NLX-microwires-184"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-185"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-185"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-185"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-185"].device # (Device)
+nwb.electrode_groups["NLX-microwires-185"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-186"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-186"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-186"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-186"].device # (Device)
+nwb.electrode_groups["NLX-microwires-186"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-187"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-187"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-187"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-187"].device # (Device)
+nwb.electrode_groups["NLX-microwires-187"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-188"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-188"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-188"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-188"].device # (Device)
+nwb.electrode_groups["NLX-microwires-188"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-189"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-189"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-189"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-189"].device # (Device)
+nwb.electrode_groups["NLX-microwires-189"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-191"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-191"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-191"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-191"].device # (Device)
+nwb.electrode_groups["NLX-microwires-191"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-192"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-192"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-192"].location # (str) hippocampus_right
+nwb.electrode_groups["NLX-microwires-192"].device # (Device)
+nwb.electrode_groups["NLX-microwires-192"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-193"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-193"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-193"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-193"].device # (Device)
+nwb.electrode_groups["NLX-microwires-193"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-194"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-194"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-194"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-194"].device # (Device)
+nwb.electrode_groups["NLX-microwires-194"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-195"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-195"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-195"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-195"].device # (Device)
+nwb.electrode_groups["NLX-microwires-195"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-197"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-197"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-197"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-197"].device # (Device)
+nwb.electrode_groups["NLX-microwires-197"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-198"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-198"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-198"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-198"].device # (Device)
+nwb.electrode_groups["NLX-microwires-198"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-199"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-199"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-199"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-199"].device # (Device)
+nwb.electrode_groups["NLX-microwires-199"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-200"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-200"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-200"].location # (str) ventral_medial_prefrontal_cortex_right
+nwb.electrode_groups["NLX-microwires-200"].device # (Device)
+nwb.electrode_groups["NLX-microwires-200"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-201"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-201"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-201"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-201"].device # (Device)
+nwb.electrode_groups["NLX-microwires-201"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-202"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-202"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-202"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-202"].device # (Device)
+nwb.electrode_groups["NLX-microwires-202"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-203"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-203"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-203"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-203"].device # (Device)
+nwb.electrode_groups["NLX-microwires-203"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-204"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-204"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-204"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-204"].device # (Device)
+nwb.electrode_groups["NLX-microwires-204"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-205"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-205"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-205"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-205"].device # (Device)
+nwb.electrode_groups["NLX-microwires-205"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-206"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-206"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-206"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-206"].device # (Device)
+nwb.electrode_groups["NLX-microwires-206"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-208"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-208"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-208"].location # (str) ventral_medial_prefrontal_cortex_left
+nwb.electrode_groups["NLX-microwires-208"].device # (Device)
+nwb.electrode_groups["NLX-microwires-208"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices # (LabelledDict)
+nwb.devices["NLX-microwires-129"] # (Device)
+nwb.devices["NLX-microwires-129"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-130"] # (Device)
+nwb.devices["NLX-microwires-130"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-131"] # (Device)
+nwb.devices["NLX-microwires-131"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-132"] # (Device)
+nwb.devices["NLX-microwires-132"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-133"] # (Device)
+nwb.devices["NLX-microwires-133"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-134"] # (Device)
+nwb.devices["NLX-microwires-134"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-135"] # (Device)
+nwb.devices["NLX-microwires-135"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-136"] # (Device)
+nwb.devices["NLX-microwires-136"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-137"] # (Device)
+nwb.devices["NLX-microwires-137"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-138"] # (Device)
+nwb.devices["NLX-microwires-138"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-140"] # (Device)
+nwb.devices["NLX-microwires-140"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-141"] # (Device)
+nwb.devices["NLX-microwires-141"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-142"] # (Device)
+nwb.devices["NLX-microwires-142"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-143"] # (Device)
+nwb.devices["NLX-microwires-143"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-144"] # (Device)
+nwb.devices["NLX-microwires-144"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-145"] # (Device)
+nwb.devices["NLX-microwires-145"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-146"] # (Device)
+nwb.devices["NLX-microwires-146"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-148"] # (Device)
+nwb.devices["NLX-microwires-148"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-149"] # (Device)
+nwb.devices["NLX-microwires-149"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-150"] # (Device)
+nwb.devices["NLX-microwires-150"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-151"] # (Device)
+nwb.devices["NLX-microwires-151"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-152"] # (Device)
+nwb.devices["NLX-microwires-152"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-153"] # (Device)
+nwb.devices["NLX-microwires-153"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-154"] # (Device)
+nwb.devices["NLX-microwires-154"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-155"] # (Device)
+nwb.devices["NLX-microwires-155"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-156"] # (Device)
+nwb.devices["NLX-microwires-156"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-157"] # (Device)
+nwb.devices["NLX-microwires-157"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-158"] # (Device)
+nwb.devices["NLX-microwires-158"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-160"] # (Device)
+nwb.devices["NLX-microwires-160"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-161"] # (Device)
+nwb.devices["NLX-microwires-161"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-162"] # (Device)
+nwb.devices["NLX-microwires-162"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-163"] # (Device)
+nwb.devices["NLX-microwires-163"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-164"] # (Device)
+nwb.devices["NLX-microwires-164"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-165"] # (Device)
+nwb.devices["NLX-microwires-165"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-166"] # (Device)
+nwb.devices["NLX-microwires-166"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-167"] # (Device)
+nwb.devices["NLX-microwires-167"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-168"] # (Device)
+nwb.devices["NLX-microwires-168"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-169"] # (Device)
+nwb.devices["NLX-microwires-169"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-170"] # (Device)
+nwb.devices["NLX-microwires-170"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-171"] # (Device)
+nwb.devices["NLX-microwires-171"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-172"] # (Device)
+nwb.devices["NLX-microwires-172"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-173"] # (Device)
+nwb.devices["NLX-microwires-173"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-174"] # (Device)
+nwb.devices["NLX-microwires-174"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-175"] # (Device)
+nwb.devices["NLX-microwires-175"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-176"] # (Device)
+nwb.devices["NLX-microwires-176"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-177"] # (Device)
+nwb.devices["NLX-microwires-177"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-178"] # (Device)
+nwb.devices["NLX-microwires-178"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-179"] # (Device)
+nwb.devices["NLX-microwires-179"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-180"] # (Device)
+nwb.devices["NLX-microwires-180"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-181"] # (Device)
+nwb.devices["NLX-microwires-181"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-182"] # (Device)
+nwb.devices["NLX-microwires-182"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-183"] # (Device)
+nwb.devices["NLX-microwires-183"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-184"] # (Device)
+nwb.devices["NLX-microwires-184"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-185"] # (Device)
+nwb.devices["NLX-microwires-185"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-186"] # (Device)
+nwb.devices["NLX-microwires-186"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-187"] # (Device)
+nwb.devices["NLX-microwires-187"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-188"] # (Device)
+nwb.devices["NLX-microwires-188"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-189"] # (Device)
+nwb.devices["NLX-microwires-189"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-191"] # (Device)
+nwb.devices["NLX-microwires-191"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-192"] # (Device)
+nwb.devices["NLX-microwires-192"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-193"] # (Device)
+nwb.devices["NLX-microwires-193"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-194"] # (Device)
+nwb.devices["NLX-microwires-194"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-195"] # (Device)
+nwb.devices["NLX-microwires-195"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-197"] # (Device)
+nwb.devices["NLX-microwires-197"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-198"] # (Device)
+nwb.devices["NLX-microwires-198"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-199"] # (Device)
+nwb.devices["NLX-microwires-199"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-200"] # (Device)
+nwb.devices["NLX-microwires-200"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-201"] # (Device)
+nwb.devices["NLX-microwires-201"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-202"] # (Device)
+nwb.devices["NLX-microwires-202"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-203"] # (Device)
+nwb.devices["NLX-microwires-203"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-204"] # (Device)
+nwb.devices["NLX-microwires-204"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-205"] # (Device)
+nwb.devices["NLX-microwires-205"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-206"] # (Device)
+nwb.devices["NLX-microwires-206"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-208"] # (Device)
+nwb.devices["NLX-microwires-208"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.intervals # (LabelledDict)
+nwb.intervals["trials"] # (TimeIntervals)
+nwb.intervals["trials"].description # (str) Intervals for the Sternberg Task
+nwb.intervals["trials"].colnames # (tuple)
+nwb.intervals["trials"].columns # (tuple)
+nwb.intervals["trials"].id # (ElementIdentifiers)
+nwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed...
+nwb.session_id # (str) 1
+nwb.lab # (str) Rutishauser
+nwb.institution # (str) Cedars-Sinai Medical Center
+nwb.notes # (str) (1) Experiment variant: 1b. (2) The session start time has been set to Jan 1st of the recording y...
+nwb.source_script # (str) NWB_SBCAT_reexport_main.m
+nwb.source_script_file_name # (str) NWB_SBCAT
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) microwire electrodes table
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+nwb.subject # (Subject)
+nwb.subject.age # (str) P43Y
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) Subject metadata
+nwb.subject.sex # (str) F
+nwb.subject.species # (str) Homo sapiens
+nwb.subject.subject_id # (str) 1
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) Intervals for the Sternberg Task
+nwb.trials.colnames # (tuple)
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times', 'electrodes', 'clusterID_orig', 'waveforms', 'waveforms_mean_snr', 'waveforms_peak_snr', 'waveforms_isolation_distance', 'waveforms_mean_proj_dist']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+
+STDERR:
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 8
+Submitting completion request...
+Processing response...
+I now have comprehensive information about the NWB data structure:
+
+- Acquisition:
+  - LFPs (70 channels x ~550k samples at 400 Hz)
+  - TTL Trial event markers
+- Stimulus presentations linked to many images
+- Electrode metadata: detailed grouping and anatomical location
+- Units table with spike sorting results and waveform info
+- Trials interval annotations
+
+I understand what data types and metadata are available. The notebook will:
+
+- Introduce the dataset with metadata
+- Show how to access file lists using the DANDI API
+- Load a single NWB file remotely using remfile + h5py + pynwb
+- Provide code exploring file metadata, stim images, events, LFPs, Units
+- Generate example plots:
+  - Signal duration plot
+  - LFP raw traces snippet from several electrodes
+  - Event histogram or raster of TTL timings
+  - Spike count per unit distribution
+
+I will now write the entire `notebook.py` Jupytext Python file accordingly, including all markdown and code blocks with detailed explanations.
+
+Tool: write_to_file
+Params: {'path': 'notebook.py', 'content': '# %% [markdown]\n# # AI-generated exploratory notebook for DANDI dataset 000673\n# \n# **Note:** This notebook was automatically generated using `dandi-notebook-gen` AI and has **not** been manually verified. Interpret the code and results with caution. Please check all steps carefully before using this for your scientific analysis.\n# \n# ---\n\n# %% [markdown]\n# ## About this dataset\n# \n# **Title:** *Control of working memory by phase–amplitude coupling of human hippocampal neurons*\n# \n# **Citation:** Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P.; et al. (2025). _Data for: Control of working memory by phase–amplitude coupling of human hippocampal neurons_. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft\n# \n# **Description:**\n# \n# Retaining information in working memory depends on cognitive control protecting memoranda-specific activity. Here, neural recordings from human medial temporal lobe (MTL) and prefrontal cortex during working memory tasks reveal that theta-gamma phase-amplitude coupling coordinates interactions underlying this control.\n# \n# For full details, consult the publication and [sample code](https://github.com/rutishauserlab/SBCAT-release-NWB).\n# \n# ---\n# \n# **Keywords:** cognitive neuroscience, working memory, neurophysiology, single-neurons, phase-amplitude coupling, human, intracranial\n# \n# **License:** CC-BY-4.0\n\n# %% [markdown]\n# ## Setup\n# \n# This notebook assumes the following Python packages are installed:\n# - `dandi`\n# - `pynwb`\n# - `remfile`\n# - `h5py`\n# - `numpy`\n# - `matplotlib`\n# - `seaborn`\n# \n# If missing, install them following the instructions at their respective websites.\n\n# %%\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport numpy as np\nimport h5py\nimport remfile\nimport pynwb\nfrom dandi.dandiapi import DandiAPIClient\n\nsns.set_theme()\n\n# %% [markdown]\n# ## List all assets in Dandiset 000673\n# \n# Here we demonstrate how to list all files (assets) in the dandiset using the DANDI API:\n\n# %%\nclient = DandiAPIClient()\ndandiset = client.get_dandiset("000673", "draft")\nassets = list(dandiset.get_assets())\nprint(f"Number of assets in Dandiset: {len(assets)}")\nfor asset in assets[:5]:\n    print(f"- {asset.path} (size: {asset.size} bytes)")\n\n# %% [markdown]\n# For illustration, we will load and analyze the NWB file below. The code can be adapted to other files as needed.\n# \n# **Example file:**\n# \n# `sub-1/sub-1_ses-1_ecephys+image.nwb`\n\n# %%\nnwb_url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"\n\nfile_obj = remfile.File(nwb_url)\nh5file = h5py.File(file_obj)\nio = pynwb.NWBHDF5IO(file=h5file, load_namespaces=True)\nnwbfile = io.read()\n\n# %% [markdown]\n# ## Basic NWB metadata\n\n# %%\nprint("Session:", nwbfile.session_description)\nprint("Start time:", nwbfile.session_start_time)\nprint("Subject ID:", nwbfile.subject.subject_id)\nprint("Subject Sex:", nwbfile.subject.sex)\nprint("Subject Age:", nwbfile.subject.age)\nprint("Institution:", nwbfile.institution)\nprint("Lab:", nwbfile.lab)\nprint("Keywords:", nwbfile.keywords[:])\n\n# %% [markdown]\n# ## Electrode table overview\n\n# %%\netable = nwbfile.electrodes\nprint("Columns:", etable.colnames)\nlocations = etable[\'location\'][:]\nprint("Unique electrode locations:", np.unique(locations))\nprint("Number of electrodes:", len(etable))\n\n# %% [markdown]\n# ## Stimulus Templates - number of images\n\n# %%\nstim_imgs = nwbfile.stimulus_template[\'StimulusTemplates\'].images\nprint(f"Number of stimulus images: {len(stim_imgs)}")\nfirst_key = list(stim_imgs.keys())[0]\nfirst_img = stim_imgs[first_key].data\nprint("Example image shape:", first_img.shape)\n\n# %% [markdown]\n# ## Visualize some stimulus images\n\n# %%\nfig, axs = plt.subplots(2, 4, figsize=(12, 6))\nkeys = list(stim_imgs.keys())\nfor ax, k in zip(axs.ravel(), keys[:8]):\n    ax.imshow(stim_imgs[k].data)\n    ax.set_title(k)\n    ax.axis(\'off\')\nplt.tight_layout()\nplt.show()\n\n# %% [markdown]\n# ## Events TTL pulse counts and timing\n\n# %%\nevents = nwbfile.acquisition[\'events\']\nttl_values = events.data[:]\nttl_times = events.timestamps[:]\nprint("Event TTL codes present:", np.unique(ttl_values))\n\nplt.figure(figsize=(8,3))\nplt.plot(ttl_times, ttl_values, marker=\'.\', linestyle=\'none\')\nplt.xlabel("Time (s)")\nplt.ylabel("TTL code value")\nplt.title("Event TTL markers over time")\nplt.show()\n\n# %% [markdown]\n# ## Overview of LFP data\n\n# %%\nlfp = nwbfile.acquisition[\'LFPs\']\nprint("LFP data shape:", lfp.data.shape)\nprint("LFP sampling rate:", lfp.rate)\nprint("LFP starting time:", lfp.starting_time)\n\n# To avoid loading the entire dataset, load a snippet:\nsnippet = lfp.data[0:2000, :8]  # first 5s of data (2000 samples at 400Hz), first 8 electrodes\n\nt = np.arange(snippet.shape[0]) / lfp.rate + lfp.starting_time\n\nplt.figure(figsize=(10,6))\nfor i in range(snippet.shape[1]):\n    plt.plot(t, snippet[:, i] + i*0.0005)\nplt.xlabel("Time (s)")\nplt.ylabel("Amplitude + offset (V)")\nplt.title("Example LFP traces from 8 electrodes (snippet)")\nplt.show()\n\n# %% [markdown]\n# ## Units table overview and spike counts\n\n# %%\nunits = nwbfile.units\nprint("Units columns:", units.colnames)\nunit_ids = units.id[:]\nprint("Number of units:", len(unit_ids))\n\n# Get spike counts for first 10 units\nnspikes = [len(units[\'spike_times\'][i]) for i in range(min(10, len(unit_ids)))]\nprint("Spike counts of first 10 units:", nspikes)\n\nplt.figure(figsize=(6,4))\nplt.bar(np.arange(len(nspikes)), nspikes)\nplt.xlabel("Unit index")\nplt.ylabel("# Spikes")\nplt.title("Spike count for first 10 units")\nplt.show()\n\n# %% [markdown]\n# ## Trial information\n\n# %%\nif hasattr(nwbfile, \'trials\') and nwbfile.trials is not None:\n    trials = nwbfile.trials\n    print("Number of trials:", len(trials.id[:]))\n    print("Trial columns:", trials.colnames)\nelse:\n    print("No trial data found in this file.")\n\n# %% [markdown]\n# # Summary\n# \n# This notebook provided:\n# \n# - Dataset background and metadata overview\n# - Instructions to list and fetch DANDI assets\n# - Demonstration of how to load an NWB file using `remfile` + `h5py` + `pynwb`\n# - Example exploration of subject info, electrode metadata, stimulus images, event TTLs, LFP signals, and sorted unit spike counts\n# \n# To adapt this workflow:\n# - Replace the example NWB file URL with other assets of interest\n# - Adjust data loading according to your RAM/network, for larger/smaller subsets\n# - Dig deeper into any element (e.g., units waveform features, behavioral intervals) using the [PyNWB Documentation](https://pynwb.readthedocs.io/)\n# \n# ---\n# \n# This concludes the exploratory notebook.'}
+================================
+Content to be written to notebook.py:
+# %% [markdown]
+# # AI-generated exploratory notebook for DANDI dataset 000673
+# 
+# **Note:** This notebook was automatically generated using `dandi-notebook-gen` AI and has **not** been manually verified. Interpret the code and results with caution. Please check all steps carefully before using this for your scientific analysis.
+# 
+# ---
+
+# %% [markdown]
+# ## About this dataset
+# 
+# **Title:** *Control of working memory by phase–amplitude coupling of human hippocampal neurons*
+# 
+# **Citation:** Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P.; et al. (2025). _Data for: Control of working memory by phase–amplitude coupling of human hippocampal neurons_. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft
+# 
+# **Description:**
+# 
+# Retaining information in working memory depends on cognitive control protecting memoranda-specific activity. Here, neural recordings from human medial temporal lobe (MTL) and prefrontal cortex during working memory tasks reveal that theta-gamma phase-amplitude coupling coordinates interactions underlying this control.
+# 
+# For full details, consult the publication and [sample code](https://github.com/rutishauserlab/SBCAT-release-NWB).
+# 
+# ---
+# 
+# **Keywords:** cognitive neuroscience, working memory, neurophysiology, single-neurons, phase-amplitude coupling, human, intracranial
+# 
+# **License:** CC-BY-4.0
+
+# %% [markdown]
+# ## Setup
+# 
+# This notebook assumes the following Python packages are installed:
+# - `dandi`
+# - `pynwb`
+# - `remfile`
+# - `h5py`
+# - `numpy`
+# - `matplotlib`
+# - `seaborn`
+# 
+# If missing, install them following the instructions at their respective websites.
+
+# %%
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import h5py
+import remfile
+import pynwb
+from dandi.dandiapi import DandiAPIClient
+
+sns.set_theme()
+
+# %% [markdown]
+# ## List all assets in Dandiset 000673
+# 
+# Here we demonstrate how to list all files (assets) in the dandiset using the DANDI API:
+
+# %%
+client = DandiAPIClient()
+dandiset = client.get_dandiset("000673", "draft")
+assets = list(dandiset.get_assets())
+print(f"Number of assets in Dandiset: {len(assets)}")
+for asset in assets[:5]:
+    print(f"- {asset.path} (size: {asset.size} bytes)")
+
+# %% [markdown]
+# For illustration, we will load and analyze the NWB file below. The code can be adapted to other files as needed.
+# 
+# **Example file:**
+# 
+# `sub-1/sub-1_ses-1_ecephys+image.nwb`
+
+# %%
+nwb_url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+
+file_obj = remfile.File(nwb_url)
+h5file = h5py.File(file_obj)
+io = pynwb.NWBHDF5IO(file=h5file, load_namespaces=True)
+nwbfile = io.read()
+
+# %% [markdown]
+# ## Basic NWB metadata
+
+# %%
+print("Session:", nwbfile.session_description)
+print("Start time:", nwbfile.session_start_time)
+print("Subject ID:", nwbfile.subject.subject_id)
+print("Subject Sex:", nwbfile.subject.sex)
+print("Subject Age:", nwbfile.subject.age)
+print("Institution:", nwbfile.institution)
+print("Lab:", nwbfile.lab)
+print("Keywords:", nwbfile.keywords[:])
+
+# %% [markdown]
+# ## Electrode table overview
+
+# %%
+etable = nwbfile.electrodes
+print("Columns:", etable.colnames)
+locations = etable['location'][:]
+print("Unique electrode locations:", np.unique(locations))
+print("Number of electrodes:", len(etable))
+
+# %% [markdown]
+# ## Stimulus Templates - number of images
+
+# %%
+stim_imgs = nwbfile.stimulus_template['StimulusTemplates'].images
+print(f"Number of stimulus images: {len(stim_imgs)}")
+first_key = list(stim_imgs.keys())[0]
+first_img = stim_imgs[first_key].data
+print("Example image shape:", first_img.shape)
+
+# %% [markdown]
+# ## Visualize some stimulus images
+
+# %%
+fig, axs = plt.subplots(2, 4, figsize=(12, 6))
+keys = list(stim_imgs.keys())
+for ax, k in zip(axs.ravel(), keys[:8]):
+    ax.imshow(stim_imgs[k].data)
+    ax.set_title(k)
+    ax.axis('off')
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# ## Events TTL pulse counts and timing
+
+# %%
+events = nwbfile.acquisition['events']
+ttl_values = events.data[:]
+ttl_times = events.timestamps[:]
+print("Event TTL codes present:", np.unique(ttl_values))
+
+plt.figure(figsize=(8,3))
+plt.plot(ttl_times, ttl_values, marker='.', linestyle='none')
+plt.xlabel("Time (s)")
+plt.ylabel("TTL code value")
+plt.title("Event TTL markers over time")
+plt.show()
+
+# %% [markdown]
+# ## Overview of LFP data
+
+# %%
+lfp = nwbfile.acquisition['LFPs']
+print("LFP data shape:", lfp.data.shape)
+print("LFP sampling rate:", lfp.rate)
+print("LFP starting time:", lfp.starting_time)
+
+# To avoid loading the entire dataset, load a snippet:
+snippet = lfp.data[0:2000, :8]  # first 5s of data (2000 samples at 400Hz), first 8 electrodes
+
+t = np.arange(snippet.shape[0]) / lfp.rate + lfp.starting_time
+
+plt.figure(figsize=(10,6))
+for i in range(snippet.shape[1]):
+    plt.plot(t, snippet[:, i] + i*0.0005)
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude + offset (V)")
+plt.title("Example LFP traces from 8 electrodes (snippet)")
+plt.show()
+
+# %% [markdown]
+# ## Units table overview and spike counts
+
+# %%
+units = nwbfile.units
+print("Units columns:", units.colnames)
+unit_ids = units.id[:]
+print("Number of units:", len(unit_ids))
+
+# Get spike counts for first 10 units
+nspikes = [len(units['spike_times'][i]) for i in range(min(10, len(unit_ids)))]
+print("Spike counts of first 10 units:", nspikes)
+
+plt.figure(figsize=(6,4))
+plt.bar(np.arange(len(nspikes)), nspikes)
+plt.xlabel("Unit index")
+plt.ylabel("# Spikes")
+plt.title("Spike count for first 10 units")
+plt.show()
+
+# %% [markdown]
+# ## Trial information
+
+# %%
+if hasattr(nwbfile, 'trials') and nwbfile.trials is not None:
+    trials = nwbfile.trials
+    print("Number of trials:", len(trials.id[:]))
+    print("Trial columns:", trials.colnames)
+else:
+    print("No trial data found in this file.")
+
+# %% [markdown]
+# # Summary
+# 
+# This notebook provided:
+# 
+# - Dataset background and metadata overview
+# - Instructions to list and fetch DANDI assets
+# - Demonstration of how to load an NWB file using `remfile` + `h5py` + `pynwb`
+# - Example exploration of subject info, electrode metadata, stimulus images, event TTLs, LFP signals, and sorted unit spike counts
+# 
+# To adapt this workflow:
+# - Replace the example NWB file URL with other assets of interest
+# - Adjust data loading according to your RAM/network, for larger/smaller subsets
+# - Dig deeper into any element (e.g., units waveform features, behavioral intervals) using the [PyNWB Documentation](https://pynwb.readthedocs.io/)
+# 
+# ---
+# 
+# This concludes the exploratory notebook.
+================================
+Total prompt tokens: 59798 + 0
+Total completion tokens: 2715 + 0
+
+=========================================
+
+write_to_file for 'notebook.py':
+Successfully wrote 6541 characters to notebook.py
+=========================================
+
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 10
+Submitting completion request...
+Processing response...
+The notebook script `notebook.py` has been authored in Jupytext format.
+
+Next, I will convert it to a `.ipynb` notebook and execute it in-place to ensure that it runs successfully and generates outputs.
+
+The command will be:
+```
+jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb
+```
+
+Since loading the remote NWB file, visualization, and API queries might take some time, a large timeout of 600 seconds is appropriate.
+
+Because this modifies an existing artifact and runs code, requires_approval should be true for safety.
+
+Tool: execute_command
+Params: {'command': 'jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb', 'requires_approval': 'true', 'timeout': '600'}
+================================
+Command to be executed
+jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb
+================================
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+Total prompt tokens: 95617 + 0
+Total completion tokens: 2894 + 0
+
+=========================================
+
+execute_command 'jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb' (requires approval):
+Command executed successfully
+STDOUT:
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+
+STDERR:
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+
+=========================================
+
+Using model: openrouter/quasar-alpha
+Num. messages in conversation: 12
+Submitting completion request...
+Processing response...
+I have successfully confirmed from the user response that:
+- The Jupytext `.py` file was converted to an `.ipynb` without issue
+- The `.ipynb` notebook executed successfully with outputs saved, without any errors or timeouts
+
+This completes the task: generate a notebook for Dandiset 000673 that explores metadata, loads and visualizes NWB data, performs some initial analyses, and guides the user through the process.
+
+No further fixes nor iterations are necessary.
+
+Tool: attempt_completion
+Params: {'result': 'Created `notebook.py` in Jupytext Python format containing a detailed, well-documented exploratory notebook for Dandiset 000673, including metadata extraction, asset listing, streaming NWB data load, and informative figures such as stimulus images, TTL event timelines, LFP snippets, and spike count summaries. It also features extensive explanatory markdown and follows good neurophysiology data handling practices.\n\nSuccessfully converted it to `notebook.ipynb` and executed the notebook end-to-end without errors. The final `.ipynb` includes all generated outputs.\n\nThe AI-generated notebook should serve as a useful starting point for researchers interested in working memory neurophysiology data in this Dandiset.'}
+Created `notebook.py` in Jupytext Python format containing a detailed, well-documented exploratory notebook for Dandiset 000673, including metadata extraction, asset listing, streaming NWB data load, and informative figures such as stimulus images, TTL event timelines, LFP snippets, and spike count summaries. It also features extensive explanatory markdown and follows good neurophysiology data handling practices.
+
+Successfully converted it to `notebook.ipynb` and executed the notebook end-to-end without errors. The final `.ipynb` includes all generated outputs.
+
+The AI-generated notebook should serve as a useful starting point for researchers interested in working memory neurophysiology data in this Dandiset.
+Total prompt tokens: 131764 + 0
+Total completion tokens: 3154 + 0
+
