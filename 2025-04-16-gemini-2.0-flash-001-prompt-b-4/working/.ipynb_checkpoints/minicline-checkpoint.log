@@ -1,0 +1,1804 @@
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Okay, I will create a Jupytext notebook called `notebook.py` to help researchers explore and analyze Dandiset 000673, convert it to `notebook.ipynb`, and make sure it runs without errors.
+
+I have the following plan:
+
+1.  Get the Dandiset metadata using `python tools_cli.py dandiset-info 000673`.
+2.  Get the Dandiset assets using `python tools_cli.py dandiset-assets 000673`.
+3.  Choose one NWB files from the assets and get its information using `python tools_cli.py nwb-file-info 000673 <NWB_FILE_URL>`.
+4.  Do exploratory research on the contents of the Dandiset by creating and executing python scripts in an explore/ subdirectory to generate text output and plots.
+     -   It's very important that the plots go to .png image files in the explore/ subdirectory. Otherwise, if the plot is displayed in a window, the script will hang. So do not do a plt.show().
+     -   After executing each script, if you created plots, always review each plot using the read_image tool to be able to gain information about them. Each call to read_image should include instructions that give context for the image and that help determine whether the plot is informative and useful.
+5.  Write the content of the notebook to `notebook.py`.
+6.  Run `jupytext --to notebook notebook.py && jupyter execute --inplace notebook.ipynb` to convert the notebook to a Jupyter notebook and execute the resulting `notebook.ipynb` to make sure it runs without errors and produces output cells.
+7.  If there are errors, fix them in the Jupytext `notebook.py` file, re-run the above command to convert and execute, repeating these steps until the notebook runs properly.
+
+I will start by getting the Dandiset metadata.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-info 000673', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-info 000673
+================================
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+Total prompt tokens: 8714 + 0
+Total completion tokens: 498 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-info 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "id": "DANDI:000673/draft",
+    "name": "Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons",
+    "about": [
+      {
+        "name": "Medial Temporal Lobe",
+        "schemaKey": "GenericType"
+      },
+      {
+        "name": "Medial Frontal Cortex",
+        "schemaKey": "GenericType"
+      }
+    ],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "draft",
+    "citation": "Daume, Jonathan; Kaminski, Jan; Schjetnan, Andrea G. P. ; Salimpour, Yousef; Khan, Umais; Kyzar, Michael; Reed, Chrystal M.; Anderson, William S.; Valiante, Taufik A.; Mamelak, Adam N.; Rutishauser, Ueli (2025) Data for: Control of working memory by phase\u2013amplitude coupling of human hippocampal neurons (Version draft) [Data set]. DANDI Archive. https://dandiarchive.org/dandiset/000673/draft",
+    "keywords": [
+      "cognitive neuroscience",
+      "data standardization",
+      "working memory",
+      "neurophysiology",
+      "neurosurgery",
+      "NWB",
+      "open source",
+      "single-neurons",
+      "phase-amplitude coupling"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000673",
+    "contributor": [
+      "Daume, Jonathan",
+      "Kaminski, Jan",
+      "Schjetnan, Andrea G. P. ",
+      "Salimpour, Yousef",
+      "Khan, Umais",
+      "Kyzar, Michael",
+      "Reed, Chrystal M.",
+      "Anderson, William S.",
+      "Valiante, Taufik A.",
+      "Mamelak, Adam N.",
+      "Rutishauser, Ueli",
+      "National Institutes of Health (NIH)",
+      "National Institutes of Health (NIH)",
+      "National Science Foundation (NSF)"
+    ],
+    "dateCreated": "2023-09-26T20:41:29.787964+00:00",
+    "description": "Retaining information in working memory is a demanding process that relies on cognitive control to protect memoranda-specific persistent activity from interference. However, how cognitive control regulates working memory storage is unclear. Here we show that interactions of frontal control and hippocampal persistent activity are coordinated by theta\u2013gamma phase\u2013amplitude coupling (TG-PAC). We recorded single neurons in the human medial temporal and frontal lobe while patients maintained multiple items in their working memory. In the hippocampus, TG-PAC was indicative of working memory load and quality. We identified cells that selectively spiked during nonlinear interactions of theta phase and gamma amplitude. The spike timing of these PAC neurons was coordinated with frontal theta activity when cognitive control demand was high. By introducing noise correlations with persistently active neurons in the hippocampus, PAC neurons shaped the geometry of the population code. This led to higher-fidelity representations of working memory content that were associated with improved behaviour. Our results support a multicomponent architecture of working memory, with frontal control managing maintenance of working memory content in storage-related areas. Within this framework, hippocampal TG-PAC integrates cognitive control and working memory storage across brain areas, thereby suggesting a potential mechanism for top-down control over sensory-driven processes.\n\nSample code that illustrates how to replicate key figures/analysis in Daume et. al. can be found here: https://github.com/rutishauserlab/SBCAT-release-NWB\n\nNote: sub-35_ses-1_ecephys+image.nwb is missing mean/std waveform data, but these data can be derived from the raw spike waveforms included in the file.",
+    "variableMeasured": [
+      "Units",
+      "ElectricalSeries",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 4
+Submitting completion request...
+Processing response...
+I have successfully retrieved the Dandiset metadata. Now I need to get the Dandiset assets.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-assets 000673', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-assets 000673
+================================
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+Total prompt tokens: 19072 + 0
+Total completion tokens: 580 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-assets 000673' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "count": 44,
+    "results": [
+      {
+        "asset_id": "65a7e913-45c7-48db-bf19-b9f5e910110a",
+        "path": "sub-1/sub-1_ses-1_ecephys+image.nwb",
+        "size": 745833239
+      },
+      {
+        "asset_id": "95406971-26ad-4894-917b-713ed7625349",
+        "path": "sub-1/sub-1_ses-2_ecephys+image.nwb",
+        "size": 690528032
+      },
+      {
+        "asset_id": "c03df798-01fc-4023-ab51-e1721e2db93c",
+        "path": "sub-10/sub-10_ses-1_ecephys+image.nwb",
+        "size": 519312053
+      },
+      {
+        "asset_id": "5a25429a-9f5f-4801-91e7-9b04ff3f3857",
+        "path": "sub-11/sub-11_ses-1_ecephys+image.nwb",
+        "size": 679215592
+      },
+      {
+        "asset_id": "f3a72b16-6e70-4adf-8384-28224ce212a8",
+        "path": "sub-12/sub-12_ses-1_ecephys+image.nwb",
+        "size": 518882687
+      },
+      {
+        "asset_id": "720d3e78-82f1-4d9d-a0f4-d7fc041da6c0",
+        "path": "sub-12/sub-12_ses-2_ecephys+image.nwb",
+        "size": 405388453
+      },
+      {
+        "asset_id": "5b5ef653-a5b2-4e06-8b9e-6cb3100b9b7f",
+        "path": "sub-13/sub-13_ses-1_ecephys+image.nwb",
+        "size": 549568265
+      },
+      {
+        "asset_id": "a606f280-b588-4116-96ec-ee12f34ddb04",
+        "path": "sub-14/sub-14_ses-1_ecephys+image.nwb",
+        "size": 399996163
+      },
+      {
+        "asset_id": "682b5f43-68b9-4e8b-9af0-d10613552872",
+        "path": "sub-15/sub-15_ses-1_ecephys+image.nwb",
+        "size": 764160300
+      },
+      {
+        "asset_id": "89f99cf7-0465-4beb-add5-cbc0f31289b0",
+        "path": "sub-16/sub-16_ses-1_ecephys+image.nwb",
+        "size": 893755892
+      },
+      {
+        "asset_id": "a2f476b8-2ae7-437a-9db7-3175f8ad72d5",
+        "path": "sub-17/sub-17_ses-1_ecephys+image.nwb",
+        "size": 1019994792
+      },
+      {
+        "asset_id": "c25c1d44-2b20-4796-8c73-b50986c7c116",
+        "path": "sub-18/sub-18_ses-1_ecephys+image.nwb",
+        "size": 360908172
+      },
+      {
+        "asset_id": "af4084c0-883d-4d35-85a1-203beacfb3a7",
+        "path": "sub-19/sub-19_ses-1_ecephys+image.nwb",
+        "size": 1288392806
+      },
+      {
+        "asset_id": "a10b7d1b-85e4-4b0b-a623-b011becea299",
+        "path": "sub-19/sub-19_ses-2_ecephys+image.nwb",
+        "size": 931052497
+      },
+      {
+        "asset_id": "2689c02a-d7e7-470f-971f-2fcd7c5fe82e",
+        "path": "sub-2/sub-2_ses-1_ecephys+image.nwb",
+        "size": 721549137
+      },
+      {
+        "asset_id": "9fdbe18f-158f-47c5-ba67-4c56118d6cf5",
+        "path": "sub-20/sub-20_ses-1_ecephys+image.nwb",
+        "size": 219922064
+      },
+      {
+        "asset_id": "78cced68-978b-44c4-ac29-81f31802267f",
+        "path": "sub-21/sub-21_ses-1_ecephys+image.nwb",
+        "size": 555029396
+      },
+      {
+        "asset_id": "3d6f37a0-2a41-46a0-9ae6-e3784b918341",
+        "path": "sub-22/sub-22_ses-1_ecephys+image.nwb",
+        "size": 436016274
+      },
+      {
+        "asset_id": "3b1aa623-0e52-4c74-a8b0-4392eb3ba352",
+        "path": "sub-22/sub-22_ses-2_ecephys+image.nwb",
+        "size": 315553276
+      },
+      {
+        "asset_id": "f081e72a-61cb-4a16-894b-16967f461686",
+        "path": "sub-22/sub-22_ses-3_ecephys+image.nwb",
+        "size": 294837848
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 6
+Submitting completion request...
+Processing response...
+I have retrieved the Dandiset assets. There are 44 assets in total. I will select one of the NWB files and get its information. I'll choose `sub-1/sub-1_ses-1_ecephys+image.nwb`. The asset ID is `65a7e913-45c7-48db-bf19-b9f5e910110a`. Therefore, the NWB file URL is `https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/`.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+/home/jovyan/dandi-ai-notebooks-2/packages/get-nwbfile-info/src/get_nwbfile_info/core.py:319: UserWarning: Warning: Duplicate entries found in the results.
+  warnings.warn("Warning: Duplicate entries found in the results.")
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) SBCAT_ID: 1
+nwb.identifier # (str) sub-1_ses-1_P55CS
+nwb.session_start_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 1, 20, 0, 0, tzinfo=tzoffset(None, -28800)), datetime.datetime(2025, 1, 20, 11, 52, 9, 51525, tzinfo=tzoffset(None, -28800))]
+nwb.experimenter # (tuple) ['Kyzar, Michael']
+nwb.related_publications # (tuple) ['doi: PENDING']
+nwb.acquisition # (LabelledDict)
+nwb.acquisition["LFPs"] # (ElectricalSeries)
+nwb.acquisition["LFPs"].starting_time # (float64) 1.55e-05
+nwb.acquisition["LFPs"].rate # (float64) 400.0
+nwb.acquisition["LFPs"].resolution # (float64) -1.0
+nwb.acquisition["LFPs"].comments # (str) no comments
+nwb.acquisition["LFPs"].description # (str) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz
+nwb.acquisition["LFPs"].conversion # (float64) 1.0
+nwb.acquisition["LFPs"].offset # (float64) 0.0
+nwb.acquisition["LFPs"].unit # (str) volts
+nwb.acquisition["LFPs"].data # (Dataset) shape (550276, 70); dtype float64
+# nwb.acquisition["LFPs"].data[:, :] # Access all data
+# nwb.acquisition["LFPs"].data[0:10, :] # Access first 10 rows
+# nwb.acquisition["LFPs"].data[:, 0:10] # Access first 10 columns
+nwb.acquisition["LFPs"].starting_time_unit # (str) seconds
+nwb.acquisition["LFPs"].electrodes # (DynamicTableRegion)
+nwb.acquisition["LFPs"].electrodes.description # (str) single electrodes
+nwb.acquisition["LFPs"].electrodes.table # (DynamicTable)
+nwb.acquisition["LFPs"].electrodes.table.description # (str) microwire electrodes table
+nwb.acquisition["LFPs"].electrodes.table.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.acquisition["LFPs"].electrodes.table.columns # (tuple)
+nwb.acquisition["LFPs"].electrodes.table.id # (ElementIdentifiers)
+# nwb.acquisition["LFPs"].electrodes.table.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 74 rows and 8 columns
+# nwb.acquisition["LFPs"].electrodes.table.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 74
+nwb.acquisition["LFPs"].electrodes.table.x # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.y # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.z # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.location # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.filtering # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.group # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.group_name # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.origChannel # (VectorData) my description
+nwb.acquisition["events"] # (TimeSeries)
+nwb.acquisition["events"].resolution # (float64) -1.0
+nwb.acquisition["events"].comments # (str) no comments
+nwb.acquisition["events"].description # (str) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = ...
+nwb.acquisition["events"].conversion # (float64) 1.0
+nwb.acquisition["events"].offset # (float64) 0.0
+nwb.acquisition["events"].unit # (str) NA
+nwb.acquisition["events"].data # (Dataset) shape (982,); dtype int8
+# nwb.acquisition["events"].data[:] # Access all data
+# nwb.acquisition["events"].data[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps # (Dataset) shape (982,); dtype float64
+# nwb.acquisition["events"].timestamps[:] # Access all data
+# nwb.acquisition["events"].timestamps[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps_unit # (str) seconds
+nwb.acquisition["events"].interval # (int) 1
+nwb.stimulus # (LabelledDict)
+nwb.stimulus["StimulusPresentation"] # (IndexSeries)
+nwb.stimulus["StimulusPresentation"].resolution # (float) -1.0
+nwb.stimulus["StimulusPresentation"].comments # (str) no comments
+nwb.stimulus["StimulusPresentation"].description # (str) Presentation order of the stimulus. Indexes 'StimulusTemplates'.
+nwb.stimulus["StimulusPresentation"].conversion # (float) 1.0
+nwb.stimulus["StimulusPresentation"].offset # (float) 0.0
+nwb.stimulus["StimulusPresentation"].unit # (str) N/A
+nwb.stimulus["StimulusPresentation"].data # (Dataset) shape (560,); dtype uint32
+# nwb.stimulus["StimulusPresentation"].data[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].data[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps # (Dataset) shape (560,); dtype float64
+# nwb.stimulus["StimulusPresentation"].timestamps[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].timestamps[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps_unit # (str) seconds
+nwb.stimulus["StimulusPresentation"].interval # (int) 1
+nwb.stimulus_template # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"] # (Images)
+nwb.stimulus_template["StimulusTemplates"].description # (str) A collection of images presented to the subject
+nwb.stimulus_template["StimulusTemplates"].images # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"].images["image_101"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_102"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_103"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_104"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_105"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_106"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_107"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_108"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_109"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_110"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_111"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_112"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_113"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_114"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_115"] # (RGBImage)
+# ...
+# Other fields: image_116, image_117, image_118, image_119, image_120, image_121, image_122, image_123, image_124, image_125, image_126, image_127, image_128, image_129, image_130, image_131, image_132, image_133, image_134, image_135, image_136, image_137, image_138, image_139, image_140, image_141, image_142, image_143, image_144, image_145, image_146, image_147, image_148, image_149, image_150, image_151, image_152, image_153, image_154, image_155, image_156, image_157, image_201, image_202, image_203, image_204, image_205, image_206, image_207, image_208, image_209, image_210, image_211, image_212, image_213, image_214, image_215, image_216, image_217, image_218, image_219, image_220, image_221, image_222, image_223, image_224, image_225, image_226, image_227, image_228, image_229, image_230, image_231, image_232, image_233, image_234, image_235, image_236, image_237, image_238, image_239, image_240, image_241, image_242, image_243, image_244, image_245, image_246, image_247, image_248, image_249, image_250, image_251, image_252, image_253, image_254, image_255, image_256, image_257, image_301, image_302, image_303, image_304, image_305, image_306, image_307, image_308, image_309, image_310, image_311, image_312, image_313, image_314, image_315, image_316, image_317, image_318, image_319, image_320, image_321, image_322, image_323, image_324, image_325, image_326, image_327, image_328, image_329, image_330, image_331, image_332, image_333, image_334, image_335, image_336, image_337, image_338, image_339, image_340, image_341, image_342, image_343, image_344, image_345, image_346, image_347, image_348, image_349, image_350, image_351, image_352, image_353, image_354, image_355, image_356, image_401, image_402, image_403, image_404, image_405, image_406, image_407, image_408, image_409, image_410, image_411, image_412, image_413, image_414, image_415, image_416, image_417, image_418, image_419, image_420, image_421, image_422, image_423, image_424, image_425, image_426, image_427, image_428, image_429, image_430, image_431, image_432, image_433, image_434, image_435, image_436, image_437, image_438, image_439, image_440, image_441, image_442, image_443, image_444, image_445, image_446, image_447, image_448, image_449, image_450, image_451, image_452, image_453, image_454, image_455, image_501, image_502, image_503, image_504, image_505, image_506, image_507, image_508, image_509, image_510, image_511, image_512, image_513, image_514, image_515, image_516, image_517, image_518, image_519, image_520, image_521, image_522, image_523, image_524, image_525, image_526, image_527, image_528, image_529, image_530, image_531, image_532, image_533, image_534, image_535, image_536, image_537, image_538, image_539, image_540, image_541, image_542, image_543, image_544, image_545, image_546, image_547, image_548, image_549, image_550, image_551, image_552, image_553, image_554, image_555, image_999
+nwb.stimulus_template["StimulusTemplates"].order_of_images # (ImageReferences)
+nwb.keywords # (StrDataset) shape (1,); dtype object
+# nwb.keywords[:] # Access all data
+# nwb.keywords[0:10] # Access first 10 elements
+# First few values of nwb.keywords: ['single neuron, human, intracranial']
+nwb.electrode_groups # (LabelledDict)
+nwb.electrode_groups["NLX-microwires-129"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-129"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-129"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-129"].device # (Device)
+nwb.electrode_groups["NLX-microwires-129"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-130"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-130"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-130"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-130"].device # (Device)
+nwb.electrode_groups["NLX-microwires-130"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-131"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-131"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-131"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-131"].device # (Device)
+nwb.electrode_groups["NLX-microwires-131"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-132"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-132"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-132"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-132"].device # (Device)
+nwb.electrode_groups["NLX-microwires-132"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-133"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-133"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-133"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-133"].device # (Device)
+nwb.electrode_groups["NLX-microwires-133"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-134"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-134"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-134"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-134"].device # (Device)
+nwb.electrode_groups["NLX-microwires-134"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-135"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-135"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-135"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-135"].device # (Device)
+nwb.electrode_groups["NLX-microwires-135"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-136"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-136"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-136"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-136"].device # (Device)
+nwb.electrode_groups["NLX-microwires-136"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-137"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-137"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-137"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-137"].device # (Device)
+nwb.electrode_groups["NLX-microwires-137"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-138"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-138"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-138"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-138"].device # (Device)
+nwb.electrode_groups["NLX-microwires-138"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-140"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-140"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-140"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-140"].device # (Device)
+nwb.electrode_groups["NLX-microwires-140"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-141"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-141"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-141"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-141"].device # (Device)
+nwb.electrode_groups["NLX-microwires-141"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-142"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-142"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-142"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-142"].device # (Device)
+nwb.electrode_groups["NLX-microwires-142"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-143"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-143"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-143"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-143"].device # (Device)
+nwb.electrode_groups["NLX-microwires-143"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-144"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-144"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-144"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-144"].device # (Device)
+nwb.electrode_groups["NLX-microwires-144"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+# ...
+# Other fields: NLX-microwires-145, NLX-microwires-146, NLX-microwires-148, NLX-microwires-149, NLX-microwires-150, NLX-microwires-151, NLX-microwires-152, NLX-microwires-153, NLX-microwires-154, NLX-microwires-155, NLX-microwires-156, NLX-microwires-157, NLX-microwires-158, NLX-microwires-160, NLX-microwires-161, NLX-microwires-162, NLX-microwires-163, NLX-microwires-164, NLX-microwires-165, NLX-microwires-166, NLX-microwires-167, NLX-microwires-168, NLX-microwires-169, NLX-microwires-170, NLX-microwires-171, NLX-microwires-172, NLX-microwires-173, NLX-microwires-174, NLX-microwires-175, NLX-microwires-176, NLX-microwires-177, NLX-microwires-178, NLX-microwires-179, NLX-microwires-180, NLX-microwires-181, NLX-microwires-182, NLX-microwires-183, NLX-microwires-184, NLX-microwires-185, NLX-microwires-186, NLX-microwires-187, NLX-microwires-188, NLX-microwires-189, NLX-microwires-191, NLX-microwires-192, NLX-microwires-193, NLX-microwires-194, NLX-microwires-195, NLX-microwires-197, NLX-microwires-198, NLX-microwires-199, NLX-microwires-200, NLX-microwires-201, NLX-microwires-202, NLX-microwires-203, NLX-microwires-204, NLX-microwires-205, NLX-microwires-206, NLX-microwires-208
+nwb.devices # (LabelledDict)
+nwb.devices["NLX-microwires-129"] # (Device)
+nwb.devices["NLX-microwires-129"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-130"] # (Device)
+nwb.devices["NLX-microwires-130"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-131"] # (Device)
+nwb.devices["NLX-microwires-131"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-132"] # (Device)
+nwb.devices["NLX-microwires-132"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-133"] # (Device)
+nwb.devices["NLX-microwires-133"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-134"] # (Device)
+nwb.devices["NLX-microwires-134"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-135"] # (Device)
+nwb.devices["NLX-microwires-135"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-136"] # (Device)
+nwb.devices["NLX-microwires-136"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-137"] # (Device)
+nwb.devices["NLX-microwires-137"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-138"] # (Device)
+nwb.devices["NLX-microwires-138"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-140"] # (Device)
+nwb.devices["NLX-microwires-140"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-141"] # (Device)
+nwb.devices["NLX-microwires-141"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-142"] # (Device)
+nwb.devices["NLX-microwires-142"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-143"] # (Device)
+nwb.devices["NLX-microwires-143"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-144"] # (Device)
+nwb.devices["NLX-microwires-144"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+# ...
+# Other fields: NLX-microwires-145, NLX-microwires-146, NLX-microwires-148, NLX-microwires-149, NLX-microwires-150, NLX-microwires-151, NLX-microwires-152, NLX-microwires-153, NLX-microwires-154, NLX-microwires-155, NLX-microwires-156, NLX-microwires-157, NLX-microwires-158, NLX-microwires-160, NLX-microwires-161, NLX-microwires-162, NLX-microwires-163, NLX-microwires-164, NLX-microwires-165, NLX-microwires-166, NLX-microwires-167, NLX-microwires-168, NLX-microwires-169, NLX-microwires-170, NLX-microwires-171, NLX-microwires-172, NLX-microwires-173, NLX-microwires-174, NLX-microwires-175, NLX-microwires-176, NLX-microwires-177, NLX-microwires-178, NLX-microwires-179, NLX-microwires-180, NLX-microwires-181, NLX-microwires-182, NLX-microwires-183, NLX-microwires-184, NLX-microwires-185, NLX-microwires-186, NLX-microwires-187, NLX-microwires-188, NLX-microwires-189, NLX-microwires-191, NLX-microwires-192, NLX-microwires-193, NLX-microwires-194, NLX-microwires-195, NLX-microwires-197, NLX-microwires-198, NLX-microwires-199, NLX-microwires-200, NLX-microwires-201, NLX-microwires-202, NLX-microwires-203, NLX-microwires-204, NLX-microwires-205, NLX-microwires-206, NLX-microwires-208
+nwb.intervals # (LabelledDict)
+nwb.intervals["trials"] # (TimeIntervals)
+nwb.intervals["trials"].description # (str) Intervals for the Sternberg Task
+nwb.intervals["trials"].colnames # (tuple)
+nwb.intervals["trials"].columns # (tuple)
+nwb.intervals["trials"].id # (ElementIdentifiers)
+# nwb.intervals["trials"].to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 140 rows and 19 columns
+# nwb.intervals["trials"].to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 140
+nwb.intervals["trials"].loads # (VectorData) Encoding loads for each trial
+nwb.intervals["trials"].PicIDs_Encoding1 # (VectorData) Picture ID for Enc1 loads.
+nwb.intervals["trials"].PicIDs_Encoding2 # (VectorData) Picture ID for Enc2 loads.
+nwb.intervals["trials"].PicIDs_Encoding3 # (VectorData) Picture ID for Enc1 loads.
+nwb.intervals["trials"].PicIDs_Probe # (VectorData) Picture ID for Probe loads.
+nwb.intervals["trials"].start_time # (VectorData) Trial start times
+nwb.intervals["trials"].stop_time # (VectorData) Trial stop times
+nwb.intervals["trials"].timestamps_FixationCross # (VectorData) Start times of fixation cross
+nwb.intervals["trials"].timestamps_Encoding1 # (VectorData) Start times of picture #1 presentation
+nwb.intervals["trials"].timestamps_Encoding1_end # (VectorData) End times of picture #1 presentation
+nwb.intervals["trials"].timestamps_Encoding2 # (VectorData) Start times of picture #2 presentation
+nwb.intervals["trials"].timestamps_Encoding2_end # (VectorData) End times of picture #2 presentation
+nwb.intervals["trials"].timestamps_Encoding3 # (VectorData) Start times of picture #3 presentation
+nwb.intervals["trials"].timestamps_Encoding3_end # (VectorData) End times of picture #3 presentation
+nwb.intervals["trials"].timestamps_Maintenance # (VectorData) Start times of maintenance periods
+nwb.intervals["trials"].timestamps_Probe # (VectorData) Start times of probe onset
+nwb.intervals["trials"].timestamps_Response # (VectorData) Time stamps of button press
+nwb.intervals["trials"].response_accuracy # (VectorData) Whether the subject response was correct (1) or incorrect (0).
+nwb.intervals["trials"].probe_in_out # (VectorData) Whether the probe image was held (1) or not held (0) in memory.
+nwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed...
+nwb.session_id # (str) 1
+nwb.lab # (str) Rutishauser
+nwb.institution # (str) Cedars-Sinai Medical Center
+nwb.notes # (str) (1) Experiment variant: 1b. (2) The session start time has been set to Jan 1st of the recording y...
+nwb.source_script # (str) NWB_SBCAT_reexport_main.m
+nwb.source_script_file_name # (str) NWB_SBCAT
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) microwire electrodes table
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 74 rows and 8 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 74
+nwb.electrodes.x # (VectorData) my description
+nwb.electrodes.y # (VectorData) my description
+nwb.electrodes.z # (VectorData) my description
+nwb.electrodes.location # (VectorData) my description
+nwb.electrodes.filtering # (VectorData) my description
+nwb.electrodes.group # (VectorData) my description
+nwb.electrodes.group_name # (VectorData) my description
+nwb.electrodes.origChannel # (VectorData) my description
+nwb.subject # (Subject)
+nwb.subject.age # (str) P43Y
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) Subject metadata
+nwb.subject.sex # (str) F
+nwb.subject.species # (str) Homo sapiens
+nwb.subject.subject_id # (str) 1
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) Intervals for the Sternberg Task
+nwb.trials.colnames # (tuple)
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+# nwb.trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 140 rows and 19 columns
+# nwb.trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 140
+nwb.trials.loads # (VectorData) Encoding loads for each trial
+nwb.trials.PicIDs_Encoding1 # (VectorData) Picture ID for Enc1 loads.
+nwb.trials.PicIDs_Encoding2 # (VectorData) Picture ID for Enc2 loads.
+nwb.trials.PicIDs_Encoding3 # (VectorData) Picture ID for Enc1 loads.
+nwb.trials.PicIDs_Probe # (VectorData) Picture ID for Probe loads.
+nwb.trials.start_time # (VectorData) Trial start times
+nwb.trials.stop_time # (VectorData) Trial stop times
+nwb.trials.timestamps_FixationCross # (VectorData) Start times of fixation cross
+nwb.trials.timestamps_Encoding1 # (VectorData) Start times of picture #1 presentation
+nwb.trials.timestamps_Encoding1_end # (VectorData) End times of picture #1 presentation
+nwb.trials.timestamps_Encoding2 # (VectorData) Start times of picture #2 presentation
+nwb.trials.timestamps_Encoding2_end # (VectorData) End times of picture #2 presentation
+nwb.trials.timestamps_Encoding3 # (VectorData) Start times of picture #3 presentation
+nwb.trials.timestamps_Encoding3_end # (VectorData) End times of picture #3 presentation
+nwb.trials.timestamps_Maintenance # (VectorData) Start times of maintenance periods
+nwb.trials.timestamps_Probe # (VectorData) Start times of probe onset
+nwb.trials.timestamps_Response # (VectorData) Time stamps of button press
+nwb.trials.response_accuracy # (VectorData) Whether the subject response was correct (1) or incorrect (0).
+nwb.trials.probe_in_out # (VectorData) Whether the probe image was held (1) or not held (0) in memory.
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times', 'electrodes', 'clusterID_orig', 'waveforms', 'waveforms_mean_snr', 'waveforms_peak_snr', 'waveforms_isolation_distance', 'waveforms_mean_proj_dist']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 46 rows and 11 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 46
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+nwb.units.electrodes # (DynamicTableRegion) single electrodes
+nwb.units.clusterID_orig # (VectorData) Cluster IDs of units, which referneces the cluster ID used in the native dataset. Used for cross-referencing validating the exported dataset
+nwb.units.waveforms # (VectorIndex) Index for VectorData 'waveforms_index_index'
+# nwb.units.waveforms_index[0] # (list)
+# nwb.units.waveforms_index[1] # (list)
+# nwb.units.waveforms_index[2] # (list)
+# nwb.units.waveforms_index[3] # (list)
+# ...
+nwb.units.waveforms_mean_snr # (VectorData) Mean Signal-to-Noise Ratio (SNR) across all samples of the mean waveform.
+nwb.units.waveforms_peak_snr # (VectorData) Signal-to-Noise Ratio (SNR) of the mean signal amplitude.
+nwb.units.waveforms_isolation_distance # (VectorData) Cluster Isolation distance, computed using all waveforms in the cluster.
+nwb.units.waveforms_mean_proj_dist # (VectorData) Cluster Isolation distance, computed using all waveforms in the cluster.
+Total prompt tokens: 31446 + 0
+Total completion tokens: 851 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py nwb-file-info 000673 https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/' (requires approval):
+Command executed successfully
+STDOUT:
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) SBCAT_ID: 1
+nwb.identifier # (str) sub-1_ses-1_P55CS
+nwb.session_start_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.timestamps_reference_time # (datetime) 2018-01-01T00:00:00-08:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 1, 20, 0, 0, tzinfo=tzoffset(None, -28800)), datetime.datetime(2025, 1, 20, 11, 52, 9, 51525, tzinfo=tzoffset(None, -28800))]
+nwb.experimenter # (tuple) ['Kyzar, Michael']
+nwb.related_publications # (tuple) ['doi: PENDING']
+nwb.acquisition # (LabelledDict)
+nwb.acquisition["LFPs"] # (ElectricalSeries)
+nwb.acquisition["LFPs"].starting_time # (float64) 1.55e-05
+nwb.acquisition["LFPs"].rate # (float64) 400.0
+nwb.acquisition["LFPs"].resolution # (float64) -1.0
+nwb.acquisition["LFPs"].comments # (str) no comments
+nwb.acquisition["LFPs"].description # (str) These are LFP recordings that have spike potentials removed and is downsampled to 400Hz
+nwb.acquisition["LFPs"].conversion # (float64) 1.0
+nwb.acquisition["LFPs"].offset # (float64) 0.0
+nwb.acquisition["LFPs"].unit # (str) volts
+nwb.acquisition["LFPs"].data # (Dataset) shape (550276, 70); dtype float64
+# nwb.acquisition["LFPs"].data[:, :] # Access all data
+# nwb.acquisition["LFPs"].data[0:10, :] # Access first 10 rows
+# nwb.acquisition["LFPs"].data[:, 0:10] # Access first 10 columns
+nwb.acquisition["LFPs"].starting_time_unit # (str) seconds
+nwb.acquisition["LFPs"].electrodes # (DynamicTableRegion)
+nwb.acquisition["LFPs"].electrodes.description # (str) single electrodes
+nwb.acquisition["LFPs"].electrodes.table # (DynamicTable)
+nwb.acquisition["LFPs"].electrodes.table.description # (str) microwire electrodes table
+nwb.acquisition["LFPs"].electrodes.table.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.acquisition["LFPs"].electrodes.table.columns # (tuple)
+nwb.acquisition["LFPs"].electrodes.table.id # (ElementIdentifiers)
+# nwb.acquisition["LFPs"].electrodes.table.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 74 rows and 8 columns
+# nwb.acquisition["LFPs"].electrodes.table.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 74
+nwb.acquisition["LFPs"].electrodes.table.x # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.y # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.z # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.location # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.filtering # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.group # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.group_name # (VectorData) my description
+nwb.acquisition["LFPs"].electrodes.table.origChannel # (VectorData) my description
+nwb.acquisition["events"] # (TimeSeries)
+nwb.acquisition["events"].resolution # (float64) -1.0
+nwb.acquisition["events"].comments # (str) no comments
+nwb.acquisition["events"].description # (str) The events coorespond to the TTL markers for each trial. The TTL markers are the following: 61 = ...
+nwb.acquisition["events"].conversion # (float64) 1.0
+nwb.acquisition["events"].offset # (float64) 0.0
+nwb.acquisition["events"].unit # (str) NA
+nwb.acquisition["events"].data # (Dataset) shape (982,); dtype int8
+# nwb.acquisition["events"].data[:] # Access all data
+# nwb.acquisition["events"].data[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps # (Dataset) shape (982,); dtype float64
+# nwb.acquisition["events"].timestamps[:] # Access all data
+# nwb.acquisition["events"].timestamps[0:10] # Access first 10 elements
+nwb.acquisition["events"].timestamps_unit # (str) seconds
+nwb.acquisition["events"].interval # (int) 1
+nwb.stimulus # (LabelledDict)
+nwb.stimulus["StimulusPresentation"] # (IndexSeries)
+nwb.stimulus["StimulusPresentation"].resolution # (float) -1.0
+nwb.stimulus["StimulusPresentation"].comments # (str) no comments
+nwb.stimulus["StimulusPresentation"].description # (str) Presentation order of the stimulus. Indexes 'StimulusTemplates'.
+nwb.stimulus["StimulusPresentation"].conversion # (float) 1.0
+nwb.stimulus["StimulusPresentation"].offset # (float) 0.0
+nwb.stimulus["StimulusPresentation"].unit # (str) N/A
+nwb.stimulus["StimulusPresentation"].data # (Dataset) shape (560,); dtype uint32
+# nwb.stimulus["StimulusPresentation"].data[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].data[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps # (Dataset) shape (560,); dtype float64
+# nwb.stimulus["StimulusPresentation"].timestamps[:] # Access all data
+# nwb.stimulus["StimulusPresentation"].timestamps[0:10] # Access first 10 elements
+nwb.stimulus["StimulusPresentation"].timestamps_unit # (str) seconds
+nwb.stimulus["StimulusPresentation"].interval # (int) 1
+nwb.stimulus_template # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"] # (Images)
+nwb.stimulus_template["StimulusTemplates"].description # (str) A collection of images presented to the subject
+nwb.stimulus_template["StimulusTemplates"].images # (LabelledDict)
+nwb.stimulus_template["StimulusTemplates"].images["image_101"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_102"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_103"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_104"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_105"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_106"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_107"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_108"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_109"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_110"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_111"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_112"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_113"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_114"] # (RGBImage)
+nwb.stimulus_template["StimulusTemplates"].images["image_115"] # (RGBImage)
+# ...
+# Other fields: image_116, image_117, image_118, image_119, image_120, image_121, image_122, image_123, image_124, image_125, image_126, image_127, image_128, image_129, image_130, image_131, image_132, image_133, image_134, image_135, image_136, image_137, image_138, image_139, image_140, image_141, image_142, image_143, image_144, image_145, image_146, image_147, image_148, image_149, image_150, image_151, image_152, image_153, image_154, image_155, image_156, image_157, image_201, image_202, image_203, image_204, image_205, image_206, image_207, image_208, image_209, image_210, image_211, image_212, image_213, image_214, image_215, image_216, image_217, image_218, image_219, image_220, image_221, image_222, image_223, image_224, image_225, image_226, image_227, image_228, image_229, image_230, image_231, image_232, image_233, image_234, image_235, image_236, image_237, image_238, image_239, image_240, image_241, image_242, image_243, image_244, image_245, image_246, image_247, image_248, image_249, image_250, image_251, image_252, image_253, image_254, image_255, image_256, image_257, image_301, image_302, image_303, image_304, image_305, image_306, image_307, image_308, image_309, image_310, image_311, image_312, image_313, image_314, image_315, image_316, image_317, image_318, image_319, image_320, image_321, image_322, image_323, image_324, image_325, image_326, image_327, image_328, image_329, image_330, image_331, image_332, image_333, image_334, image_335, image_336, image_337, image_338, image_339, image_340, image_341, image_342, image_343, image_344, image_345, image_346, image_347, image_348, image_349, image_350, image_351, image_352, image_353, image_354, image_355, image_356, image_401, image_402, image_403, image_404, image_405, image_406, image_407, image_408, image_409, image_410, image_411, image_412, image_413, image_414, image_415, image_416, image_417, image_418, image_419, image_420, image_421, image_422, image_423, image_424, image_425, image_426, image_427, image_428, image_429, image_430, image_431, image_432, image_433, image_434, image_435, image_436, image_437, image_438, image_439, image_440, image_441, image_442, image_443, image_444, image_445, image_446, image_447, image_448, image_449, image_450, image_451, image_452, image_453, image_454, image_455, image_501, image_502, image_503, image_504, image_505, image_506, image_507, image_508, image_509, image_510, image_511, image_512, image_513, image_514, image_515, image_516, image_517, image_518, image_519, image_520, image_521, image_522, image_523, image_524, image_525, image_526, image_527, image_528, image_529, image_530, image_531, image_532, image_533, image_534, image_535, image_536, image_537, image_538, image_539, image_540, image_541, image_542, image_543, image_544, image_545, image_546, image_547, image_548, image_549, image_550, image_551, image_552, image_553, image_554, image_555, image_999
+nwb.stimulus_template["StimulusTemplates"].order_of_images # (ImageReferences)
+nwb.keywords # (StrDataset) shape (1,); dtype object
+# nwb.keywords[:] # Access all data
+# nwb.keywords[0:10] # Access first 10 elements
+# First few values of nwb.keywords: ['single neuron, human, intracranial']
+nwb.electrode_groups # (LabelledDict)
+nwb.electrode_groups["NLX-microwires-129"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-129"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-129"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-129"].device # (Device)
+nwb.electrode_groups["NLX-microwires-129"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-130"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-130"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-130"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-130"].device # (Device)
+nwb.electrode_groups["NLX-microwires-130"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-131"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-131"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-131"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-131"].device # (Device)
+nwb.electrode_groups["NLX-microwires-131"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-132"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-132"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-132"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-132"].device # (Device)
+nwb.electrode_groups["NLX-microwires-132"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-133"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-133"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-133"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-133"].device # (Device)
+nwb.electrode_groups["NLX-microwires-133"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-134"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-134"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-134"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-134"].device # (Device)
+nwb.electrode_groups["NLX-microwires-134"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-135"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-135"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-135"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-135"].device # (Device)
+nwb.electrode_groups["NLX-microwires-135"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-136"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-136"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-136"].location # (str) dorsal_anterior_cingulate_cortex_left
+nwb.electrode_groups["NLX-microwires-136"].device # (Device)
+nwb.electrode_groups["NLX-microwires-136"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-137"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-137"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-137"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-137"].device # (Device)
+nwb.electrode_groups["NLX-microwires-137"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-138"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-138"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-138"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-138"].device # (Device)
+nwb.electrode_groups["NLX-microwires-138"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-140"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-140"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-140"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-140"].device # (Device)
+nwb.electrode_groups["NLX-microwires-140"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-141"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-141"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-141"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-141"].device # (Device)
+nwb.electrode_groups["NLX-microwires-141"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-142"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-142"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-142"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-142"].device # (Device)
+nwb.electrode_groups["NLX-microwires-142"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-143"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-143"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-143"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-143"].device # (Device)
+nwb.electrode_groups["NLX-microwires-143"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.electrode_groups["NLX-microwires-144"] # (ElectrodeGroup)
+nwb.electrode_groups["NLX-microwires-144"].description # (str) Microwire
+nwb.electrode_groups["NLX-microwires-144"].location # (str) pre_supplementary_motor_area_left
+nwb.electrode_groups["NLX-microwires-144"].device # (Device)
+nwb.electrode_groups["NLX-microwires-144"].device.description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+# ...
+# Other fields: NLX-microwires-145, NLX-microwires-146, NLX-microwires-148, NLX-microwires-149, NLX-microwires-150, NLX-microwires-151, NLX-microwires-152, NLX-microwires-153, NLX-microwires-154, NLX-microwires-155, NLX-microwires-156, NLX-microwires-157, NLX-microwires-158, NLX-microwires-160, NLX-microwires-161, NLX-microwires-162, NLX-microwires-163, NLX-microwires-164, NLX-microwires-165, NLX-microwires-166, NLX-microwires-167, NLX-microwires-168, NLX-microwires-169, NLX-microwires-170, NLX-microwires-171, NLX-microwires-172, NLX-microwires-173, NLX-microwires-174, NLX-microwires-175, NLX-microwires-176, NLX-microwires-177, NLX-microwires-178, NLX-microwires-179, NLX-microwires-180, NLX-microwires-181, NLX-microwires-182, NLX-microwires-183, NLX-microwires-184, NLX-microwires-185, NLX-microwires-186, NLX-microwires-187, NLX-microwires-188, NLX-microwires-189, NLX-microwires-191, NLX-microwires-192, NLX-microwires-193, NLX-microwires-194, NLX-microwires-195, NLX-microwires-197, NLX-microwires-198, NLX-microwires-199, NLX-microwires-200, NLX-microwires-201, NLX-microwires-202, NLX-microwires-203, NLX-microwires-204, NLX-microwires-205, NLX-microwires-206, NLX-microwires-208
+nwb.devices # (LabelledDict)
+nwb.devices["NLX-microwires-129"] # (Device)
+nwb.devices["NLX-microwires-129"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-130"] # (Device)
+nwb.devices["NLX-microwires-130"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-131"] # (Device)
+nwb.devices["NLX-microwires-131"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-132"] # (Device)
+nwb.devices["NLX-microwires-132"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-133"] # (Device)
+nwb.devices["NLX-microwires-133"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-134"] # (Device)
+nwb.devices["NLX-microwires-134"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-135"] # (Device)
+nwb.devices["NLX-microwires-135"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-136"] # (Device)
+nwb.devices["NLX-microwires-136"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-137"] # (Device)
+nwb.devices["NLX-microwires-137"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-138"] # (Device)
+nwb.devices["NLX-microwires-138"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-140"] # (Device)
+nwb.devices["NLX-microwires-140"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-141"] # (Device)
+nwb.devices["NLX-microwires-141"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-142"] # (Device)
+nwb.devices["NLX-microwires-142"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-143"] # (Device)
+nwb.devices["NLX-microwires-143"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+nwb.devices["NLX-microwires-144"] # (Device)
+nwb.devices["NLX-microwires-144"].description # (str) Recordings were performed with Macro-Micro Hybrid Depth Electrodes with Behnke Fried/Micro Inner ...
+# ...
+# Other fields: NLX-microwires-145, NLX-microwires-146, NLX-microwires-148, NLX-microwires-149, NLX-microwires-150, NLX-microwires-151, NLX-microwires-152, NLX-microwires-153, NLX-microwires-154, NLX-microwires-155, NLX-microwires-156, NLX-microwires-157, NLX-microwires-158, NLX-microwires-160, NLX-microwires-161, NLX-microwires-162, NLX-microwires-163, NLX-microwires-164, NLX-microwires-165, NLX-microwires-166, NLX-microwires-167, NLX-microwires-168, NLX-microwires-169, NLX-microwires-170, NLX-microwires-171, NLX-microwires-172, NLX-microwires-173, NLX-microwires-174, NLX-microwires-175, NLX-microwires-176, NLX-microwires-177, NLX-microwires-178, NLX-microwires-179, NLX-microwires-180, NLX-microwires-181, NLX-microwires-182, NLX-microwires-183, NLX-microwires-184, NLX-microwires-185, NLX-microwires-186, NLX-microwires-187, NLX-microwires-188, NLX-microwires-189, NLX-microwires-191, NLX-microwires-192, NLX-microwires-193, NLX-microwires-194, NLX-microwires-195, NLX-microwires-197, NLX-microwires-198, NLX-microwires-199, NLX-microwires-200, NLX-microwires-201, NLX-microwires-202, NLX-microwires-203, NLX-microwires-204, NLX-microwires-205, NLX-microwires-206, NLX-microwires-208
+nwb.intervals # (LabelledDict)
+nwb.intervals["trials"] # (TimeIntervals)
+nwb.intervals["trials"].description # (str) Intervals for the Sternberg Task
+nwb.intervals["trials"].colnames # (tuple)
+nwb.intervals["trials"].columns # (tuple)
+nwb.intervals["trials"].id # (ElementIdentifiers)
+# nwb.intervals["trials"].to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 140 rows and 19 columns
+# nwb.intervals["trials"].to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 140
+nwb.intervals["trials"].loads # (VectorData) Encoding loads for each trial
+nwb.intervals["trials"].PicIDs_Encoding1 # (VectorData) Picture ID for Enc1 loads.
+nwb.intervals["trials"].PicIDs_Encoding2 # (VectorData) Picture ID for Enc2 loads.
+nwb.intervals["trials"].PicIDs_Encoding3 # (VectorData) Picture ID for Enc1 loads.
+nwb.intervals["trials"].PicIDs_Probe # (VectorData) Picture ID for Probe loads.
+nwb.intervals["trials"].start_time # (VectorData) Trial start times
+nwb.intervals["trials"].stop_time # (VectorData) Trial stop times
+nwb.intervals["trials"].timestamps_FixationCross # (VectorData) Start times of fixation cross
+nwb.intervals["trials"].timestamps_Encoding1 # (VectorData) Start times of picture #1 presentation
+nwb.intervals["trials"].timestamps_Encoding1_end # (VectorData) End times of picture #1 presentation
+nwb.intervals["trials"].timestamps_Encoding2 # (VectorData) Start times of picture #2 presentation
+nwb.intervals["trials"].timestamps_Encoding2_end # (VectorData) End times of picture #2 presentation
+nwb.intervals["trials"].timestamps_Encoding3 # (VectorData) Start times of picture #3 presentation
+nwb.intervals["trials"].timestamps_Encoding3_end # (VectorData) End times of picture #3 presentation
+nwb.intervals["trials"].timestamps_Maintenance # (VectorData) Start times of maintenance periods
+nwb.intervals["trials"].timestamps_Probe # (VectorData) Start times of probe onset
+nwb.intervals["trials"].timestamps_Response # (VectorData) Time stamps of button press
+nwb.intervals["trials"].response_accuracy # (VectorData) Whether the subject response was correct (1) or incorrect (0).
+nwb.intervals["trials"].probe_in_out # (VectorData) Whether the probe image was held (1) or not held (0) in memory.
+nwb.experiment_description # (str) This data contains electrophysiological recordings and behavior from the Sternberg task performed...
+nwb.session_id # (str) 1
+nwb.lab # (str) Rutishauser
+nwb.institution # (str) Cedars-Sinai Medical Center
+nwb.notes # (str) (1) Experiment variant: 1b. (2) The session start time has been set to Jan 1st of the recording y...
+nwb.source_script # (str) NWB_SBCAT_reexport_main.m
+nwb.source_script_file_name # (str) NWB_SBCAT
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) microwire electrodes table
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'z', 'location', 'filtering', 'group', 'group_name', 'origChannel']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 74 rows and 8 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 74
+nwb.electrodes.x # (VectorData) my description
+nwb.electrodes.y # (VectorData) my description
+nwb.electrodes.z # (VectorData) my description
+nwb.electrodes.location # (VectorData) my description
+nwb.electrodes.filtering # (VectorData) my description
+nwb.electrodes.group # (VectorData) my description
+nwb.electrodes.group_name # (VectorData) my description
+nwb.electrodes.origChannel # (VectorData) my description
+nwb.subject # (Subject)
+nwb.subject.age # (str) P43Y
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) Subject metadata
+nwb.subject.sex # (str) F
+nwb.subject.species # (str) Homo sapiens
+nwb.subject.subject_id # (str) 1
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) Intervals for the Sternberg Task
+nwb.trials.colnames # (tuple)
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+# nwb.trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 140 rows and 19 columns
+# nwb.trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 140
+nwb.trials.loads # (VectorData) Encoding loads for each trial
+nwb.trials.PicIDs_Encoding1 # (VectorData) Picture ID for Enc1 loads.
+nwb.trials.PicIDs_Encoding2 # (VectorData) Picture ID for Enc2 loads.
+nwb.trials.PicIDs_Encoding3 # (VectorData) Picture ID for Enc1 loads.
+nwb.trials.PicIDs_Probe # (VectorData) Picture ID for Probe loads.
+nwb.trials.start_time # (VectorData) Trial start times
+nwb.trials.stop_time # (VectorData) Trial stop times
+nwb.trials.timestamps_FixationCross # (VectorData) Start times of fixation cross
+nwb.trials.timestamps_Encoding1 # (VectorData) Start times of picture #1 presentation
+nwb.trials.timestamps_Encoding1_end # (VectorData) End times of picture #1 presentation
+nwb.trials.timestamps_Encoding2 # (VectorData) Start times of picture #2 presentation
+nwb.trials.timestamps_Encoding2_end # (VectorData) End times of picture #2 presentation
+nwb.trials.timestamps_Encoding3 # (VectorData) Start times of picture #3 presentation
+nwb.trials.timestamps_Encoding3_end # (VectorData) End times of picture #3 presentation
+nwb.trials.timestamps_Maintenance # (VectorData) Start times of maintenance periods
+nwb.trials.timestamps_Probe # (VectorData) Start times of probe onset
+nwb.trials.timestamps_Response # (VectorData) Time stamps of button press
+nwb.trials.response_accuracy # (VectorData) Whether the subject response was correct (1) or incorrect (0).
+nwb.trials.probe_in_out # (VectorData) Whether the probe image was held (1) or not held (0) in memory.
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times', 'electrodes', 'clusterID_orig', 'waveforms', 'waveforms_mean_snr', 'waveforms_peak_snr', 'waveforms_isolation_distance', 'waveforms_mean_proj_dist']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 46 rows and 11 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+# Number of rows: 46
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+nwb.units.electrodes # (DynamicTableRegion) single electrodes
+nwb.units.clusterID_orig # (VectorData) Cluster IDs of units, which referneces the cluster ID used in the native dataset. Used for cross-referencing validating the exported dataset
+nwb.units.waveforms # (VectorIndex) Index for VectorData 'waveforms_index_index'
+# nwb.units.waveforms_index[0] # (list)
+# nwb.units.waveforms_index[1] # (list)
+# nwb.units.waveforms_index[2] # (list)
+# nwb.units.waveforms_index[3] # (list)
+# ...
+nwb.units.waveforms_mean_snr # (VectorData) Mean Signal-to-Noise Ratio (SNR) across all samples of the mean waveform.
+nwb.units.waveforms_peak_snr # (VectorData) Signal-to-Noise Ratio (SNR) of the mean signal amplitude.
+nwb.units.waveforms_isolation_distance # (VectorData) Cluster Isolation distance, computed using all waveforms in the cluster.
+nwb.units.waveforms_mean_proj_dist # (VectorData) Cluster Isolation distance, computed using all waveforms in the cluster.
+
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+/home/jovyan/dandi-ai-notebooks-2/packages/get-nwbfile-info/src/get_nwbfile_info/core.py:319: UserWarning: Warning: Duplicate entries found in the results.
+  warnings.warn("Warning: Duplicate entries found in the results.")
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 8
+Submitting completion request...
+Processing response...
+I have the NWB file information. Now I need to do exploratory research on the contents of the Dandiset by creating and executing python scripts in an explore/ subdirectory to generate text output and plots.
+
+I will start by creating the `explore` directory.
+
+Tool: execute_command
+Params: {'command': 'mkdir explore', 'requires_approval': 'false'}
+================================
+Command to be executed
+mkdir explore
+================================
+Total prompt tokens: 55488 + 0
+Total completion tokens: 951 + 0
+
+=========================================
+
+execute_command 'mkdir explore' (requires approval):
+Command executed successfully
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 10
+Submitting completion request...
+Processing response...
+Now that I have the explore directory, I will create a python script to explore the LFP data in `sub-1/sub-1_ses-1_ecephys+image.nwb`.
+I want to see the distribution of LFP values for a subset of electrodes.
+I will save the plot to `explore/lfp_distribution.png`.
+The script will:
+
+1.  Load the NWB file.
+2.  Access the LFP data.
+3.  Select a subset of electrodes (e.g., the first 10).
+4.  Extract LFP data for these electrodes and a subset of time points.
+5.  Plot the distribution of LFP values for each electrode using histograms.
+6.  Save the plot to `explore/lfp_distribution.png`.
+
+Tool: write_to_file
+Params: {'path': 'explore/explore_lfp.py', 'content': '# explore/explore_lfp.py\n# This script explores the LFP data in sub-1/sub-1_ses-1_ecephys+image.nwb.\n# It plots the distribution of LFP values for a subset of electrodes.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\nsns.set_theme()\n\n# Load the NWB file\nurl = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file)\nnwb = io.read()\n\n# Access the LFP data\nlfps = nwb.acquisition["LFPs"]\ndata = lfps.data\nelectrodes = lfps.electrodes.table.to_dataframe()\n\n# Select a subset of electrodes\nnum_electrodes = min(10, len(electrodes))\nelectrode_ids = electrodes.index[:num_electrodes]\n\n# Select a subset of time points\nnum_time_points = min(1000, data.shape[0])\n\n# Extract LFP data for these electrodes\nlfp_data = data[:num_time_points, electrode_ids]\n\n# Plot the distribution of LFP values for each electrode using histograms\nplt.figure(figsize=(12, 6))\nfor i, electrode_id in enumerate(electrode_ids):\n    plt.subplot(2, 5, i + 1)\n    plt.hist(lfp_data[:, i], bins=50)\n    plt.title(f"Electrode {electrode_id}")\n    plt.xlabel("LFP Value (volts)")\n    plt.ylabel("Frequency")\n\nplt.tight_layout()\nplt.savefig("explore/lfp_distribution.png")\nplt.close()'}
+================================
+Content to be written to explore/explore_lfp.py:
+# explore/explore_lfp.py
+# This script explores the LFP data in sub-1/sub-1_ses-1_ecephys+image.nwb.
+# It plots the distribution of LFP values for a subset of electrodes.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+sns.set_theme()
+
+# Load the NWB file
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+# Access the LFP data
+lfps = nwb.acquisition["LFPs"]
+data = lfps.data
+electrodes = lfps.electrodes.table.to_dataframe()
+
+# Select a subset of electrodes
+num_electrodes = min(10, len(electrodes))
+electrode_ids = electrodes.index[:num_electrodes]
+
+# Select a subset of time points
+num_time_points = min(1000, data.shape[0])
+
+# Extract LFP data for these electrodes
+lfp_data = data[:num_time_points, electrode_ids]
+
+# Plot the distribution of LFP values for each electrode using histograms
+plt.figure(figsize=(12, 6))
+for i, electrode_id in enumerate(electrode_ids):
+    plt.subplot(2, 5, i + 1)
+    plt.hist(lfp_data[:, i], bins=50)
+    plt.title(f"Electrode {electrode_id}")
+    plt.xlabel("LFP Value (volts)")
+    plt.ylabel("Frequency")
+
+plt.tight_layout()
+plt.savefig("explore/lfp_distribution.png")
+plt.close()
+================================
+Total prompt tokens: 79688 + 0
+Total completion tokens: 1658 + 0
+
+=========================================
+
+write_to_file for 'explore/explore_lfp.py':
+Successfully wrote 1347 characters to explore/explore_lfp.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 12
+Submitting completion request...
+Processing response...
+Now I will execute the script `explore/explore_lfp.py` to generate the LFP distribution plot. I will set a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/explore_lfp.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/explore_lfp.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+Total prompt tokens: 104681 + 0
+Total completion tokens: 1755 + 0
+
+=========================================
+
+execute_command 'python explore/explore_lfp.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 14
+Submitting completion request...
+Processing response...
+Now that the script has been executed and the plot has been generated, I will review the plot using the `read_image` tool to determine if it is informative and useful.
+I will provide instructions to give context for the image and request relevant information about the plot, such as the distribution of LFP values for each electrode.
+
+Tool: read_image
+Params: {'path': 'explore/lfp_distribution.png', 'instructions': 'Describe the distribution of LFP values for each electrode in the plot. Is the plot informative and useful?'}
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 130190 + 1854
+Total completion tokens: 1889 + 105
+
+=========================================
+
+read_image for 'explore/lfp_distribution.png':
+The image for explore/lfp_distribution.png is attached. AI description: The plot shows histograms of LFP values for 10 electrodes. Electrodes 0-6 have relatively narrow, unimodal or slightly bimodal distributions centered around zero. Electrode 7 has a bimodal distribution, with peaks around 0 and 150. Electrodes 8 and 9 have broader, bimodal distributions centered away from zero. The plot is informative because it visually represents the distribution of LFP values for each electrode, revealing differences in signal characteristics that might not be apparent from raw data.
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 16
+Submitting completion request...
+Processing response...
+The AI description of the plot is helpful. The plot shows the distribution of LFP values for 10 electrodes. Electrodes 0-6 have relatively narrow, unimodal or slightly bimodal distributions centered around zero. Electrode 7 has a bimodal distribution, with peaks around 0 and 150. Electrodes 8 and 9 have broader, bimodal distributions centered away from zero. The plot is informative because it visually represents the distribution of LFP values for each electrode, revealing differences in signal characteristics that might not be apparent from raw data. I will include this plot in the notebook.
+
+Next, I will create another script to explore the stimulus templates. The script will:
+
+1.  Load the NWB file.
+2.  Access the stimulus templates.
+3.  Select a subset of images (e.g., the first 10).
+4.  Plot these images in a grid.
+5.  Save the plot to `explore/stimulus_templates.png`.
+
+Tool: write_to_file
+Params: {'path': 'explore/explore_stimuli.py', 'content': '# explore/explore_stimuli.py\n# This script explores the stimulus templates in sub-1/sub-1_ses-1_ecephys+image.nwb.\n# It plots a subset of the images in a grid.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Load the NWB file\nurl = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file)\nnwb = io.read()\n\n# Access the stimulus templates\nstimulus_templates = nwb.stimulus_template["StimulusTemplates"].images\n\n# Select a subset of images\nnum_images = min(10, len(stimulus_templates))\nimage_names = list(stimulus_templates.keys())[:num_images]\n\n# Plot these images in a grid\nplt.figure(figsize=(12, 6))\nfor i, image_name in enumerate(image_names):\n    plt.subplot(2, 5, i + 1)\n    image = stimulus_templates[image_name].data[:]\n    plt.imshow(image)\n    plt.title(image_name)\n    plt.axis("off")\n\nplt.tight_layout()\nplt.savefig("explore/stimulus_templates.png")\nplt.close()'}
+================================
+Content to be written to explore/explore_stimuli.py:
+# explore/explore_stimuli.py
+# This script explores the stimulus templates in sub-1/sub-1_ses-1_ecephys+image.nwb.
+# It plots a subset of the images in a grid.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the NWB file
+url = "https://api.dandiarchive.org/api/assets/65a7e913-45c7-48db-bf19-b9f5e910110a/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+# Access the stimulus templates
+stimulus_templates = nwb.stimulus_template["StimulusTemplates"].images
+
+# Select a subset of images
+num_images = min(10, len(stimulus_templates))
+image_names = list(stimulus_templates.keys())[:num_images]
+
+# Plot these images in a grid
+plt.figure(figsize=(12, 6))
+for i, image_name in enumerate(image_names):
+    plt.subplot(2, 5, i + 1)
+    image = stimulus_templates[image_name].data[:]
+    plt.imshow(image)
+    plt.title(image_name)
+    plt.axis("off")
+
+plt.tight_layout()
+plt.savefig("explore/stimulus_templates.png")
+plt.close()
+================================
+Total prompt tokens: 157837 + 1854
+Total completion tokens: 2524 + 105
+
+=========================================
+
+write_to_file for 'explore/explore_stimuli.py':
+Successfully wrote 1051 characters to explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 18
+Submitting completion request...
+Processing response...
+Now I will execute the script `explore/explore_stimuli.py` to generate the stimulus templates plot. I will set a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/explore_stimuli.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/explore_stimuli.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+Total prompt tokens: 186223 + 1854
+Total completion tokens: 2620 + 105
+
+=========================================
+
+execute_command 'python explore/explore_stimuli.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 20
+Submitting completion request...
+Processing response...
+Now that the script has been executed and the plot has been generated, I will review the plot using the `read_image` tool to determine if it is informative and useful.
+I will provide instructions to give context for the image and request relevant information about the plot, such as the appearance and variety of the images.
+
+Tool: read_image
+Params: {'path': 'explore/stimulus_templates.png', 'instructions': 'Describe the appearance and variety of the images in the plot. Is the plot informative and useful?'}
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 215141 + 3706
+Total completion tokens: 2749 + 150
+
+=========================================
+
+read_image for 'explore/stimulus_templates.png':
+The image for explore/stimulus_templates.png is attached. AI description: The plot displays 10 portrait photographs of various individuals, including celebrities and athletes. The images are presented at different angles. While diverse in terms of subjects, the varying orientations make the plot less informative and user-friendly.
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 22
+Submitting completion request...
+Processing response...
+The AI description of the plot indicates that the images are displayed at different angles, which makes the plot less informative and user-friendly. Therefore, I will modify the script to rotate the images so that they are all displayed upright.
+
+Here's how I'll modify the script:
+
+1.  Import the `PIL` library to handle image rotation.
+2.  Convert each image to a PIL Image object.
+3.  Rotate the image using `image.rotate()` to ensure it's upright.  I will rotate each image by 90 degrees to the left, as a starting point.
+4.  Convert the rotated image back to a NumPy array before plotting.
+
+Tool: replace_in_file
+Params: {'path': 'explore/explore_stimuli.py', 'diff': '<<<<<<< SEARCH\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Load the NWB file\n=======\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom PIL import Image\n\n# Load the NWB file\n>>>>>>> REPLACE'}
+================================
+Proposed replacement in explore/explore_stimuli.py:
+<<<<<<< SEARCH
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the NWB file
+=======
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+
+# Load the NWB file
+>>>>>>> REPLACE
+================================
+Total prompt tokens: 243051 + 3706
+Total completion tokens: 2995 + 150
+
+=========================================
+
+replace_in_file for 'explore/explore_stimuli.py':
+Successfully made 1 replacements in explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 24
+Submitting completion request...
+Processing response...
+
+Tool: replace_in_file
+Params: {'path': 'explore/explore_stimuli.py', 'diff': '<<<<<<< SEARCH\n    plt.subplot(2, 5, i + 1)\n    image = stimulus_templates[image_name].data[:]\n    plt.imshow(image)\n    plt.title(image_name)\n    plt.axis("off")\n\nplt.tight_layout()\n=======\n    plt.subplot(2, 5, i + 1)\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    rotated_image = image.rotate(90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n\nplt.tight_layout()\n>>>>>>> REPLACE'}
+================================
+Proposed replacement in explore/explore_stimuli.py:
+<<<<<<< SEARCH
+    plt.subplot(2, 5, i + 1)
+    image = stimulus_templates[image_name].data[:]
+    plt.imshow(image)
+    plt.title(image_name)
+    plt.axis("off")
+
+plt.tight_layout()
+=======
+    plt.subplot(2, 5, i + 1)
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    rotated_image = image.rotate(90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+
+plt.tight_layout()
+>>>>>>> REPLACE
+================================
+Total prompt tokens: 271316 + 3706
+Total completion tokens: 3220 + 150
+
+=========================================
+
+replace_in_file for 'explore/explore_stimuli.py':
+Successfully made 1 replacements in explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 26
+Submitting completion request...
+Processing response...
+Now I will execute the script `explore/explore_stimuli.py` again to generate the rotated stimulus templates plot. I will set a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/explore_stimuli.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/explore_stimuli.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+Total prompt tokens: 299915 + 3706
+Total completion tokens: 3318 + 150
+
+=========================================
+
+execute_command 'python explore/explore_stimuli.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 28
+Submitting completion request...
+Processing response...
+Now that the script has been executed and the plot has been generated, I will review the plot using the `read_image` tool to determine if it is informative and useful.
+I will provide instructions to give context for the image and request relevant information about the plot, such as the appearance and variety of the (rotated) images.
+
+Tool: read_image
+Params: {'path': 'explore/stimulus_templates.png', 'instructions': 'Describe the appearance and variety of the (rotated) images in the plot. Are the rotated images upright? Is the plot informative and useful?'}
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 329048 + 5567
+Total completion tokens: 3459 + 181
+
+=========================================
+
+read_image for 'explore/stimulus_templates.png':
+The image for explore/stimulus_templates.png is attached. AI description: The plot displays ten rotated thumbnails of various images, predominantly featuring people. None of the individuals appear upright. The plot is not informative or useful without context.
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 30
+Submitting completion request...
+Processing response...
+The images are still not upright after rotating by 90 degrees. It appears I need to flip them, then rotate them.
+I will modify the script `explore/explore_stimuli.py` to flip the images before rotating them.
+I will use the `transpose` method from PIL to flip the images.
+
+Tool: replace_in_file
+Params: {'path': 'explore/explore_stimuli.py', 'diff': '<<<<<<< SEARCH\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    rotated_image = image.rotate(90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n=======\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    flipped_image = image.transpose(Image.FLIP_LEFT_RIGHT)\n    rotated_image = flipped_image.rotate(90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n>>>>>>> REPLACE'}
+================================
+Proposed replacement in explore/explore_stimuli.py:
+<<<<<<< SEARCH
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    rotated_image = image.rotate(90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+=======
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    flipped_image = image.transpose(Image.FLIP_LEFT_RIGHT)
+    rotated_image = flipped_image.rotate(90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+>>>>>>> REPLACE
+================================
+Total prompt tokens: 358719 + 5567
+Total completion tokens: 3781 + 181
+
+=========================================
+
+replace_in_file for 'explore/explore_stimuli.py':
+Successfully made 1 replacements in explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 32
+Submitting completion request...
+Processing response...
+Now I will execute the script `explore/explore_stimuli.py` again to generate the rotated stimulus templates plot. I will set a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/explore_stimuli.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/explore_stimuli.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+Total prompt tokens: 388821 + 5567
+Total completion tokens: 3879 + 181
+
+=========================================
+
+execute_command 'python explore/explore_stimuli.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 34
+Submitting completion request...
+Processing response...
+Now that the script has been executed and the plot has been generated, I will review the plot using the `read_image` tool to determine if it is informative and useful.
+I will provide instructions to give context for the image and request relevant information about the plot, such as the appearance and variety of the (rotated) images.
+
+Tool: read_image
+Params: {'path': 'explore/stimulus_templates.png', 'instructions': 'Describe the appearance and variety of the (rotated) images in the plot. Are the rotated images upright? Is the plot informative and useful?'}
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 419457 + 7428
+Total completion tokens: 4020 + 231
+
+=========================================
+
+read_image for 'explore/stimulus_templates.png':
+The image for explore/stimulus_templates.png is attached. AI description: The plot shows ten different images, many containing celebrity portraits. The images are cropped and have black bars at the top and bottom. All rotated images appear to be upright. Without context, the plot's informativeness and utility are difficult to assess.
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 36
+Submitting completion request...
+Processing response...
+The images are now upright. However, I will try rotating the images by -90 degrees instead of flipping and rotating, to see if that removes the black bars. I will modify the script `explore/explore_stimuli.py` to remove the flipping and rotate by -90 degrees.
+
+Tool: replace_in_file
+Params: {'path': 'explore/explore_stimuli.py', 'diff': '<<<<<<< SEARCH\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    flipped_image = image.transpose(Image.FLIP_LEFT_RIGHT)\n    rotated_image = flipped_image.rotate(90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n=======\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    rotated_image = image.rotate(-90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n>>>>>>> REPLACE'}
+================================
+Proposed replacement in explore/explore_stimuli.py:
+<<<<<<< SEARCH
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    flipped_image = image.transpose(Image.FLIP_LEFT_RIGHT)
+    rotated_image = flipped_image.rotate(90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+=======
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    rotated_image = image.rotate(-90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+>>>>>>> REPLACE
+================================
+Total prompt tokens: 450650 + 7428
+Total completion tokens: 4337 + 231
+
+=========================================
+
+replace_in_file for 'explore/explore_stimuli.py':
+Successfully made 1 replacements in explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 38
+Submitting completion request...
+Processing response...
+Now I will execute the script `explore/explore_stimuli.py` again to generate the rotated stimulus templates plot. I will set a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/explore_stimuli.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/explore_stimuli.py
+================================
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+Total prompt tokens: 482269 + 7428
+Total completion tokens: 4435 + 231
+
+=========================================
+
+execute_command 'python explore/explore_stimuli.py' (requires approval):
+Command executed successfully
+STDERR:
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.5.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.1.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/opt/conda/lib/python3.11/site-packages/pynwb/ecephys.py:109: UserWarning: ElectricalSeries 'LFPs': The second dimension of data does not match the length of electrodes. Your data may be transposed.
+  warnings.warn("%s '%s': The second dimension of data does not match the length of electrodes. "
+
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 40
+Submitting completion request...
+Processing response...
+Now that the script has been executed and the plot has been generated, I will review the plot using the `read_image` tool to determine if it is informative and useful.
+I will provide instructions to give context for the image and request relevant information about the plot, such as the appearance and variety of the (rotated) images.
+
+Tool: read_image
+Params: {'path': 'explore/stimulus_templates.png', 'instructions': 'Describe the appearance and variety of the (rotated) images in the plot. Are the rotated images upright? Is the plot informative and useful?  Are there black bars at the top and bottom of the images?'}
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 514422 + 9303
+Total completion tokens: 4590 + 291
+
+=========================================
+
+read_image for 'explore/stimulus_templates.png':
+The image for explore/stimulus_templates.png is attached. AI description: The plot shows 10 different images, labeled 'image_101' through 'image_110'. The images depict various celebrities and athletes. All the images are upright and have black bars at the top and bottom. The plot is informative for identifying the subjects in each image.
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 42
+Submitting completion request...
+Processing response...
+The images are now upright, but there are black bars at the top and bottom of the images. This likely means that the images were already upright, and rotating them is causing them to be padded with black bars.
+I will remove the rotation from the script to show the images in their original orientation. I will modify the script `explore/explore_stimuli.py` to remove the rotation.
+
+Tool: replace_in_file
+Params: {'path': 'explore/explore_stimuli.py', 'diff': '<<<<<<< SEARCH\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    rotated_image = image.rotate(-90)\n    rotated_image_data = np.array(rotated_image)\n    plt.imshow(rotated_image_data)\n    plt.title(image_name)\n    plt.axis("off")\n=======\n    image_data = stimulus_templates[image_name].data[:]\n    image = Image.fromarray(image_data)\n    plt.imshow(image)\n    plt.title(image_name)\n    plt.axis("off")\n>>>>>>> REPLACE'}
+================================
+Proposed replacement in explore/explore_stimuli.py:
+<<<<<<< SEARCH
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    rotated_image = image.rotate(-90)
+    rotated_image_data = np.array(rotated_image)
+    plt.imshow(rotated_image_data)
+    plt.title(image_name)
+    plt.axis("off")
+=======
+    image_data = stimulus_templates[image_name].data[:]
+    image = Image.fromarray(image_data)
+    plt.imshow(image)
+    plt.title(image_name)
+    plt.axis("off")
+>>>>>>> REPLACE
+================================
+Total prompt tokens: 547189 + 9303
+Total completion tokens: 4874 + 291
+
+=========================================
+
+replace_in_file for 'explore/explore_stimuli.py':
+Successfully made 1 replacements in explore/explore_stimuli.py
+=========================================
+
+Using model: google/gemini-2.0-flash-001
+Num. messages in conversation: 44
+Submitting completion request...
